@@ -5,12 +5,14 @@ import React from 'react'
 import { Routes, Route} from 'react-router-dom';
 import  Navbar from './components/Navbar'
 import HomePage from './pages/HomePage';
+import Discover from './pages/Discover';
 function App() {
  return (
   <Routes>
       {/*public routes */}
       <Route path="/" element={<Navbar />}>
       <Route index element={<HomePage />}/>
+      <Route path="/discover" element={<Discover/>}/>
         </Route>
 </Routes>
   )

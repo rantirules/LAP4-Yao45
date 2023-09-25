@@ -1,37 +1,23 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { Link } from 'react-router-dom'
+import './nav.css'
+import { NavLink, Outlet } from 'react-router-dom'
 
 const Navbar = () => {
+  const styles = ({ isActive }) => ({ color: 'black', textDecoration: isActive ? 'underline' : 'none', fontWeight: isActive? 'bold' : 'normal' });
+
   return (
-    <div>
-      <nav className="navbar">
-      <div className="navbar-container">
-        <Link to="/" className="navbar-logo">
-          Your Logo
-        </Link>
-        <ul className="navbar-menu">
-          <li className="navbar-item">
-            <Link to="/home" className="navbar-link">
-              Home
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/about" className="navbar-link">
-              About
-            </Link>
-          </li>
-          <li className="navbar-item">
-            <Link to="/contact" className="navbar-link">
-              Contact
-            </Link>
-          </li>
-          {/* Add more menu items as needed */}
-        </ul>
-      </div>
-    </nav>
-    </div>
-  )
+    <>
+      <header className="navbar">
+        <NavLink to="/" className="links" styles = {styles} role="link">
+          Home
+        </NavLink>
+        <NavLink to="/discover"className="links" styles = {styles} role="link">
+          Discover
+        </NavLink>
+      </header>
+      <Outlet />
+    </> )
 }
 
 export default Navbar
