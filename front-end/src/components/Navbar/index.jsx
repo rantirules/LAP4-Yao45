@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Outlet } from 'react-router-dom'
+
 
 const Navbar = () => {
   return (
@@ -26,10 +27,16 @@ const Navbar = () => {
               Contact
             </Link>
           </li>
+          <li className="navbar-item">
+            <Link to="/register" className="navbar-link">
+              Register
+            </Link>
+          </li>
           {/* Add more menu items as needed */}
         </ul>
       </div>
     </nav>
+    <Outlet/>
     </div>
   )
 }
