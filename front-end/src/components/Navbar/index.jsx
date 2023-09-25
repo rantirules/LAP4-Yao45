@@ -30,8 +30,11 @@ const Navbar = () => {
           DISCOVER
         </NavLink>
         <div className='user-icon' >
-        <button onClick={toggleDropdown} ><img src="/src/assets/account-icon.png" alt="account" className='acc-icon'/>
-                  </button>
+        <button className='account-btn' onClick={toggleDropdown} style={{ backgroundImage: 'url("/src/assets/account-icon.png")', backgroundSize: 'cover' }}>
+  {/* Your content */}
+</button>
+
+     
         </div>
         {isDropdownVisible && (
 

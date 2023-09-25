@@ -48,6 +48,10 @@
     height: 25px;
   
   }
+  .account-btn {
+
+height: 30px;
+}
 
 /* CSS for the dropdown appearance and animation */
 .user-dropdown {
