@@ -1,20 +1,50 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, {useState} from 'react'
 import './nav.css'
 import { NavLink, Outlet } from 'react-router-dom'
 
 const Navbar = () => {
-  const styles = ({ isActive }) => ({ color: 'black', textDecoration: isActive ? 'underline' : 'none', fontWeight: isActive? 'bold' : 'normal' });
+  const [isDropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!isDropdownVisible);
+    console.log(isDropdownVisible)
+  };
+ const styles = ({ isActive }) => ({
+  color: isActive ? 'black' : 'inherit', // Change the color for active elements
+  fontWeight: isActive ? 'bold' : 'normal',
+});
 
   return (
     <>
       <header className="navbar">
-        <NavLink to="/" className="links" styles = {styles} role="link">
-          Home
+      <nav className='nav-links'>
+        <NavLink to="/" className="logo">
+          Culturify
         </NavLink>
-        <NavLink to="/discover"className="links" styles = {styles} role="link">
-          Discover
+      
+        <NavLink to="/" className="link"style={styles} role="link">
+          HOME
         </NavLink>
+        <NavLink to="/discover"className="link" style={styles}role="link">
+          DISCOVER
+        </NavLink>
+        <div className='user-icon' >
+        <button onClick={toggleDropdown} ><img src="/src/assets/account-icon.png" alt="account" className='acc-icon'/>
+                  </button>
+        </div>
+        {isDropdownVisible && (
+
+                <ul className="user-dropdown">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Log Out</a></li>
+                </ul>
+
+        )}
+      
+        </nav>
+
       </header>
       <Outlet />
     </> )
