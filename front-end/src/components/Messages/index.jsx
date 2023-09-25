@@ -1,3 +1,5 @@
+import ChatMessage from '../ChatMessage'
+
 import React from 'react'
 
 const Messages = (props) => {
