@@ -18,7 +18,7 @@ const Messages = (props) => {
   return (
     <>
         <div>
-            {props.messages && props.messages.map(msg => <ChatMessage key={msg.id} message={msg.data}/>)}
+            {props.messages && props.messages.map((msg, index) => <ChatMessage key={index} message={msg.text}/>)}
         </div>
         <form onSubmit={sendMessage}>
             <input value={props.formValue} onChange={(e) => {props.setFormValue(e.target.value)}}/>

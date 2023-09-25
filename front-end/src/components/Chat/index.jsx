@@ -3,7 +3,7 @@ import './index.css'
 import Messages from '../Messages';
 
 const Chat = () => {
-    const messages = useState([]);
+    const [messages, setMessages] = useState([{user: 'Charlie', text: 'Hello' }]);
     const [formValue, setFormValue] = useState('')
 
 

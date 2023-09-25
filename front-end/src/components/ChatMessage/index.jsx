@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { UserContext } from '../../App'
 
 const ChatMessage = (props) => {
-    const { text, username, imageUrl } = props.message
+    // const { text, username, imageUrl } = props.message
+    console.log(props.message)
+    const username = useContext(UserContext)
 
     const messageClass = username === UserContext ? 'sent' : 'received'
   return (
     <div className={`message ${messageClass}`}>
-        <img src={imageUrl} alt="profile-picture" />
-        <p>{text}</p>
+        {/* <img src={imageUrl} alt="profile-picture" /> */}
+        <p>{props.message}</p>
     </div>
   )
 }
