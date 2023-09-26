@@ -14,15 +14,18 @@ const Messages = (props) => {
         }
         getData()
     },[])
-    const user = useContext(UserContext)
+    const username = useContext(UserContext)
+    const text = props.formValue
+    const message = {username, text}
     const sendMessage = async(e) => {
         const options = {method: "POST", headers: {
             'Content-Type' : 'application/json'
             },
-            body: {user: user, text: JSON.stringify(props.formValue)}
+            body: JSON.stringify(message)
         }
+        console.log(options);
         e.preventDefault()
-        await fetch('localhost:3000/messages', options)
+        await fetch('http://127.0.0.1:5000/messages', options)
     }
 
   return (
