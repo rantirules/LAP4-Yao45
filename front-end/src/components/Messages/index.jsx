@@ -23,9 +23,11 @@ const Messages = (props) => {
             },
             body: JSON.stringify(message)
         }
-        console.log(options);
         e.preventDefault()
-        await fetch('http://127.0.0.1:5000/messages', options)
+        const response = await fetch('http://127.0.0.1:5000/messages', options)
+        const data = await response.json()
+        console.log(data)
+        props.setMessages(data.messages)
     }
 
   return (
