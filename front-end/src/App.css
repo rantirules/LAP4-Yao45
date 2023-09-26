@@ -1,14 +1,140 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
 * {
+    font-family: 'Fascinate', sans-serif;
+}
+* {
+  margin: 0;
+
 text-align: center;
 }
 .navbar {
-  position: fixed; 
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #333;
-  color: #fff; 
-  padding: 10px 0; 
-  z-index: 1000; 
+ height: var(--nav-size);
+ background-color: var(--bg);
+ padding: 0 1rem;
+ border-bottom: var(--border);
+}
+
+.navbar-nav {
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+:root {
+  --bg: #FF5757;
+  --bg-accent: #484a4d;
+  --text-color:#dadce1;
+  --nav-size: 50px;
+  --border: 1px solid #FF5757;
+  --border-radius: 8px;
+  --speed: 500ms;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.nav-item {
+  width: calc(var(--nav-size)* 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-button {
+  --button-size: calc(var(--nav-size) * 0.5);
+  width: var(--button-size);
+  height: var(--button-size);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 2px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+  width: 35px;
+  height: 35px;
+  font-size: 30px;
+  transition: 0.2s ease-in-out;
+}
+
+.icon-button:hover {
+  filter: invert(.9);
+  transform: scale(1.5);
+}
+
+.dropdown {
+  position: absolute;
+  top: 58px;
+  width: 300px;
+  transform: translateX(-45%);
+  background-color: var(--bg);
+  border: var(--border);
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  overflow: hidden;
+
+  transition: height var(--speed) ease;
+}
+
+.menu-item {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-radius: var(--border-radius);
+  transition: background var(--speed);
+  padding: 0.5rem;
+
+
+}
+
+.menu-item:hover {
+  background-color: #525357;
+}
+
+.icon-right {
+  margin-left: auto;
+}
+
+.menu-primary-enter {
+  position: absolute;
+  transform: translateX(-110%);
+
+}
+.menu-primary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-primary-exit {
+  position: absolute;
+}
+.menu-primary-exit-active {
+  transform: translateX(-110%);
+  transition: all var(--speed) ease;
+}
+
+.menu-secondary-enter {
+  position: absolute;
+  transform: translateX(110%);
+
+}
+.menu-secondary-enter-active {
+  transform: translateX(0%);
+  transition: all var(--speed) ease;
+}
+.menu-secondary-exit {
+  position: absolute;
+}
+.menu-secondary-exit-active {
+  transform: translateX(110%);
+  transition: all var(--speed) ease;
 }
