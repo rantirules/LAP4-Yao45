@@ -32,5 +32,8 @@
     "jsdom": "^22.1.0",
     "vite": "^4.4.5",
     "vitest": "^0.34.5"
+  },
+  "jest": {
+    "setupFilesAfterEnv": ["@testing-library/jest-dom/extend-expect"]
   }
 }
