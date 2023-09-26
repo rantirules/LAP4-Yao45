@@ -11,6 +11,8 @@ import DropdownMenu from './components/Navbar/DropdownMenu';
 
 function App() {
  return (
+  <Routes>
+  <Route path="/" element={
   <Navbar>
     <NavItem icon="🌎"/>
   <NavItem icon="💬"/>
@@ -18,16 +20,14 @@ function App() {
   <NavItem icon="👤">
     {/*dropdown menu*/}
     <DropdownMenu />
-
+    
     </NavItem>
     </Navbar> 
-//   <Routes>
-//       {/*public routes */}
-//       <Route path="/" element={<Navbar> <li>X</li> </Navbar>}>
-//       <Route index element={<HomePage />}/>
-//       <Route path="/discover" element={<Discover/>}/>
-//         </Route>
-// </Routes>
+              }>
+    <Route index element={<HomePage />}/>
+      <Route path="/discover" element={<Discover/>}/>
+        </Route>
+</Routes>
   )
 }
 
