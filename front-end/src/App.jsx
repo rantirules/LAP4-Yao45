@@ -8,7 +8,7 @@ import { Routes, Route} from 'react-router-dom';
 // import  Navbar from './components/Navbar'
 // import HomePage from './pages/HomePage';
 // import Discover from './pages/Discover';
-import  Navbar from './components'
+import  {Navbar} from './components'
 import {HomePage, RegisterPage, Discover} from './pages';
 
 const App = () => {
