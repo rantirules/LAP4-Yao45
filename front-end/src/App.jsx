@@ -4,21 +4,24 @@ import './App.css'
 
 //import * as Pages from './pages';
 import { Routes, Route} from 'react-router-dom';
-import  Navbar from './components'
-import {HomePage, RegisterPage} from './pages';
+
+// import  Navbar from './components/Navbar'
 // import HomePage from './pages/HomePage';
-// import RegisterPage from './pages/RegisterPage';
+// import Discover from './pages/Discover';
+import  Navbar from './components'
+import {HomePage, RegisterPage, Discover} from './pages';
 
 const App = () => {
  return (
- 
-    <Routes>
-        {/*public routes */}
-        <Route path="/" element={<Navbar />}>
-        <Route index element={<HomePage />}/>
+  <Routes>
+      {/*public routes */}
+      <Route path="/" element={<Navbar />}>
+      <Route index element={<HomePage />}/>
+      <Route path="/discover" element={<Discover/>}/>
         <Route path="/register" element={<RegisterPage />} />
-          </Route>
-  </Routes>
+        </Route>
+</Routes>
+
   )
 }
 
