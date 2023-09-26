@@ -53,7 +53,8 @@ const ProfileIcon = (props) => {
         return color;
     }
 
-    const handleClick = async () => {
+    const handleClick = async (e) => {
+        e.preventDefault()
         const dialogue = props.dialogue_id
         console.log(dialogue)
         const options = {
@@ -66,7 +67,12 @@ const ProfileIcon = (props) => {
         const response = await fetch(`http://127.0.0.1:5000/dialogues/${props.dialogue_id}`)
         const data = await response.json()
         props.setCurrentDialogue(data.dialogues)
-        console.log(props.setCurrentDialogue)
+        const messageResponse = await fetch(`http://127.0.0.1:5000/messages/${dialogue}`)
+        const messageData = await messageResponse.json()
+        props.setMessages(messageData.messages)
+        console.log('DIALOGUE MESSAGES');
+        console.log(messageData.messages);
+        console.log(props.messages);
     }
     
   return (

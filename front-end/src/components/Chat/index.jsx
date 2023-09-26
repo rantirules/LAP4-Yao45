@@ -31,7 +31,7 @@ const Chat = () => {
     <>
       <div className='users'>
         {dialogues && users.map((u, idx) => 
-           <ProfileIcon username={u.username} receiver={u.receiver} key={idx} dialogue_id={u.id} setCurrentDialogue={setCurrentDialogue}/>
+           <ProfileIcon username={u.username} receiver={u.receiver} key={idx} dialogue_id={u.id} currentDialogue={currentDialogue} setCurrentDialogue={setCurrentDialogue} setMessages={setMessages} messages={messages}/>
         )}
       </div>
       {currentDialogue ? 
