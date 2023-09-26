@@ -1,3 +1,4 @@
+import React from 'react'
 import './App.css'
 // eslint-disable-next-line no-unused-vars
 import React, {useState} from 'react'
@@ -8,6 +9,7 @@ import HomePage from './pages/HomePage';
 import Discover from './pages/Discover';
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
+import {HomePage, RegisterPage, Discover} from './pages';
 
 function App() {
  return (
@@ -26,8 +28,10 @@ function App() {
               }>
     <Route index element={<HomePage />}/>
       <Route path="/discover" element={<Discover/>}/>
+        <Route path="/register" element={<RegisterPage />} />
         </Route>
 </Routes>
+
   )
 }
 

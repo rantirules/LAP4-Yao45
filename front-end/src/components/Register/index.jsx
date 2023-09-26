@@ -1,19 +1,21 @@
-import React from "react"
+import React, {useState} from "react"
 
 
 const Register = () => {
-    const [formData, setFormData] = React.useState({
+    const [formData, setFormData] = useState({
         email: "",
         password: "",
         passwordConfirm: "",
     
     })
-    // function handleChange(event) {
-    //     const {name, value, type } = event.target
-    //     setFormData(prevFormData => ({
-    //         ...prevFormData
-    //     }))
-    // }
+    function handleChange(event) {
+        const {name, value } = event.target
+        setFormData(prevFormData => ({
+            ...prevFormData,
+            [name]: value
+        }))
+    }
+    // console.log(formData)
     function handleSubmit(event) {
         event.preventDefault()
         if(formData.password === formData.passwordConfirm) {
@@ -21,11 +23,10 @@ const Register = () => {
         } else {
             console.log("Passwords do not match")
             return
-        }
-        
-    }
+        } 
+   }
   return (
-    // <div>Register</div>
+    
     <div className="form-container">
             <form className="form" onSubmit={handleSubmit}>
                 <input 
@@ -35,7 +36,7 @@ const Register = () => {
                     name="email"
                     onChange={handleChange}
                     value={formData.email}
-                />
+                /><br/>
                 <input 
                     type="password" 
                     placeholder="Password"
@@ -43,7 +44,7 @@ const Register = () => {
                     name="password"
                     onChange={handleChange}
                     value={formData.password}
-                />
+                /><br/>
                 <input 
                     type="password" 
                     placeholder="Confirm password"
@@ -51,7 +52,7 @@ const Register = () => {
                     name="passwordConfirm"
                     onChange={handleChange}
                     value={formData.passwordConfirm}
-                />
+                /><br/>
                 
                 
                 <button className="form-submit"> Sign up </button>
