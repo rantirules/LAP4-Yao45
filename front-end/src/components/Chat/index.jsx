@@ -7,6 +7,7 @@ const Chat = () => {
     const [messages, setMessages] = useState()
     const [formValue, setFormValue] = useState('')
     const [users, setUsers] = useState([])
+    const [dialogues, setDialogues] = useState([])
     const [currentDialogue, setCurrentDialogue] = useState()
 
     useEffect(() => {
@@ -16,19 +17,27 @@ const Chat = () => {
         setUsers(data.users)
         console.log(users)
       }
+      const getDialogues = async () => {
+        const response = await fetch('http://127.0.0.1:5000/dialogues')
+        const data = await response.json()
+        setDialogues(data.dialogues)
+        console.log(data.dialogues);
+      }
       getUsers()
+      getDialogues()
     },[])
 
   return (
     <>
       <div className='users'>
-        {users && users.map((u, idx) => 
-           <ProfileIcon username={u.username} key={idx} setCurrentDialogue={setCurrentDialogue}/>
+        {dialogues && users.map((u, idx) => 
+           <ProfileIcon username={u.username} receiver={u.receiver} key={idx} dialogue_id={u.id} setCurrentDialogue={setCurrentDialogue}/>
         )}
       </div>
+      {currentDialogue ? 
       <div className='chat-header'>
-          <Messages messages={messages} setMessages={setMessages} formValue={formValue} setFormValue={setFormValue}/>
-      </div>
+          <Messages messages={messages} setMessages={setMessages} formValue={formValue} setFormValue={setFormValue} currentDialogue={currentDialogue}/>
+      </div> : <div>No chat loaded</div>}
     </>
   )
 }

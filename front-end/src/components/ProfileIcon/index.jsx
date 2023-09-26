@@ -7,7 +7,6 @@ const ProfileIcon = (props) => {
     console.log(name)
 
     const getInitials = (name) => {
-        console.log('GETTING INITIALS')
         let initials;
         const nameSplit = name.split(" ");
         const nameLength = nameSplit.length;
@@ -23,7 +22,6 @@ const ProfileIcon = (props) => {
     }
     
     function createImageFromInitials(size, name, color) {
-        console.log('CREATING IMAGE')
         if (name == null) return;
         name=getInitials(name)
     
@@ -52,15 +50,11 @@ const ProfileIcon = (props) => {
         for (var i = 0; i < 6; i++) {
             color += letters[Math.floor(Math.random() * 16)];
         }
-        console.log('GET RANDOM COLOR' + color)
         return color;
     }
 
     const handleClick = async () => {
-        const username = currentUser
-        const receiver = props.username
-        const title = `${username}-${receiver}`
-        const dialogue = {username, receiver, title}
+        const dialogue = props.dialogue_id
         console.log(dialogue)
         const options = {
             method: "POST", headers: {
@@ -69,10 +63,10 @@ const ProfileIcon = (props) => {
                 body: JSON.stringify(dialogue)
             }
         
-        const response = await fetch(`http://127.0.0.1:5000/dialogues`, options)
+        const response = await fetch(`http://127.0.0.1:5000/dialogues/${props.dialogue_id}`)
         const data = await response.json()
-        props.setCurrentDialogue(data);
-        console.log(props.setCurrentDialogue);
+        props.setCurrentDialogue(data.dialogues)
+        console.log(props.setCurrentDialogue)
     }
     
   return (
