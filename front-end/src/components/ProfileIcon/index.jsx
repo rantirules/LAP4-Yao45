@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useContext} from 'react'
+import { UserContext } from '../../App'
 
 const ProfileIcon = (props) => {
+    const currentUser = useContext(UserContext)
     let name = props.username 
     console.log(name)
 
@@ -54,6 +56,24 @@ const ProfileIcon = (props) => {
         return color;
     }
 
+    const handleClick = async () => {
+        const username = currentUser
+        const receiver = props.username
+        const title = `${username}-${receiver}`
+        const dialogue = {username, receiver, title}
+        console.log(dialogue)
+        const options = {
+            method: "POST", headers: {
+                'Content-Type' : 'application/json'
+                },
+                body: JSON.stringify(dialogue)
+            }
+        
+        const response = await fetch(`http://127.0.0.1:5000/dialogues`, options)
+        const data = await response.json()
+        props.setCurrentDialogue(data);
+        console.log(props.setCurrentDialogue);
+    }
     
   return (
     <div>
@@ -63,6 +83,7 @@ const ProfileIcon = (props) => {
             createImageFromInitials(50, name, getRandomColor())
         }
         alt='profile-pic'
+        onClick={handleClick}
         />
     </div>
   )

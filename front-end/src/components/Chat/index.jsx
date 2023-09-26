@@ -7,6 +7,7 @@ const Chat = () => {
     const [messages, setMessages] = useState()
     const [formValue, setFormValue] = useState('')
     const [users, setUsers] = useState([])
+    const [currentDialogue, setCurrentDialogue] = useState()
 
     useEffect(() => {
       const getUsers = async () => {
@@ -22,7 +23,7 @@ const Chat = () => {
     <>
       <div className='users'>
         {users && users.map((u, idx) => 
-           <ProfileIcon username={u.username} key={idx}/>
+           <ProfileIcon username={u.username} key={idx} setCurrentDialogue={setCurrentDialogue}/>
         )}
       </div>
       <div className='chat-header'>
