@@ -1,0 +1,80 @@
+/* CSS */
+  @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+* {
+    font-family: 'Fascinate', sans-serif;
+}
+.navbar {
+    background-color: #F6F3E4;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-height: 15%;
+  }
+  
+  .logo img {
+    max-height: 100px;
+    width: 100px;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    color: #FF5757;
+  }
+  
+  .logo {
+    color: #FF5757;
+
+  }
+
+  .logo:hover {
+    color: #FF5757;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #FF5757;
+    align-items: center;
+    margin-left: 25%;
+  }
+.link:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #FF5757; /* Change the color on hover */
+    font-weight: bold; /* Change the font weight on hover */
+  }
+  .acc-icon {
+    height: 25px;
+  
+  }
+  .account-btn {
+
+height: 30px;
+}
+
+/* CSS for the dropdown appearance and animation */
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    /* Add other styles for padding, font, etc. */
+  }
+  
+  .user-dropdown li {
+    list-style: none;
+  }
+  
+  .user-dropdown li a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: #333;
+    /* Add other styles for hover effects, etc. */
+  }
+  
