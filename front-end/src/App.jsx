@@ -1,22 +1,32 @@
 import React from 'react'
 import './App.css'
 // eslint-disable-next-line no-unused-vars
-
+import React, {useState} from 'react'
 //import * as Pages from './pages';
 import { Routes, Route} from 'react-router-dom';
-
-// import  Navbar from './components/Navbar'
-// import HomePage from './pages/HomePage';
-// import Discover from './pages/Discover';
-import  {Navbar} from './components'
+import  Navbar from './components/Navbar'
+import HomePage from './pages/HomePage';
+import Discover from './pages/Discover';
+import NavItem from './components/Navbar/NavItem';
+import DropdownMenu from './components/Navbar/DropdownMenu';
 import {HomePage, RegisterPage, Discover} from './pages';
 
-const App = () => {
+function App() {
  return (
   <Routes>
-      {/*public routes */}
-      <Route path="/" element={<Navbar />}>
-      <Route index element={<HomePage />}/>
+  <Route path="/" element={
+  <Navbar>
+    <NavItem icon="🌎"/>
+  <NavItem icon="💬"/>
+  <NavItem icon="🔔"/>
+  <NavItem icon="👤">
+    {/*dropdown menu*/}
+    <DropdownMenu />
+    
+    </NavItem>
+    </Navbar> 
+              }>
+    <Route index element={<HomePage />}/>
       <Route path="/discover" element={<Discover/>}/>
         <Route path="/register" element={<RegisterPage />} />
         </Route>

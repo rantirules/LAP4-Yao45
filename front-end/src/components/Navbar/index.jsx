@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+import React from 'react'
+import { Link, Outlet} from 'react-router-dom';
+=======
 /* eslint-disable no-unused-vars */
 
 import React, {useState} from 'react'
@@ -8,40 +12,34 @@ import { NavLink, Link,  Outlet } from 'react-router-dom'
 // import { Link, Outlet } from 'react-router-dom'
 
 
+>>>>>>> 35ccfe33a96ac1dbc5016de0ed627868c72e8d07
 
-const Navbar = () => {
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
 
-  const toggleDropdown = () => {
-    setDropdownVisible(!isDropdownVisible);
-    console.log(isDropdownVisible)
-  };
- const styles = ({ isActive }) => ({
-  color: isActive ? 'black' : 'inherit', // Change the color for active elements
-  fontWeight: isActive ? 'bold' : 'normal',
-});
 
+const Navbar = (props) => {
+  
   return (
 
     <>
-      <header className="navbar">
-      <nav className='nav-links'>
-        <NavLink to="/" className="logo">
-          Culturify
-        </NavLink>
-      
-        <NavLink to="/" className="link"style={styles} role="link">
-          HOME
-        </NavLink>
-        <NavLink to="/discover"className="link" style={styles}role="link">
-          DISCOVER
-        </NavLink>
-        <div className='user-icon' >
-        <button className='account-btn' onClick={toggleDropdown} style={{ backgroundImage: 'url("/src/assets/account-icon.png")', backgroundSize: 'cover' }}>
-  {/* Your content */}
-</button>
-
+    <nav className='navbar'>
+      <ul className='navbar-links'>
+       <li>
+        <Link to="/">HOME</Link></li>
+       <li>
+        <Link to="/discover">DISCOVER</Link></li>
      
+<<<<<<< HEAD
+      </ul> 
+     
+      <ul className='navbar-nav'>{props.children}
+      </ul>
+     
+    </nav>
+    
+     <Outlet/>
+     </>
+  )
+=======
         </div>
         {isDropdownVisible && (
 
@@ -94,6 +92,7 @@ const Navbar = () => {
 //     </div>
  // )
 
+>>>>>>> 35ccfe33a96ac1dbc5016de0ed627868c72e8d07
 }
 
 export default Navbar
