@@ -3,7 +3,7 @@ import './App.css'
 // eslint-disable-next-line no-unused-vars
 //import * as Pages from './pages';
 import { Routes, Route} from 'react-router-dom';
-
+import {FaBell, FaUser, FaEnvelope, FaCog} from 'react-icons/fa';
 
 import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
@@ -20,10 +20,9 @@ function App() {
   <Routes>
   <Route path="/" element={
   <Navbar>
-    <NavItem icon="🌎"/>
-  <NavItem icon="💬"/>
-  <NavItem icon="🔔"/>
-  <NavItem icon="👤">
+  <NavItem icon={<FaEnvelope/>}/>
+  <NavItem icon={<FaBell/>}/>
+  <NavItem icon={<FaUser/>}>
     {/*dropdown menu*/}
     <DropdownMenu />
     
