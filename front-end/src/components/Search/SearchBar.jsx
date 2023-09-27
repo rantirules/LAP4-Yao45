@@ -32,6 +32,7 @@ const SearchBar = ({ onSearch }) => {
               onKeyDown={handleKeyDown}
               onFocus={handleInputFocus}
               onBlur={handleInputBlur}
+              data-testid="search-input-field"
             />
             <button type="button">
               <FaSearch className='search-icon'/> {/* Render the search icon */}
