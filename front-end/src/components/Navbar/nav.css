@@ -1,9 +1,5 @@
-/* CSS */
-  @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
-* {
-    font-family: 'Fascinate', sans-serif;
-}
-.navbar {
+
+/* .navbar {
     background-color: #F6F3E4;
     color: #fff;
     padding: 10px;
@@ -11,9 +7,9 @@
     justify-content: flex-start;
     align-items: center;
     max-height: 15%;
-  }
+  } */
   
-  .logo img {
+  /* .logo img {
     max-height: 100px;
     width: 100px;
   }
@@ -40,10 +36,10 @@
     margin-left: 25%;
   }
 .link:hover {
-    text-decoration: underline; /* Add underline on hover */
-    color: #FF5757; /* Change the color on hover */
-    font-weight: bold; /* Change the font weight on hover */
-  }
+    text-decoration: underline; 
+    color: #FF5757; 
+    font-weight: bold; 
+  /* } 
   .acc-icon {
     height: 25px;
   
@@ -53,7 +49,6 @@
 height: 30px;
 }
 
-/* CSS for the dropdown appearance and animation */
 .user-dropdown {
     display: none;
     position: absolute;
@@ -63,7 +58,7 @@ height: 30px;
     border: 1px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1;
-    /* Add other styles for padding, font, etc. */
+    /* Add other styles for padding, font, etc. 
   }
   
   .user-dropdown li {
@@ -75,6 +70,6 @@ height: 30px;
     padding: 10px 20px;
     text-decoration: none;
     color: #333;
-    /* Add other styles for hover effects, etc. */
+    /* Add other styles for hover effects, etc. 
   }
-  
+   */
