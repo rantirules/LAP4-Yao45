@@ -1,0 +1,20 @@
+.postContainer {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    min-height: 60vh;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3rem;
+    /* box-shadow: 10px 10px rgba(255, 255, 255, 0.3); */
+
+}
+
+.user > img {
+    max-height: 40px;
+    border-radius: 2rem;
+}
+

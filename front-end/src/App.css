@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Sofia+Sans:wght@1;400&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Mooli&family=Sofia+Sans:wght@1;400&family=VT323&display=swap');
 * {
-    font-family: 'Fascinate', sans-serif;
+    /* font-family: 'Fascinate', sans-serif; */
+    font-family: 'Montserrat', sans-serif
 }
 * {
   margin: 0;

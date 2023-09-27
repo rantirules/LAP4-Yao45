@@ -1,0 +1,6 @@
+.discover {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(to right top, #FF5757, #dadce1);
+    min-height: 100vh;
+}
