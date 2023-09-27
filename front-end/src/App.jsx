@@ -2,7 +2,7 @@ import { useState, createContext } from 'react'
 import { Chat } from './components'
 
 export const UserContext = createContext()
-const user = 'charlie'
+const user = 'charlie1'
 
 function App() {
 
