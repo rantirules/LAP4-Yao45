@@ -5,7 +5,7 @@ import './App.css'
 import { Routes, Route} from 'react-router-dom';
 
 
-import  {Navbar, Chat} from './components/Navbar'
+import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
 import {HomePage, RegisterPage, Discover} from './pages';
