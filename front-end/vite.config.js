@@ -10,4 +10,8 @@ export default defineConfig({
   setupfilesafterenv: [
     './setuptests.js',
   ],
+  server : {
+    host: true,
+    port: 5173
+  }
 })
