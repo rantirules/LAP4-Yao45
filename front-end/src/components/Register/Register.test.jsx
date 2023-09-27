@@ -3,7 +3,7 @@ import { describe, it, expect, beforeEach, afterEach } from "vitest";
 // import '@testing-library/jest-dom/extend-expect';
 
 import { screen, render, cleanup, fireEvent, waitFor } from "@testing-library/react";
-import matchers from "@testing-library/jest-dom/matchers";
+import * as matchers from "@testing-library/jest-dom/matchers";
 expect.extend(matchers);
 import Register from '.';
 

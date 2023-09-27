@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-import React from 'react'
-import { Link, Outlet} from 'react-router-dom';
-=======
+
 /* eslint-disable no-unused-vars */
 
 import React, {useState} from 'react'
@@ -9,10 +6,9 @@ import './nav.css'
 import { NavLink, Link,  Outlet } from 'react-router-dom'
 
 // import React from 'react'
-// import { Link, Outlet } from 'react-router-dom'
+// import { Link, Outlet } om 'react-router-dom'
 
 
->>>>>>> 35ccfe33a96ac1dbc5016de0ed627868c72e8d07
 
 
 
@@ -28,18 +24,6 @@ const Navbar = (props) => {
        <li>
         <Link to="/discover">DISCOVER</Link></li>
      
-<<<<<<< HEAD
-      </ul> 
-     
-      <ul className='navbar-nav'>{props.children}
-      </ul>
-     
-    </nav>
-    
-     <Outlet/>
-     </>
-  )
-=======
         </div>
         {isDropdownVisible && (
 
@@ -53,7 +37,6 @@ const Navbar = (props) => {
       
         </nav>
 
-      </header>
       <Outlet />
     </> )
 
@@ -92,7 +75,6 @@ const Navbar = (props) => {
 //     </div>
  // )
 
->>>>>>> 35ccfe33a96ac1dbc5016de0ed627868c72e8d07
 }
 
 export default Navbar

@@ -13,6 +13,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
     "react-transition-group": "^4.4.5"
   },
@@ -34,6 +35,8 @@
     "vitest": "^0.34.5"
   },
   "jest": {
-    "setupFilesAfterEnv": ["@testing-library/jest-dom/extend-expect"]
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
   }
 }
