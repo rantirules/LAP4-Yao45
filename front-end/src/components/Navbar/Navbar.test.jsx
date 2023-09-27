@@ -1,11 +1,12 @@
 import React from 'react';
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import { screen, render, cleanup } from '@testing-library/react';
+import { screen, render, cleanup, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import * as matchers from '@testing-library/jest-dom/matchers';
 
 expect.extend(matchers);
 import Navbar from '.';
+import SearchBar from '../Search/SearchBar';
 
 describe('Navbar', () => {
   beforeEach(() => {
@@ -25,9 +26,13 @@ describe('Navbar', () => {
     expect(homeLink).toBeInTheDocument();
   });
 
-  it('renders the discover link', () => {
+  it('renders the Discover link', () => {
     const discoverLink = screen.getByRole('link', { name: /discover/i });
     expect(discoverLink).toBeInTheDocument();
   });
 
-});
+it('renders searchBar', () => {
+    const searchBar = screen.getByRole("textbox")
+    expect(searchBar).toBeInTheDocument();
+}) 
+})

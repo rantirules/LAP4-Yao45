@@ -31,15 +31,15 @@ const DropdownMenu = () => {
         classNames="menu-primary" 
         onEnter={calcHeight}>
         <div className='menu'>
-      <DropDownItem>My profile</DropDownItem>
-      <DropDownItem leftIcon="😁" rightIcon="🖕" goToMenu="settings">Settings</DropDownItem>
+      <DropDownItem role="menuitem">My profile</DropDownItem>
+      <DropDownItem role="settings" leftIcon="😁" rightIcon="🖕" goToMenu="settings">Settings</DropDownItem>
       </div>
       </CSSTransition>
       <CSSTransition in={activeMenu === 'settings'} 
       unmountOnExit 
       timeout={500} 
       classNames="menu-secondary">
-            <div className='menu'>
+            <div role="secondary-menu" className='menu'>
       <DropDownItem leftIcon="⬅️" goToMenu="main"/>
       <DropDownItem>Settings</DropDownItem>
 
