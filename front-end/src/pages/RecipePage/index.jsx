@@ -20,7 +20,7 @@ const RecipePage = () => {
     // both components must know the recipe id
     // the button must also know the user_id
     <>
-      <Recipe rid={recipe.id} name={recipe.name} culture={recipe.culture} desc={recipe.description} img={recipe.img_url} user_id={recipe.user_id} />
+      <Recipe rid={recipe.id} name={recipe.name} culture={recipe.culture} desc={recipe.description} img={recipe.img_url} user_id={recipe.user_id} ingredients={recipe.ingredients} steps={recipe.steps} />
       <SaveRecipeButton rid={recipe.id} uid={user_id} />
     </>
 

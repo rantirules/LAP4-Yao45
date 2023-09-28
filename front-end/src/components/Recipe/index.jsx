@@ -19,6 +19,16 @@ const Recipe = (props) => {
     loadUser()
   }, [props.user_id])
 
+  function displayIngredients() {
+    const ingredients = props.ingredients
+    if (ingredients) {
+      let list = ingredients.map((ingredient, index) => {
+        return <li key={index}>{ingredient}</li>
+      })
+      return list
+    }
+  }
+
   function displayRecipe() {
     return (
       <main>
@@ -34,6 +44,12 @@ const Recipe = (props) => {
         </div>
         <div>
           Image URL: {props.img}
+        </div>
+        <div>
+          Ingredients:
+          <ol>
+            {displayIngredients()}
+          </ol>
         </div>
       </main>
     )
