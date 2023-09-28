@@ -6,6 +6,16 @@ import './index.css'
 
 const Post = (props) => {
     const [isOpen, setIsOpen] = useState(false)
+    const [comments, setComments] = useState([])
+
+    useEffect(() => {
+        const getComments = async () => {
+            const response = await fetch(`http://127.0.0.1:5000/posts/${props.id}/comments`)
+            const data = await response.json()
+            setComments(data.comments)
+        }
+        getComments()
+    })
 
     const showComments = (e) => {
         e.preventDefault()
@@ -36,7 +46,7 @@ const Post = (props) => {
                 </div>
             </div>
             <button onClick={showComments}>Comments</button>
-            <CommentModal open={isOpen} setIsOpen={setIsOpen}/>
+            <CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments}/>
         </div>
         <div className="right-panel">
             <div className="card food-image">

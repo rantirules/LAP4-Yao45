@@ -6,3 +6,4 @@ export { default as Navbar } from "./Navbar";
 export { default as Register } from "./Register"
 export { default as Post } from './Post'
 export { default as CommentModal } from './CommentModal'
+export { default as Comment } from './Comment'
