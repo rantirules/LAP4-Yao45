@@ -5,3 +5,4 @@ export { default as ProfileIcon } from './ProfileIcon'
 export { default as Navbar } from "./Navbar";
 export { default as Register } from "./Register"
 export { default as Post } from './Post'
+export { default as CommentModal } from './CommentModal'
