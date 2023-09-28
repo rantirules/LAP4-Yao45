@@ -15,7 +15,7 @@ const Post = (props) => {
             setComments(data.comments)
         }
         getComments()
-    })
+    }, [])
 
     const showComments = (e) => {
         e.preventDefault()
@@ -46,7 +46,7 @@ const Post = (props) => {
                 </div>
             </div>
             <button onClick={showComments}>Comments</button>
-            <CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments}/>
+            <CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments} post_id={props.id}/>
         </div>
         <div className="right-panel">
             <div className="card food-image">
