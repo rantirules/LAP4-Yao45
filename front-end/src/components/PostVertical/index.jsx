@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUser, faKitchenSet, faEarthAfrica} from '@fortawesome/free-solid-svg-icons'
 import './index.css'
 
-const Post = (props) => {
+const PostVertical = (props) => {
   return (
     <div className='postContainer'>
         <div className="left-panel">
@@ -28,18 +28,18 @@ const Post = (props) => {
         </div>
         <div className="right-panel">
             <div className="card food-image">
-                
+                {/* <img id='image' src="https://www.kitchensanctuary.com/wp-content/uploads/2019/08/Korean-Fried-Chicken-foodporn-7373.jpg" alt="" /> */}
             </div>
-            <div className="card dish-description">
+            {/* <div className="card dish-description">
                 <p className='text'>Dish Description</p>
             </div>
             <div className="card personal-description">
                 <p className='text'>Personal Description</p>
-            </div>
+            </div> */}
         </div>
 
     </div>
   )
 }
 
-export default Post
+export default PostVertical
