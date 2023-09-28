@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Ingredients from '../Ingredients'
 
 const Recipe = (props) => {
   const [loading, setLoading] = useState(false)
@@ -19,16 +20,6 @@ const Recipe = (props) => {
     loadUser()
   }, [props.user_id])
 
-  function displayIngredients() {
-    const ingredients = props.ingredients
-    if (ingredients) {
-      let list = ingredients.map((ingredient, index) => {
-        return <li key={index}>{ingredient}</li>
-      })
-      return list
-    }
-  }
-
   function displayRecipe() {
     return (
       <main>
@@ -46,10 +37,7 @@ const Recipe = (props) => {
           Image URL: {props.img}
         </div>
         <div>
-          Ingredients:
-          <ol>
-            {displayIngredients()}
-          </ol>
+          <Ingredients ingredients={props.ingredients}/>
         </div>
       </main>
     )
