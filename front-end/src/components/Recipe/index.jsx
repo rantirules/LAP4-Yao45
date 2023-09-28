@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-import Ingredients from '../Ingredients'
+import { Ingredients, Steps } from '..'
 
 const Recipe = (props) => {
   const [loading, setLoading] = useState(false)
@@ -38,6 +38,9 @@ const Recipe = (props) => {
         </div>
         <div>
           <Ingredients ingredients={props.ingredients}/>
+        </div>
+        <div>
+          <Steps steps={props.steps}/>
         </div>
       </main>
     )
