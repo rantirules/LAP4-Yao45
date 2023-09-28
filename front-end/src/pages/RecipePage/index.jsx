@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Recipe, SaveRecipeButton } from '../../components'
 
-const RecipePage = ({ user_id }) => {
+const RecipePage = () => {
   const [recipe, setRecipe] = useState({})
   const recipe_id = 1 // remove this once id is passed
+  const user_id = 4 // remove and pass instead
 
   useEffect(() => {
     async function loadRecipe() {
@@ -16,11 +17,11 @@ const RecipePage = ({ user_id }) => {
     loadRecipe()
   }, [])
   return (
-      // both components must know the recipe id
-      // the button must also know the user_id
+    // both components must know the recipe id
+    // the button must also know the user_id
     <>
       <Recipe rid={recipe.id} name={recipe.name} culture={recipe.culture} desc={recipe.description} img={recipe.img_url} user_id={recipe.user_id} />
-      <SaveRecipeButton rid={recipe.id} user_id={user_id} />
+      <SaveRecipeButton rid={recipe.id} uid={user_id} />
     </>
 
   )
