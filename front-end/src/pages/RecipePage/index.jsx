@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import { Recipe } from '../../components'
+import { Recipe, SaveRecipeButton } from '../../components'
 
 const RecipePage = () => {
   return (
-    <Recipe />
+    <>
+      <Recipe />
+      <SaveRecipeButton />
+    </>
+
   )
 }
 
