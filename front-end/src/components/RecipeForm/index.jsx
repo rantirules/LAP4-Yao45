@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
-import IngredientFields from '../IngredientFields'
+import { IngredientFields, StepFields } from '..'
 
 const RecipeForm = () => {
   const [name, setName] = useState('')
   const [culture, setCulture] = useState('')
   const [ingredients, setIngredients] = useState([{ ingredient: '', amount: '' }])
-  // const [steps, setSteps] = useState([])
+  const [steps, setSteps] = useState([{ step: '' }])
   const [description, setDescription] = useState('')
 
   function handleName(e) {
@@ -28,7 +28,7 @@ const RecipeForm = () => {
     e.preventDefault()
     if (e.target.className === "submit-btn") {
 
-      console.log(name, culture, description, ingredients)
+      console.log(name, culture, description, ingredients, steps)
       // console.log(e.target)
       setName('')
       setCulture('')
@@ -54,6 +54,9 @@ const RecipeForm = () => {
       </div>
       <div>
         <IngredientFields ingredients={ingredients} setIngredients={setIngredients}/>
+      </div>
+      <div>
+        <StepFields steps={steps} setSteps={setSteps}/>
       </div>
       <button type="submit" className="submit-btn" onClick={handleSubmit}>Submit Recipe</button>
     </form>
