@@ -4,4 +4,5 @@ export { default as ChatMessage } from './ChatMessage'
 export { default as ProfileIcon } from './ProfileIcon'
 export { default as Navbar } from "./Navbar";
 export { default as Register } from "./Register"
+export { default as Login } from "./Login"
 
