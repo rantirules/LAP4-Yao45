@@ -10,6 +10,7 @@ import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
 import {HomePage, RegisterPage, Discover} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
+import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 
 export const UserContext = createContext()
 const user = 'charlie1'
@@ -21,13 +22,13 @@ function App() {
   <Routes>
   <Route path="/" element={
   <Navbar>
-  <NavItem icon={<FaEnvelope/>}/>
+    <SecondaryNav/>
+  {/* <NavItem icon={<FaEnvelope/>}/>
   <NavItem icon={<FaBell/>}/>
   <NavItem icon={<FaUser/>}>
-    {/*dropdown menu*/}
     <DropdownMenu />
     
-    </NavItem>
+    </NavItem> */}
     </Navbar> 
               }>
     <Route index element={<HomePage />}/>
