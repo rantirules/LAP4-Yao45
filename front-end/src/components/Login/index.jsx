@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import './index.css';
 
 
 const Login = () => {
@@ -53,8 +53,9 @@ const handleSubmit = async (e) => {
   return (
     
     <div className="form-container">
+        <h1>Welcome to Cultrify</h1><br/>
             <form className="form" onSubmit={handleSubmit}>
-            
+                <label> Username </label><br/>
                 <input 
                     type="text" 
                     placeholder="username"
@@ -63,6 +64,7 @@ const handleSubmit = async (e) => {
                     onChange={handleChange}
                     value={formData.username}
                 /><br/>
+                <label> Password </label><br/>
                 <input 
                     type="password" 
                     placeholder="Password"

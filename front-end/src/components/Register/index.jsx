@@ -92,7 +92,9 @@ const Register = () => {
 
     return (
         <div className="form-container">
+            <h1>Welcome to Cultrify</h1>
             <form className="form" onSubmit={handleSubmit}>
+            <label> Name </label><br/>
                 <input
                     type="text"
                     placeholder="Name"
@@ -101,6 +103,7 @@ const Register = () => {
                     onChange={handleChange}
                     value={formData.name}
                 /><br />
+                <label> Email </label><br/>
                 <input
                     type="email"
                     placeholder="Email address"
@@ -109,6 +112,7 @@ const Register = () => {
                     onChange={handleChange}
                     value={formData.email}
                 /><br />
+                <label> Username </label><br/>
                 <input
                     type="text"
                     placeholder="username"
@@ -119,6 +123,7 @@ const Register = () => {
                     onBlur={checkUsernameAvailability} 
                 /><br />
                 {!usernameAvailable && <div className="availability-error">Username not available</div>}
+                <label> Password </label><br/>
                 <input
                     type="password"
                     placeholder="Password"
@@ -127,6 +132,7 @@ const Register = () => {
                     onChange={handleChange}
                     value={formData.password}
                 /><br />
+                <label> Confirm Password </label><br/>
                 <input
                     type="password"
                     placeholder="Confirm password"
@@ -136,7 +142,7 @@ const Register = () => {
                     value={formData.passwordConfirm}
                 /><br />
                 {!emailAvailable && <div className="availability-error">Email not available</div>}
-                <h2>Choose your country / countries</h2>
+                <label>Choose your country / countries</label>
                 <div className="dropdown-container">
                     <Select
                         options={optionList}
