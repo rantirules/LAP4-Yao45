@@ -27,6 +27,9 @@ const DropdownMenu = () => {
     }
   return (
     <div className='dropdown' style = {{ height: menuHeight}}>
+
+
+
         <CSSTransition in={activeMenu === 'main'} 
         unmountOnExit 
         timeout={500} 
@@ -44,7 +47,7 @@ const DropdownMenu = () => {
             <div role="secondary-menu" className='menu'>
       <DropDownItem leftIcon={<FaArrowLeft/>} goToMenu="main"/>
       <DropDownItem> Settings </DropDownItem>
-
+     
       </div>
       </CSSTransition>
     </div>
