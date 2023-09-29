@@ -2,28 +2,28 @@
 
 .search-bar {
     height: 20px;
-    background-color: #F6F3E4;
+    background-color: #FFD3D3;
     width: 30%;
     display:flex;
     justify-content: flex-start;
-    border: 1px solid #FF5757;
-    border-radius: 20px; /* Adjust the border-radius as needed */
+    border-radius: 10px; /* Adjust the border-radius as needed */
     padding: 8px;
     margin: 10px;
   }
 
   .search-icon {
-    color: #FF5757;
+    color: #FF8080;
+    stroke-width: 1px;
   }
   
   .search-bar input {
-    background-color: #F6F3E4;
+    background-color: #FFD3D3;
     font-family: Arial, Helvetica, sans-serif;
     border: none;
     outline: none;
     flex: 1;
     padding: 4px;
-    border-radius: 20px; /* Adjust the border-radius to match the container */
+    border-radius: 0px; /* Adjust the border-radius to match the container */
   }
 
  

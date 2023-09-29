@@ -12,6 +12,13 @@
     "start": "vite"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.11",
+    "@mui/material": "^5.14.11",
+    "install": "^0.13.0",
+    "npm": "^10.1.0",
+
     "axios": "^1.5.1",
     "leaflet": "^1.9.4",
     "react": "^18.2.0",

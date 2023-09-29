@@ -43,14 +43,14 @@ const MapPage = () => {
         <Map selectedPosition={selectedPosition}/>
       </div>
       <div id='search-cont'>
-        <SearchMap 
+        {/* <SearchMap 
           handleInput={handleInput} 
           inputText={inputText} 
           handleSubmit={handleSubmit} 
           listPlace={listPlace} 
           selectedPosition={selectedPosition}
           setSelectedPosition={setSelectedPosition}
-          />
+          /> */}
       </div>
     </div>
   )
