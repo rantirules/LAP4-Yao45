@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const RecipeForm = () => {
   const [name, setName] = useState('')
   const [culture, setCulture] = useState('')
-  // const [ingredients, setIngredients] = useState([{ingredient: ''}])
+  const [ingredients, setIngredients] = useState([{ ingredient: '', amount: '' }])
   // const [steps, setSteps] = useState([])
   const [description, setDescription] = useState('')
 
@@ -15,9 +15,22 @@ const RecipeForm = () => {
     setCulture(e.target.value)
   }
   
-  // function handleIngredients(e) {
-  //   setIngredients(prev => [...prev, e.target.value])
-  // }
+  function handleIngredients(index, event) {
+    let data = [...ingredients]
+    data[index][event.target.name] = event.target.value
+    setIngredients(data)
+  }
+
+  function addIngredientField() {
+    let newField = { ingredient: '', amount: ''}
+    setIngredients([...ingredients, newField])
+  }
+
+  function removeFields(index) {
+    let data = [...ingredients]
+    data.splice(index, 1)
+    setIngredients(data)
+  }
 
   // function handleName(e) {
   //   setName(e.target.value)
@@ -29,40 +42,60 @@ const RecipeForm = () => {
 
   function handleSubmit(e) {
     e.preventDefault()
-    console.log(name, culture, description)
+    if (e.target.className === "submit-btn") {
+
+      console.log(name, culture, description, ingredients)
+      // console.log(e.target)
+      setName('')
+      setCulture('')
+      setDescription('')
+      setIngredients([{ ingredient: '', amount: '' }])
+    }
   }
 
   return (
-    <form action="">
+    <>
+    <form onSubmit={handleSubmit}>
       <p>Recipe Name:</p>
       <div>
-        <input type="text" value={name} onChange={handleName}/>
+        <input type="text" value={name} onChange={handleName} required/>
       </div>
       <div>
         <p>Culture/Cuisine:</p>
-        <input type="text" value={culture} onChange={handleCulture}/>
+        <input type="text" value={culture} onChange={handleCulture} required/>
       </div>
       <div>
         <p>Description:</p>
-        <input type="text" value={description} onChange={handleDescription}/>
+        <input type="text" value={description} onChange={handleDescription} required/>
       </div>
-      {/* <div>
+      <div>
         <p>Ingredients:</p>
         {ingredients.map((input, index) => {
           return (
-            <div key={index}>
-              <input
-
-                placeholder='Ingredient'
-                value={input.}
-              />
-            </div>
+            <>
+              <div key={index}>
+                <input
+                  name='ingredient'
+                  placeholder='Ingredient'
+                  value={input.ingredient}
+                  onChange={event => handleIngredients(index, event)}
+                  />
+                <input
+                  name='amount'
+                  placeholder='Amount'
+                  value={input.amount}
+                  onChange={event => handleIngredients(index, event)}
+                  />
+                <button onClick={() => removeFields(index)}>Remove</button>
+              </div>
+            </>
           )
         })}
-        <input type="text" value={ingredients} onChange={handleIngredients}/>
-      </div> */}
-      <button type="submit" onClick={handleSubmit}>Submit Recipe</button>
+        <button onClick={addIngredientField}>Add More</button>
+      </div>
+      <button type="submit" className="submit-btn" onClick={handleSubmit}>Submit Recipe</button>
     </form>
+    </>
   )
 }
 
