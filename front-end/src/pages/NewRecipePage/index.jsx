@@ -3,7 +3,10 @@ import { RecipeForm } from '../../components'
 
 const NewRecipePage = () => {
   return (
-    <RecipeForm />
+    <>
+      <h2>Add a new recipe:</h2>
+      <RecipeForm />
+    </>
   )
 }
 
