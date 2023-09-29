@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
-import axios from 'axios'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+
 
 
 const Login = () => {
@@ -24,6 +26,7 @@ const Login = () => {
         
 //    }
 const handleSubmit = async (e) => {
+    // const navigateTo = useNavigate();
     e.preventDefault();
     console.log(formData);
     try {
@@ -31,11 +34,16 @@ const handleSubmit = async (e) => {
             username: formData.username,
             password: formData.password
         });
-        console.log(response.data);
+        // console.log(response.data);
         console.log('response status', response.status)
         // console.log('login response', response)
+        const token = response.data.token
         // console.log('token', response.data.token)
+        localStorage.setItem('token', token);
+        console.log('Login successful');
         // redirect user
+        // const navigateTo = useNavigate();
+        // navigateTo('http://127.0.0.1:5000/discover');
     } catch (error) {
         console.log("Error logging in", error);
         // display error message
