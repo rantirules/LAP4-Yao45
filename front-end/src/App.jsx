@@ -8,8 +8,8 @@ import {FaBell, FaUser, FaEnvelope, FaCog} from 'react-icons/fa';
 import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
-import {HomePage, RegisterPage, Discover, LoginPage} from './pages';
-
+import {HomePage, RegisterPage, LoginPage, Discover} from './pages';
+import SearchPage from './pages/SearchPage/SearchPage';
 
 export const UserContext = createContext()
 const user = 'charlie1'
@@ -34,6 +34,7 @@ function App() {
       <Route path="/discover" element={<Discover/>}/>
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/search" element={<SearchPage/>}/>
         </Route>
 </Routes>
 </UserContext.Provider>

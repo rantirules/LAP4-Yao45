@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
 import { act } from 'react-dom/test-utils';
 import {CSSTransition} from 'react-transition-group';
+import { FaCog, FaArrowLeft, FaArrowRight, FaUserCircle } from 'react-icons/fa';
+
 const DropdownMenu = () => {
 
     const [activeMenu, setActiveMenu] = useState('main');
@@ -16,7 +18,7 @@ const DropdownMenu = () => {
     function DropDownItem(props) {
         return (
             <a href='#' className='menu-item' onClick={() => props.goToMenu && setActiveMenu(props.goToMenu)}>
-                <span className='icon-button'>{props.leftIcon}</span>
+                <span className='icon-button-sec'>{props.leftIcon}</span>
                 {props.children}
                 <span className='icon-right'>{props.rightIcon}</span>
 
@@ -31,17 +33,17 @@ const DropdownMenu = () => {
         classNames="menu-primary" 
         onEnter={calcHeight}>
         <div className='menu'>
-      <DropDownItem>My profile</DropDownItem>
-      <DropDownItem leftIcon="😁" rightIcon="🖕" goToMenu="settings">Settings</DropDownItem>
+      <DropDownItem leftIcon={<FaUserCircle/>} rightIcon={<FaArrowRight/>} role="menuitem">My profile</DropDownItem>
+      <DropDownItem role="settings" leftIcon={<FaCog/>} rightIcon={<FaArrowRight/>} goToMenu="settings"> Settings</DropDownItem>
       </div>
       </CSSTransition>
       <CSSTransition in={activeMenu === 'settings'} 
       unmountOnExit 
       timeout={500} 
       classNames="menu-secondary">
-            <div className='menu'>
-      <DropDownItem leftIcon="⬅️" goToMenu="main"/>
-      <DropDownItem>Settings</DropDownItem>
+            <div role="secondary-menu" className='menu'>
+      <DropDownItem leftIcon={<FaArrowLeft/>} goToMenu="main"/>
+      <DropDownItem> Settings </DropDownItem>
 
       </div>
       </CSSTransition>
