@@ -8,7 +8,7 @@ import {FaBell, FaUser, FaEnvelope, FaCog} from 'react-icons/fa';
 import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
-import {HomePage, RegisterPage, Discover} from './pages';
+import {HomePage, RegisterPage, Discover, RecipePage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
 
 export const UserContext = createContext()
@@ -19,22 +19,23 @@ function App() {
  return (
   <UserContext.Provider value={user}>
   <Routes>
-  <Route path="/" element={
-  <Navbar>
-  <NavItem icon={<FaEnvelope/>}/>
-  <NavItem icon={<FaBell/>}/>
-  <NavItem icon={<FaUser/>}>
-    {/*dropdown menu*/}
-    <DropdownMenu />
-    
-    </NavItem>
-    </Navbar> 
-              }>
-    <Route index element={<HomePage />}/>
+    <Route path="/" element={
+      <Navbar>
+      <NavItem icon={<FaEnvelope/>}/>
+      <NavItem icon={<FaBell/>}/>
+      <NavItem icon={<FaUser/>}>
+        {/*dropdown menu*/}
+        <DropdownMenu />
+        
+      </NavItem>
+      </Navbar> 
+    }>
+      <Route index element={<HomePage />}/>
       <Route path="/discover" element={<Discover/>}/>
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/search" element={<SearchPage/>}/>
-        </Route>
+        <Route path="/recipe" element={<RecipePage />} />
+    </Route>
 </Routes>
 </UserContext.Provider>
 

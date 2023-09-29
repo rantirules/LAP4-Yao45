@@ -4,4 +4,7 @@ export { default as ChatMessage } from './ChatMessage'
 export { default as ProfileIcon } from './ProfileIcon'
 export { default as Navbar } from "./Navbar";
 export { default as Register } from "./Register"
-
+export { default as Recipe } from "./Recipe"
+export { default as SaveRecipeButton } from './SaveRecipeButton'
+export { default as Ingredients } from './Ingredients'
+export { default as Steps } from './Steps'
