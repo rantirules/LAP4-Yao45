@@ -27,14 +27,37 @@ const RecipeForm = () => {
   function handleSubmit(e) {
     e.preventDefault()
     if (e.target.className === "submit-btn") {
-
-      console.log(name, culture, description, ingredients, steps)
+      const validIngredients = getValidIngredients()
+      const validSteps = getValidSteps()
+      // if (name.length > 0 && culture.length > 0 && description.length > 0)
+      console.log(name, culture, description, validIngredients, validSteps)
       // console.log(e.target)
       setName('')
       setCulture('')
       setDescription('')
       setIngredients([{ ingredient: '', amount: '' }])
+      setSteps([{ step: '' }])
     }
+  }
+
+  function getValidIngredients() {
+    let validIngredients = []
+    ingredients.forEach((i) => {
+      if (i.ingredient.length > 0 && i.amount.length > 0) {
+        validIngredients.push(i)
+      }
+    })
+    return validIngredients
+  }
+
+  function getValidSteps() {
+    let validSteps = []
+    steps.forEach((i) => {
+      if (i.step.length > 0) {
+        validSteps.push(i)
+      }
+    })
+    return validSteps
   }
 
   return (

@@ -8,7 +8,7 @@ const StepFields = ({steps, setSteps}) => {
   }
 
   function addStepField() {
-    let newField = { step: '', amount: ''}
+    let newField = { step: '' }
     setSteps([...steps, newField])
   }
 
