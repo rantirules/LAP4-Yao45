@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Map, SearchMap} from '../../components'
+import { Map, SearchMap } from '../../components'
 import axios from 'axios'
 
 const MapPage = () => {
@@ -38,11 +38,11 @@ const MapPage = () => {
   // console.log('selectedPosition after selection, in MapPage.jsx', selectedPosition)
 
   return (
-    <div style={{display:'flex', backgroundColor:'yellow', flexDirection:'row', width:'50vw', height:'50vh'}}>
-      <div style={{width:'100vw', height:'100vh'}}>
+    <div id='map-page-cont'>
+      <div id='map-cont'>
         <Map selectedPosition={selectedPosition}/>
       </div>
-      <div style={{display:'flex', width:'50vw', height:'100vh', alignItems:'center', justifyContent:'center'}}>
+      <div id='search-cont'>
         <SearchMap 
           handleInput={handleInput} 
           inputText={inputText} 
@@ -57,3 +57,4 @@ const MapPage = () => {
 }
 
 export default MapPage
+

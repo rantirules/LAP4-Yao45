@@ -1,0 +1,47 @@
+/* 
+#map-page-cont {
+    background-color: blueviolet;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    position: relative; 
+}
+
+#map-cont {
+    background-color: aliceblue;
+    height: 100%;
+    width: 100%; 
+    position: relative;
+    z-index: 0;
+}
+
+#search-cont {
+    background-color: aqua;
+    height: auto;
+    width: 30%; 
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    z-index: 9999;
+} */
+
+
+
+#map-page-cont {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+  }
+  
+#map-cont {
+    flex: 1;
+    position: relative;
+    height: 60px;
+  }
+  
+#search-cont {
+    background-color: aqua;
+    width: 30%;
+    position: sticky;
+    top: 0;
+  }

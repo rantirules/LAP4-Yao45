@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
-import StoreLocator from '.';
+import StoreLocator from '../StoreLocator';
 
 const Map = ({selectedPosition}) => {
     // console.log('the lat value from the map page is:', latValue)
@@ -10,36 +10,35 @@ const Map = ({selectedPosition}) => {
 
     const position = [51.5072, -0.1276]
 
-    function ResetCenterView({selectedPosition}) {
-      const map = useMap()
-
-      useEffect(() => {
-        if (selectedPosition) {
-          map.setView(
-            L.latLng(selectedPosition?.lat, selectedPosition?.lon),
-            map.getZoom(),
-            {
-              animate: true
-            }
-          )
-        }
-      }, [selectedPosition])
-
-      return null;
-    }
+    function ResetCenterView({ selectedPosition }) {
+        const map = useMap();
+      
+        useEffect(() => {
+          if (selectedPosition && selectedPosition.lat && selectedPosition.lon) {
+            map.setView(
+              [selectedPosition.lat, selectedPosition.lon],
+              map.getZoom(),
+              {
+                animate: true,
+              }
+            );
+          }
+        }, [selectedPosition, map]);
+      
+        return null;
+      }
+      
 
 
   return (
-    <div style={{height: '60vh'}}>
-      <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: '60vh' }}>
+    <div>
+      <MapContainer center={position} zoom={13} scrollWheelZoom={true} style={{ height: '100vh' }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=ZKQ4muTT8XYkrSt11Kw0"
         />
       {selectedPosition && (
-        // <Marker position={location}>
-
-        // </Marker>
+        // <Marker position={location} />
         <StoreLocator selectedPosition={selectedPosition}/>
       )}
       
@@ -52,3 +51,6 @@ const Map = ({selectedPosition}) => {
 };
 
 export default Map;
+
+
+
