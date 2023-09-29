@@ -29,14 +29,17 @@ const RecipeForm = () => {
     if (e.target.className === "submit-btn") {
       const validIngredients = getValidIngredients()
       const validSteps = getValidSteps()
-      // if (name.length > 0 && culture.length > 0 && description.length > 0)
-      console.log(name, culture, description, validIngredients, validSteps)
-      // console.log(e.target)
-      setName('')
-      setCulture('')
-      setDescription('')
-      setIngredients([{ ingredient: '', amount: '' }])
-      setSteps([{ step: '' }])
+      if (name.length > 0 && culture.length > 0 && description.length > 0 && validIngredients.length > 0 && validSteps.length > 0) {
+        console.log(name, culture, description, validIngredients, validSteps)
+        // console.log(e.target)
+        setName('')
+        setCulture('')
+        setDescription('')
+        setIngredients([{ ingredient: '', amount: '' }])
+        setSteps([{ step: '' }])
+      } else {
+        console.log("Please enter all fields.")
+      }
     }
   }
 
