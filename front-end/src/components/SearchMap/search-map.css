@@ -1,0 +1,7 @@
+#search-map {
+    background-color: aqua;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
