@@ -8,3 +8,4 @@ export { default as Recipe } from "./Recipe"
 export { default as SaveRecipeButton } from './SaveRecipeButton'
 export { default as Ingredients } from './Ingredients'
 export { default as Steps } from './Steps'
+export { default as RecipeForm } from './RecipeForm'
