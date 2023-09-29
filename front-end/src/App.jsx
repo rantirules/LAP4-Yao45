@@ -9,7 +9,7 @@ import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
 
-import {HomePage, RegisterPage, LoginPage, Discover, RecipePage} from './pages';
+import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
 
 export const UserContext = createContext()
@@ -37,6 +37,7 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage/>}/>
         <Route path="/recipe" element={<RecipePage />} />
+        <Route path="/map" element={<MapPage />} />
     </Route>
 </Routes>
 </UserContext.Provider>
