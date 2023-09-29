@@ -94,7 +94,7 @@ const Register = () => {
         <div className="form-container">
             <h1>Welcome to Cultrify</h1>
             <form className="form" onSubmit={handleSubmit}>
-            <label> Name </label><br/>
+            <label> Name <br/>
                 <input
                     type="text"
                     placeholder="Name"
@@ -102,8 +102,8 @@ const Register = () => {
                     name="name"
                     onChange={handleChange}
                     value={formData.name}
-                /><br />
-                <label> Email </label><br/>
+                /></label><br />
+                <label> Email <br/>
                 <input
                     type="email"
                     placeholder="Email address"
@@ -111,8 +111,8 @@ const Register = () => {
                     name="email"
                     onChange={handleChange}
                     value={formData.email}
-                /><br />
-                <label> Username </label><br/>
+                /></label><br />
+                <label> Username <br/>
                 <input
                     type="text"
                     placeholder="username"
@@ -121,9 +121,9 @@ const Register = () => {
                     onChange={handleChange}
                     value={formData.username}
                     onBlur={checkUsernameAvailability} 
-                /><br />
+                /></label><br />
                 {!usernameAvailable && <div className="availability-error">Username not available</div>}
-                <label> Password </label><br/>
+                <label> Password <br/>
                 <input
                     type="password"
                     placeholder="Password"
@@ -131,8 +131,8 @@ const Register = () => {
                     name="password"
                     onChange={handleChange}
                     value={formData.password}
-                /><br />
-                <label> Confirm Password </label><br/>
+                /></label><br />
+                <label> Confirm Password <br/>
                 <input
                     type="password"
                     placeholder="Confirm password"
@@ -140,9 +140,9 @@ const Register = () => {
                     name="passwordConfirm"
                     onChange={handleChange}
                     value={formData.passwordConfirm}
-                /><br />
+                /></label><br />
                 {!emailAvailable && <div className="availability-error">Email not available</div>}
-                <label>Choose your country / countries</label>
+                <label>Choose your country / countries
                 <div className="dropdown-container">
                     <Select
                         options={optionList}
@@ -153,6 +153,7 @@ const Register = () => {
                         isMulti
                     />
                 </div>
+                </label>
                 <button className="form-submit"> Sign up </button>
             </form>
         </div>
