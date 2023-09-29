@@ -1,18 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Mooli&family=Sofia+Sans:wght@1;400&family=VT323&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Mooli&family=Sofia+Sans:wght@1;400&family=VT323&display=swap');
 * {
     /* font-family: 'Fascinate', sans-serif; */
     font-family: 'Montserrat', sans-serif
+=======
+li{
+    font-family: 'Fascinate', sans-serif;
+>>>>>>> c242aec09101e93ae3e871fc8357329d3d53ff69
 }
 * {
   margin: 0;
 
 text-align: center;
 }
+body {
+  background-color: #F6F3E4;
+}
+h1 {
+  color: #FF5757;
 
+}
 .navbar {
-  display: flex;
+display: flex;
  height: var(--nav-size);
  background-color: var(--bg);
  padding: 0 1rem;
@@ -20,12 +31,14 @@ text-align: center;
  justify-content: space-between;
  align-items: center;
 }
+
 .navbar-links {
-  display: flex;
+display: flex;
 color: #F6F3E4;
 padding-bottom: 1px;
 border-bottom: 1px solid transparent;
 transition: ease;
+margin-right: 28px;
 }
 
 .navbar-links li {
@@ -35,8 +48,7 @@ transition: ease;
 }
 .navbar-links li:hover {
   border-bottom: solid 1px #F6F3E4;
-  background-color: #79776e;
-  /* transform: scale(1.3); */
+  filter: invert(.9);  /* transform: scale(1.3); */
 }
 .navbar-nav {
   max-width: 100%;
@@ -63,7 +75,7 @@ ul {
 }
 
 a {
-  color: var(--text-color);
+  color: #F6F3E4;
   text-decoration: none;
 }
 
@@ -94,16 +106,14 @@ a {
 
 .icon-button:hover {
   filter: invert(.9);
-  transform: scale(1.5);
 }
 
 .dropdown {
   position: absolute;
-  top: 58px;
-  width: 300px;
-  transform: translateX(-45%);
+  top: 52px;
+  width: 200px;
+  transform: translateX(-75%);
   background-color: var(--bg);
-  border: var(--border);
   border-radius: var(--border-radius);
   padding: 1rem;
   overflow: hidden;
@@ -112,6 +122,7 @@ a {
 }
 
 .menu-item {
+  font-family: Arial, Helvetica, sans-serif;
   height: 50px;
   display: flex;
   align-items: center;
@@ -125,9 +136,29 @@ a {
 .menu-item:hover {
   background-color:#ab1d1d;
 }
-
+.icon-button {
+  margin-right: 5px;
+}
 .icon-right {
   margin-left: auto;
+  height: 10px;
+}
+
+.icon-button-sec {
+  --button-size: calc(var(--nav-size) * 0.5);
+  width: var(--button-size);
+  height: var(--button-size);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 12px;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 300ms;
+  width: 35px;
+  height: 35px;
+  font-size: 100px;
+  transition: 0.2s ease-in-out;
 }
 
 .menu-primary-enter {
@@ -162,4 +193,27 @@ a {
 .menu-secondary-exit-active {
   transform: translateX(110%);
   transition: all var(--speed) ease;
+}
+
+
+/* Add this media query to your existing CSS */
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide the links when screen width is less than or equal to 768px */
+  }
+  .search-bar input {
+    width: 10px;
+    display: block;
+
+  }
+  /* Style the search icon when the links are hidden */
+  .search-icon {
+    align-items: flex-start;
+    font-size: 20px; /* Adjust the size of the search icon */
+    color: #fff; /* Adjust the color of the search icon */
+    cursor: pointer; /* Add a pointer cursor for interaction */
+  }
+  input[type="text"]::placeholder {
+    visibility: hidden;
+  }
 }
