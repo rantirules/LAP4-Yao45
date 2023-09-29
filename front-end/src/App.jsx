@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
 import {HomePage, RegisterPage, Discover, RecipePage} from './pages';
+import SearchPage from './pages/SearchPage/SearchPage';
 
 export const UserContext = createContext()
 const user = 'charlie1'
@@ -31,8 +32,9 @@ function App() {
     }>
       <Route index element={<HomePage />}/>
       <Route path="/discover" element={<Discover/>}/>
-      <Route path="/register" element={<RegisterPage />} />
-      <Route path="/recipe" element={<RecipePage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/search" element={<SearchPage/>}/>
+        <Route path="/recipe" element={<RecipePage />} />
     </Route>
 </Routes>
 </UserContext.Provider>
