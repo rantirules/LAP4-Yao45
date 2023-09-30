@@ -25,10 +25,13 @@ const SecondaryNav = () => {
   
   const handleNavItemClick = () => {
     console.log("Called")
+    console.log(displayArrow)
 
     if (navbarPosition === 'open') {
       closeNavbar();
       console.log("Closing")
+      console.log("after close is executed: ",displayArrow)
+
     } else {
       openNavbar();
       // If the navbar is already closed, you can choose to open it again or do nothing
@@ -37,7 +40,6 @@ const SecondaryNav = () => {
 
   return (
     <>
-    {console.log(KeyboardArrowDownIcon)}
     
     <section className={`secondary-nav ${navbarPosition}`}>
         <div className='icon-wrapper'>
@@ -45,12 +47,12 @@ const SecondaryNav = () => {
   <NavItem className="icons"icon={<FaMapMarkerAlt/>}/>
   <NavItem className="icons"icon={<FaUserCircle/>}> </NavItem>
   </div>
-  <div className='arrow-wrap' onClick={handleNavItemClick}>
-  <NavItem className="arrow-up"  icon={<KeyboardDoubleArrowUpIcon className={`${displayArrow}`}/>} /> 
+  <div className={`arrow-wrap ${displayArrow}`} onClick={handleNavItemClick}>
+  <NavItem className="arrow-up"  icon={<KeyboardDoubleArrowUpIcon selected />} /> 
 
   </div>
-  <div onClick={handleNavItemClick}>
-  <NavItem className="arrow-down"  icon={<KeyboardArrowDownIcon className={`${displayArrowDown}`}/>} /> 
+  <div className={`arrow-down-wrap ${displayArrowDown}`} onClick={handleNavItemClick}>
+  <NavItem className="arrow-down"  icon={<KeyboardArrowDownIcon selected />} /> 
   </div>
     </section>
     </>

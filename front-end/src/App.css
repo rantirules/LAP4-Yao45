@@ -55,7 +55,7 @@ margin-right: 28px;
 }
 
 .arrow-wrap {
-transform: translate(50%,1045%);
+transform: translate(50%,1025%);
 }
 
 .arrow-up {
@@ -101,7 +101,7 @@ height: 3.1rem;
 .show {
   display: flex;
 }
-.hide {
+.hide{
   display: none;
 }
 
@@ -109,6 +109,10 @@ height: 3.1rem;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.arrow-down-wrap {
+  transform: translateY(-90%)
 }
 .icon-wrapper {
   display: flex;
