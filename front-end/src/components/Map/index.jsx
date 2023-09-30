@@ -32,7 +32,7 @@ const Map = ({selectedPosition}) => {
 
   return (
     <div>
-      <MapContainer center={position} zoom={13} scrollWheelZoom={true} style={{ height: '100vh' }}>
+      <MapContainer center={position} zoom={13} scrollWheelZoom={true} style={{ height: '94vh' }}>
         <TileLayer
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=ZKQ4muTT8XYkrSt11Kw0"

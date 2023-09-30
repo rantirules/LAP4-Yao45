@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Marker, Popup } from 'react-leaflet';
+import { Icon } from 'leaflet'
+
+
 
 const StoreLocator = ({ selectedPosition }) => {
   const [stores, setStores] = useState([]);
@@ -60,7 +63,6 @@ const StoreLocator = ({ selectedPosition }) => {
       out center;
     `;
 
-
     axios
       .get(`https://overpass-api.de/api/interpreter?data=${encodeURIComponent(overpassQuery)}`)
       .then((response) => {
@@ -73,6 +75,12 @@ const StoreLocator = ({ selectedPosition }) => {
       });
   }, [selectedPosition]);
 
+
+  const customIcon = new Icon({
+    iconUrl: 'location.png', // Replace with the URL of your marker icon
+    iconSize: [45, 45], // Set the size of the icon
+  });
+
   return (
     <>
       {loading ? (
@@ -82,11 +90,9 @@ const StoreLocator = ({ selectedPosition }) => {
 
           if (typeof store.lat === 'number' && typeof store.lon === 'number') {
             return (
-              <Marker key={store.id} position={[store.lat, store.lon]}>
+              <Marker key={store.id} position={[store.lat, store.lon]} icon={customIcon} >
                 <Popup>
                   <h3>{store.tags.name}</h3>
-                  <p>Address: {store.tags.address}</p>
-
                 </Popup>
               </Marker>
             );

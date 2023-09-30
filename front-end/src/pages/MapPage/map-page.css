@@ -9,14 +9,14 @@
 #map-cont {
     flex: 1;
     position: relative;
-    height: 100vh;
+    height: 80vh;
 }
 
 #search-cont {
     background-color: var(--bg);
     border: none;
     border-radius: 0 0 0 80px; 
-    width: 19rem;
+    width: 23.5rem;
     position: absolute;
     top: 0;
     right: 0;
