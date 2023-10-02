@@ -16,10 +16,12 @@ import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 export const UserContext = createContext()
 const user = 'charlie1'
 
+import { NavbarProvider } from './components/Navbar/NavbarContext'; 
 
 function App() {
  return (
   <UserContext.Provider value={user}>
+    <NavbarProvider>
   <Routes>
 
   <Route path="/" element={
@@ -44,6 +46,7 @@ function App() {
         <Route path="/map" element={<MapPage />} />
     </Route>
 </Routes>
+</NavbarProvider>
 </UserContext.Provider>
 
   )

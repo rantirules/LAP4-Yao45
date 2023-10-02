@@ -4,8 +4,12 @@
     height: 75vh;
     /* background-color: aquamarine; */
     width: 80%;
+    transition: width 0.3s ease;
 }
 
+#home-page.closed {
+    width: 100%; /* Width when navbar is collapsed */
+  }
 
 #title {
     /* background-color: aqua; */

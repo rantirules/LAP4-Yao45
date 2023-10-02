@@ -1,24 +1,32 @@
-import React, { useState } from 'react'
+import React, { useState, createContext, useContext } from 'react'
 import NavItem from '../NavItem'
 import { FaGlobeAfrica, FaUserCircle, FaFacebookMessenger, FaMapMarkedAlt, FaMapMarkerAlt, FaArrowAltCircleUp, FaArrowCircleDown } from 'react-icons/fa'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import DropdownMenu from '../DropdownMenu'
 DropdownMenu
+
+
+import { useNavbar } from '../NavbarContext';
+
+
+
 const SecondaryNav = () => {
-  const [navbarPosition, setNavbarPosition] = useState('open');
+  // const [navbarPosition, setNavbarPosition] = useState('open');
+
+  const {navbarPosition, updateNavbarPosition } = useNavbar()
   const [displayArrow, setDisplayArrow] = useState("show");
   const [displayArrowDown, setDisplayArrowDown] = useState("hide");
 
 
   const closeNavbar = () => {
-    setNavbarPosition('closed');
+    updateNavbarPosition('closed');
     setDisplayArrow("hide");
     setDisplayArrowDown("show");
   };
 
   const openNavbar = () => {
-    setNavbarPosition('open');
+    updateNavbarPosition('open');
     setDisplayArrow("show");
     setDisplayArrowDown("hide")
   }
@@ -38,9 +46,10 @@ const SecondaryNav = () => {
     }
   };
 
+
+  console.log('navbar position line 49 secondary nav', navbarPosition)
+
   return (
-    
-    
     <section className={`secondary-nav ${navbarPosition}`}>
         <div className='icon-wrapper'>
           <NavItem className="icons" icon={<FaFacebookMessenger />} />
@@ -59,3 +68,4 @@ const SecondaryNav = () => {
 }
 
 export default SecondaryNav
+
