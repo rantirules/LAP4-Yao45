@@ -6,7 +6,7 @@ import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp
 import DropdownMenu from '../DropdownMenu'
 import Account from './DisplaySection/Account/Account';
 import DisplaySection from './DisplaySection/DisplaySection';
-
+import { useNavigate } from 'react-router-dom';
 
 const SecondaryNav = ({ userName }) => {
   const [navbarPosition, setNavbarPosition] = useState('open');
@@ -14,6 +14,15 @@ const SecondaryNav = ({ userName }) => {
   const [displayArrowDown, setDisplayArrowDown] = useState("hide");
   const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
 
+  const navigate = useNavigate();
+
+  const takeToMsgs = () => {
+    navigate('/messages');
+  }
+
+  const takeToMaps = () => {
+    navigate('/map');
+  }
 
   const toggleAccountMenu = () => {
     setIsAccountMenuOpen(!isAccountMenuOpen);
@@ -61,8 +70,10 @@ const SecondaryNav = ({ userName }) => {
     
     <section className={`secondary-nav ${navbarPosition}`}>
         <div className='icon-wrapper'>
-          <NavItem className="icons" icon={<FaFacebookMessenger />} />
-          <NavItem className="icons" icon={<FaMapMarkerAlt />} />
+          <div onClick={takeToMsgs}>
+          <NavItem className="icons" icon={<FaFacebookMessenger />} /></div>
+          
+          <div onClick={takeToMaps}><NavItem className="icons" icon={<FaMapMarkerAlt />} /> </div>
           <div onClick={toggleAccountSection}>
           <NavItem className="icons" icon={<FaUserCircle />} /> </div>
         </div>
