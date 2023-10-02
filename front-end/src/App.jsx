@@ -17,6 +17,7 @@ export const UserContext = createContext()
 const user = 'charlie1'
 
 import { NavbarProvider } from './components/Navbar/NavbarContext'; 
+import { Chat } from './components';
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/search" element={<SearchPage/>}/>
         <Route path="/recipe" element={<RecipePage />} />
         <Route path="/new-recipe" element={<NewRecipePage />} />
+        <Route path="/messages" element={<Chat/>}/>
         <Route path="/map" element={<MapPage />} />
     </Route>
 </Routes>
