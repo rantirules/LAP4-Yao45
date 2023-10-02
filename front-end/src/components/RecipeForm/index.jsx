@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { IngredientFields, StepFields } from '..'
+import { IngredientFields, StepFields, UploadImage } from '..'
 
 const RecipeForm = () => {
   const [name, setName] = useState('')
@@ -83,6 +83,10 @@ const RecipeForm = () => {
       </div>
       <div>
         <StepFields steps={steps} setSteps={setSteps}/>
+      </div>
+      <div>
+        <p>Upload an image</p>
+        <UploadImage />
       </div>
       <button type="submit" className="submit-btn" onClick={handleSubmit}>Submit Recipe</button>
     </form>
