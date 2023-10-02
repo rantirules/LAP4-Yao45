@@ -1,12 +1,12 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import NavItem from '../NavItem'
-import {FaGlobeAfrica, FaUserCircle, FaFacebookMessenger,FaMapMarkedAlt, FaMapMarkerAlt, FaArrowAltCircleUp, FaArrowCircleDown } from 'react-icons/fa'
+import { FaGlobeAfrica, FaUserCircle, FaFacebookMessenger, FaMapMarkedAlt, FaMapMarkerAlt, FaArrowAltCircleUp, FaArrowCircleDown } from 'react-icons/fa'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import DropdownMenu from '../DropdownMenu'
 DropdownMenu
 const SecondaryNav = () => {
-  const [navbarPosition, setNavbarPosition] = useState('open'); 
+  const [navbarPosition, setNavbarPosition] = useState('open');
   const [displayArrow, setDisplayArrow] = useState("show");
   const [displayArrowDown, setDisplayArrowDown] = useState("hide");
 
@@ -22,7 +22,7 @@ const SecondaryNav = () => {
     setDisplayArrow("show");
     setDisplayArrowDown("hide")
   }
-  
+
   const handleNavItemClick = () => {
     console.log("Called")
     console.log(displayArrow)
@@ -40,21 +40,23 @@ const SecondaryNav = () => {
 
   return (
     <>
-    
-    <section className={`secondary-nav ${navbarPosition}`}>
-        <div className='icon-wrapper'>
-      <NavItem className="icons" icon={<FaFacebookMessenger/>}/>
-  <NavItem className="icons"icon={<FaMapMarkerAlt/>}/>
-  <NavItem className="icons"icon={<FaUserCircle/>}> </NavItem>
-  </div>
-  <div className={`arrow-wrap ${displayArrow}`} onClick={handleNavItemClick}>
-  <NavItem className="arrow-up"  icon={<KeyboardDoubleArrowUpIcon selected />} /> 
 
-  </div>
-  <div className={`arrow-down-wrap ${displayArrowDown}`} onClick={handleNavItemClick}>
-  <NavItem className="arrow-down"  icon={<KeyboardArrowDownIcon selected />} /> 
-  </div>
-    </section>
+      {console.log(KeyboardArrowDownIcon)}
+
+      <section className={`secondary-nav ${navbarPosition}`}>
+        <div className='icon-wrapper'>
+          <NavItem className="icons" icon={<FaFacebookMessenger />} />
+          <NavItem className="icons" icon={<FaMapMarkerAlt />} />
+          <NavItem className="icons" icon={<FaUserCircle />}> </NavItem>
+        </div>
+        <div className='arrow-wrap' onClick={handleNavItemClick}>
+          <NavItem className="arrow-up" icon={<KeyboardDoubleArrowUpIcon className={`${displayArrow}`} />} />
+
+        </div>
+        <div onClick={handleNavItemClick}>
+          <NavItem className="arrow-down" icon={<KeyboardArrowDownIcon className={`${displayArrowDown}`} />} />
+        </div>
+      </section>
     </>
   )
 }
