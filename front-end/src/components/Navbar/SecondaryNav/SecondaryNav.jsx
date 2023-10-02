@@ -4,11 +4,21 @@ import { FaGlobeAfrica, FaUserCircle, FaFacebookMessenger, FaMapMarkedAlt, FaMap
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import DropdownMenu from '../DropdownMenu'
-DropdownMenu
+import Account from './DisplaySection/Account/Account';
+import DisplaySection from './DisplaySection/DisplaySection';
+
+
 const SecondaryNav = () => {
   const [navbarPosition, setNavbarPosition] = useState('open');
   const [displayArrow, setDisplayArrow] = useState("show");
   const [displayArrowDown, setDisplayArrowDown] = useState("hide");
+  const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
+
+
+  const toggleAccountMenu = () => {
+    setIsAccountMenuOpen(!isAccountMenuOpen);
+    console.log("clicked!")
+  };
 
 
   const closeNavbar = () => {
@@ -45,8 +55,12 @@ const SecondaryNav = () => {
         <div className='icon-wrapper'>
           <NavItem className="icons" icon={<FaFacebookMessenger />} />
           <NavItem className="icons" icon={<FaMapMarkerAlt />} />
-          <NavItem className="icons" icon={<FaUserCircle />}> </NavItem>
+          <NavItem className="icons" icon={<FaUserCircle />} onClick={toggleAccountMenu}/> 
         </div>
+        <div className={`display ${displayArrow}`}>
+        <DisplaySection navbarPosition={navbarPosition} closeNavbar={closeNavbar}/>
+        </div>
+        
         <div className={`arrow-wrap ${displayArrow}`} onClick={handleNavItemClick}>
           <NavItem className="arrow-up" icon={<KeyboardDoubleArrowUpIcon/>} />
 
