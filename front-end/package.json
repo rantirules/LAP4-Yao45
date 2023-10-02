@@ -12,13 +12,10 @@
     "start": "vite"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-=======
     "axios": "^1.5.1",
->>>>>>> c242aec09101e93ae3e871fc8357329d3d53ff69
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",

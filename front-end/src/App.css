@@ -1,14 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fascinate&display=swap');
-<<<<<<< HEAD
-@import url('https://fonts.googleapis.com/css2?family=Mooli&family=Sofia+Sans:wght@1;400&family=VT323&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Mooli&family=Sofia+Sans:wght@1;400&family=VT323&display=swap');
-* {
-    /* font-family: 'Fascinate', sans-serif; */
-    font-family: 'Montserrat', sans-serif
-=======
+
 li{
     font-family: 'Fascinate', sans-serif;
->>>>>>> c242aec09101e93ae3e871fc8357329d3d53ff69
 }
 * {
   margin: 0;

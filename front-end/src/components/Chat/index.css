@@ -1,5 +1,13 @@
-.users {
-    display: flex;
-    justify-content: space-evenly;
-    
+
+
+.chat-header {
+    height: 50vh;
+    width: 50vh;
+    margin: 0 auto;
+    background-color: aqua;
+}
+
+.message-form {
+    position: relative;
+    top: 50px;
 }
