@@ -1,11 +1,14 @@
-  @import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Nunito+Sans:opsz@6..12&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;1,400&display=swap');
 *{
     font-family: 'Nunito', sans-serif;
     margin: 0;
     text-align: center;
 }
-body {
-  background-color: #fff;
+html, body {
+  background-color: #F9F9F9;
+  max-width: 100%;
+  overflow-x: hidden;
+  height: 100vh;
 }
 h1 {
   color: #1C1C1C;
@@ -64,7 +67,7 @@ transform: translate(50%,1045%);
 
 
 :root {
-  --bg: #FF5757;
+  --bg: #FF8080;
   --bg-accent: #484a4d;
   --text-color:#dadce1;
   --nav-size: 50px;
@@ -87,7 +90,7 @@ a {
 .secondary-nav {
   align-items: center;
   transform: translateX(10%);
-  width: 20rem;
+  width: 25rem;
   background-color: #FF8080;
   height: 35rem;
   border-bottom-left-radius:80px;
