@@ -9,8 +9,9 @@ import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
 
-import {HomePage, RegisterPage, LoginPage, Discover, RecipePage} from './pages';
+import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
+import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 
 export const UserContext = createContext()
 const user = 'charlie1'
@@ -20,23 +21,26 @@ function App() {
  return (
   <UserContext.Provider value={user}>
   <Routes>
-    <Route path="/" element={
-      <Navbar>
-      <NavItem icon={<FaEnvelope/>}/>
-      <NavItem icon={<FaBell/>}/>
-      <NavItem icon={<FaUser/>}>
-        {/*dropdown menu*/}
-        <DropdownMenu />
-        
-      </NavItem>
-      </Navbar> 
-    }>
-      <Route index element={<HomePage />}/>
+
+  <Route path="/" element={
+  <Navbar>
+    <SecondaryNav/>
+  {/* <NavItem icon={<FaEnvelope/>}/>
+  <NavItem icon={<FaBell/>}/>
+  <NavItem icon={<FaUser/>}>
+    <DropdownMenu />
+    
+    </NavItem> */}
+    </Navbar> 
+              }>
+    <Route index element={<HomePage />}/>
+
       <Route path="/discover" element={<Discover/>}/>
         <Route path="/register" element={<RegisterPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage/>}/>
         <Route path="/recipe" element={<RecipePage />} />
+        <Route path="/map" element={<MapPage />} />
     </Route>
 </Routes>
 </UserContext.Provider>

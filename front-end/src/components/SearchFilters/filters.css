@@ -20,7 +20,7 @@
   }
   
   .filter-bar li {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
     display: inline-block;
     margin: 15px;
     padding: 17px;
@@ -55,7 +55,7 @@
 
 }
 .filter-menu p {
-font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-family:'Nunito', sans-serif;
  padding: 10px;
     
 }
