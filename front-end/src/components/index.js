@@ -16,3 +16,5 @@ export { default as Map } from './Map'
 export { default as SearchMap } from './SearchMap'
 export { default as StoreLocator } from './StoreLocator'
 
+export { default as HomeCard } from './HomeCard'
+

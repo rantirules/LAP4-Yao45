@@ -1,10 +1,18 @@
+#home-page {
+    display: flex;
+    flex-direction: column;
+    height: 95vh;
+}
+
+
 #title {
     /* background-color: aqua; */
     display: flex;
-    width: 82%;
+    width: 80.5%;
     flex-direction: row;
     justify-content: center;
-    margin-top: 3.5rem
+    /* margin-top: 3.5rem;
+    margin-bottom: 3.5rem; */
 }
 
 #title h1 {
@@ -22,3 +30,84 @@
     font-weight: 550;
 }
 
+#content-cont {
+    /* background-color: aqua; */
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80.5%;
+}
+
+/* #content {
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 2rem;
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+} */
+
+/* #content {
+    background-color: #FF8080;
+    display: flex;
+} */
+
+
+
+
+#home-card {
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    /* display: flex;
+    align-items: center;
+    flex-direction: column; */
+    overflow-y: hidden;
+    /* margin-bottom: 0; */
+    padding: 0 !important;
+}
+
+#img-home-card {
+    /* background-color: #FF8080; */
+    /* margin: 1rem; */
+    height: 40%;
+    width: auto;
+    border-radius: 15px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+#card-content {
+    background-color: yellow;
+    overflow: auto;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 1.5rem;
+    /* margin-bottom: 1.5rem; */
+    /* padding: 1rem; */
+}
+
+#card-content p {
+    padding-top: 1rem;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+#card-content h3 {
+    font-size: 22px;
+}
+
+#img-home-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
