@@ -23,19 +23,20 @@ const StepFields = ({steps, setSteps}) => {
       {steps.map((input, index) => {
         return (
           <>
-            <div key={index}>
+            <div key={index} className = "step-container">
               <input
                 name='step'
                 placeholder='Step'
                 value={input.step}
                 onChange={event => handleSteps(index, event)}
+                className = "form-input"
                 />
-              <button onClick={() => removeFields(index)}>Remove</button>
+              <button onClick={() => removeFields(index)} className = "remove-btn">Remove</button>
             </div>
           </>
         )
       })}
-      <button onClick={addStepField}>Add More</button>
+      <button onClick={addStepField} className ="add-btn">Add More</button>
     </>
   )
 }

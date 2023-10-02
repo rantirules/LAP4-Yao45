@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import './index.css';
+import { alignProperty } from '@mui/material/styles/cssUtils';
 
 
 const Login = () => {
@@ -74,7 +75,8 @@ const handleSubmit = async (e) => {
                     value={formData.password}
                 /><br/>
                 
-                <button className="form-submit"> Sign in </button>
+                <button className="form-submit"> Sign in </button><br/>
+                <p style={{textAlign: "right"}}><em>Don't have an account? </em> <a style={{color: "#FF8080"}}href="">Register Here</a></p>
             </form>
         </div>
   )
