@@ -24,25 +24,30 @@ const IngredientFields = ({ingredients, setIngredients}) => {
       {ingredients.map((input, index) => {
         return (
           <>
-            <div key={index}>
+            <div key={index} className = "ingredient-box">
+             
               <input
                 name='ingredient'
                 placeholder='Ingredient'
                 value={input.ingredient}
                 onChange={event => handleIngredients(index, event)}
+                className = "ingredient-input"
                 />
               <input
                 name='amount'
                 placeholder='Amount'
                 value={input.amount}
                 onChange={event => handleIngredients(index, event)}
+                className ="ingredient-input"
                 />
-              <button onClick={() => removeFields(index)}>Remove</button>
+                
+              <button onClick={() => removeFields(index)} className ="remove-btn"
+              >Remove</button>
             </div>
           </>
         )
       })}
-      <button onClick={addIngredientField}>Add More</button>
+      <button onClick={addIngredientField} className ="add-btn">Add More</button>
     </>
   )
 }

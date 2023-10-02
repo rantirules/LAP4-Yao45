@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { IngredientFields, StepFields, UploadImage } from '..'
+import "./index.css";
 
 const RecipeForm = () => {
   const [name, setName] = useState('')
@@ -95,30 +96,32 @@ const RecipeForm = () => {
 
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    
+    <form className ="recipe-form" onSubmit={handleSubmit}>
+      <h2>Add a new recipe:</h2><br/>
       <p>Recipe Name:</p>
       <div>
-        <input type="text" value={name} onChange={handleName} required/>
-      </div>
+        <input type="text" value={name} onChange={handleName} required className="form-input"/>
+      </div><br/>
       <div>
         <p>Culture/Cuisine:</p>
-        <input type="text" value={culture} onChange={handleCulture} required/>
-      </div>
+        <input type="text" value={culture} onChange={handleCulture} required className="form-input"/>
+      </div><br/>
       <div>
         <p>Description:</p>
-        <input type="text" value={description} onChange={handleDescription} required/>
-      </div>
+        <input type="text" value={description} onChange={handleDescription} required className="form-input"/>
+      </div> <br/>
       <div>
-        <IngredientFields ingredients={ingredients} setIngredients={setIngredients}/>
-      </div>
+        <IngredientFields ingredients={ingredients} setIngredients={setIngredients} />
+      </div> <br/>
       <div>
         <StepFields steps={steps} setSteps={setSteps}/>
-      </div>
+      </div> <br/>
       <div>
         <p>Upload an image</p>
         <UploadImage image={image} setImage={setImage} />
-      </div>
-      <button type="submit" className="submit-btn" onClick={handleSubmit}>Submit Recipe</button>
+      </div> <br/>
+      <button type="submit" className="submit-btn" class="form-submit" onClick={handleSubmit}>Submit Recipe</button>
     </form>
     </>
   )
