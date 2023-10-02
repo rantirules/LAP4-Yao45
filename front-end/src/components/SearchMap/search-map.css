@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+#search-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-right: 0;
+}
+
+#search-bar-map {
+  height: 20px;
+  background-color: #ffd3d3;
+  width: 15rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 8px;
+  margin: 10px;
+  margin-bottom: 2rem;
+}
+
+#search-bar-map input {
+  background-color: #ffd3d3;
+  border: none;
+  outline: none;
+  flex: 1;
+  padding: 4px;
+  border-radius: 0;
+  font-family: 'Nunito', sans-serif;
+  font-style: italic;
+  text-align: left;
+  font-size: 18px;
+}
+
+#search-btn {
+  border: none;
+  background: none;
+}
+
+.search-icon {
+  color: #ff8080;
+  stroke-width: 1px;
+}
+
+.place-list {
+  width: 100%;
+}
+
+.place-item {
+  display: flex;
+  align-items: center;
+  padding: 4px 10px;
+  /* background-color: aqua; */
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.marker-icon {
+  font-size: 20px;
+  margin-right: 10px;
+  color: #1c1c1c;
+}
+
+.place-name {
+  color: #1c1c1c;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 500;
+  /* margin-top: 1rem; */
+  margin-bottom: 1rem;
+  text-align: left;
+  /* background-color: antiquewhite; */
+}
+
+  
