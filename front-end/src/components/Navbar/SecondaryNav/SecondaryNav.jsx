@@ -39,25 +39,22 @@ const SecondaryNav = () => {
   };
 
   return (
-    <>
-
-      {console.log(KeyboardArrowDownIcon)}
-
-      <section className={`secondary-nav ${navbarPosition}`}>
+    
+    
+    <section className={`secondary-nav ${navbarPosition}`}>
         <div className='icon-wrapper'>
           <NavItem className="icons" icon={<FaFacebookMessenger />} />
           <NavItem className="icons" icon={<FaMapMarkerAlt />} />
           <NavItem className="icons" icon={<FaUserCircle />}> </NavItem>
         </div>
-        <div className='arrow-wrap' onClick={handleNavItemClick}>
-          <NavItem className="arrow-up" icon={<KeyboardDoubleArrowUpIcon className={`${displayArrow}`} />} />
+        <div className={`arrow-wrap ${displayArrow}`} onClick={handleNavItemClick}>
+          <NavItem className="arrow-up" icon={<KeyboardDoubleArrowUpIcon/>} />
 
-        </div>
-        <div onClick={handleNavItemClick}>
-          <NavItem className="arrow-down" icon={<KeyboardArrowDownIcon className={`${displayArrowDown}`} />} />
-        </div>
-      </section>
-    </>
+  </div>
+  <div onClick={handleNavItemClick} className={`${displayArrowDown}`}>
+  <NavItem className='arrow-down' icon={<KeyboardArrowDownIcon/>}/> 
+  </div>
+    </section>
   )
 }
 

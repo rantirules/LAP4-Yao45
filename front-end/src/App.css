@@ -104,6 +104,8 @@ height: 3.1rem;
 .show {
   display: flex;
 }
+
+
 .hide{
   display: none;
 }
