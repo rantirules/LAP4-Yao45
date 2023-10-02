@@ -25,10 +25,13 @@ const SecondaryNav = () => {
 
   const handleNavItemClick = () => {
     console.log("Called")
+    console.log(displayArrow)
 
     if (navbarPosition === 'open') {
       closeNavbar();
       console.log("Closing")
+      console.log("after close is executed: ",displayArrow)
+
     } else {
       openNavbar();
       // If the navbar is already closed, you can choose to open it again or do nothing
@@ -37,6 +40,7 @@ const SecondaryNav = () => {
 
   return (
     <>
+
       {console.log(KeyboardArrowDownIcon)}
 
       <section className={`secondary-nav ${navbarPosition}`}>
