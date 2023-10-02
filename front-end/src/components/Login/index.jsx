@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Auth/AuthContext';
 import './index.css';
+import { alignProperty } from '@mui/material/styles/cssUtils';
 
 
 const Login = () => {
@@ -44,8 +45,8 @@ const handleSubmit = async (e) => {
         // console.log('login response', response)
         const token = response.data.token
 
-        //HS code
-        const userData = formData.username
+      
+       
         
         // console.log('token', response.data.token)
         localStorage.setItem('token', token);
@@ -53,6 +54,8 @@ const handleSubmit = async (e) => {
         // redirect user
         // const navigateTo = useNavigate();
         // navigateTo('http://127.0.0.1:5000/discover');
+
+          //HS code
         login(formData.username);
         console.log(userName)
         
@@ -86,7 +89,8 @@ const handleSubmit = async (e) => {
                     value={formData.password}
                 /><br/>
                 
-                <button className="form-submit"> Sign in </button>
+                <button className="form-submit"> Sign in </button><br/>
+                <p style={{textAlign: "right"}}><em>Don't have an account? </em> <a style={{color: "#FF8080"}}href="">Register Here</a></p>
             </form>
         </div>
   )

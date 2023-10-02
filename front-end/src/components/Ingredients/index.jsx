@@ -5,7 +5,7 @@ const Ingredients = ({ ingredients }) => {
   function displayIngredients() {
     if (ingredients) {
       let list = ingredients.map((ingredient, index) => {
-        return <li key={index}>{ingredient}</li>
+        return <li key={index}>{ingredient.amount} {ingredient.ingredient}</li>
       })
       return list
     }

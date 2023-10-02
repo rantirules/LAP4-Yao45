@@ -9,19 +9,21 @@ import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
 
-import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage} from './pages';
+import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 import { AuthProvider } from './components/Auth/AuthContext';
 export const UserContext = createContext()
 const user = 'charlie1'
 
+import { NavbarProvider } from './components/Navbar/NavbarContext'; 
 
 
 function App() {
  return (
   <AuthProvider>
   <UserContext.Provider value={user}>
+    <NavbarProvider>
   <Routes>
 
   <Route path="/" element={
@@ -42,9 +44,11 @@ function App() {
         <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage/>}/>
         <Route path="/recipe" element={<RecipePage />} />
+        <Route path="/new-recipe" element={<NewRecipePage />} />
         <Route path="/map" element={<MapPage />} />
     </Route>
 </Routes>
+</NavbarProvider>
 </UserContext.Provider>
 </AuthProvider>
   )
