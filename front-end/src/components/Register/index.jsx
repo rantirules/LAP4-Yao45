@@ -155,7 +155,9 @@ const Register = () => {
                 </div>
                 </label>
                 <button className="form-submit"> Sign up </button>
-            </form>
+            </form><br/>
+            <p style={{textAlign: "right"}}><em>Already have an account? </em> <a style={{color: "#FF8080"}}href="">Login Here</a></p>
+
         </div>
     );
 };
