@@ -4,7 +4,7 @@ import { Recipe, SaveRecipeButton } from '../../components'
 
 const RecipePage = () => {
   const [recipe, setRecipe] = useState({})
-  const recipe_id = 1 // remove this once id is passed
+  const recipe_id = 2 // remove this once id is passed
   const user_id = 4 // remove and pass instead
 
   useEffect(() => {
