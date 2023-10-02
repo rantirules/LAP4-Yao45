@@ -8,7 +8,8 @@ import {FaBell, FaUser, FaEnvelope, FaCog} from 'react-icons/fa';
 import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
-import {HomePage, RegisterPage, Discover} from './pages';
+
+import {HomePage, RegisterPage, LoginPage, Discover, RecipePage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 
@@ -20,6 +21,7 @@ function App() {
  return (
   <UserContext.Provider value={user}>
   <Routes>
+
   <Route path="/" element={
   <Navbar>
     <SecondaryNav/>
@@ -32,10 +34,13 @@ function App() {
     </Navbar> 
               }>
     <Route index element={<HomePage />}/>
+
       <Route path="/discover" element={<Discover/>}/>
         <Route path="/register" element={<RegisterPage />} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/search" element={<SearchPage/>}/>
-        </Route>
+        <Route path="/recipe" element={<RecipePage />} />
+    </Route>
 </Routes>
 </UserContext.Provider>
 
