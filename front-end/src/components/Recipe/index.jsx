@@ -15,9 +15,7 @@ const Recipe = (props) => {
     }
   })
   const image = cld.image(props.img)
-  image.resize(thumbnail().width(300).height(300))
-
-
+  
   useEffect(() => {
     setLoading(true)
     async function loadUser() {
@@ -46,7 +44,7 @@ const Recipe = (props) => {
           Description: {props.desc}
         </div>
         <div>
-          <AdvancedImage cldImg={image}/>
+          <AdvancedImage cldImg={image} width={300} height={150}/>
         </div>
         <div>
           <Ingredients ingredients={props.ingredients}/>
