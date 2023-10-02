@@ -8,7 +8,7 @@ import './home.css'
 const HomePage = () => {
 
   const [content, setContent] = useState([
-    {id:1, image:"home1.jpg", title: "Cooking for Connection: How Sharing Meals Builds Relationships", description: "Discover how sharing meals can be a catalyst for building meaningful relationships in this engaging article."},
+    {id:1, image:"home1.jpg", title: "The Power of Sharing a Meal in Building Relationships", description: "Discover how sharing meals can be a catalyst for building meaningful relationships in this engaging article."},
 
     {id:2, image:"home2.jpg", title: "Kitchen Hacks and Cooking Tips: Making Your Life Easier", description: "Unlock the secrets of a smoother kitchen experience with ingenious kitchen hacks and cooking tips."},
 
@@ -29,7 +29,6 @@ const HomePage = () => {
           {content.map((article) => {
             return <HomeCard key={article.id} article={article} />
           })}
-          {/* <HomeCard/> */}
         </div>
       </div>
     </div>
