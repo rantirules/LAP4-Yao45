@@ -1,10 +1,14 @@
 import React, {useState} from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../Auth/AuthContext';
 import './index.css';
 
 
 const Login = () => {
+    const { isLoggedIn, login, setUserName, userName } = useAuth(); // Access the authentication context
+ 
+
     const [formData, setFormData] = useState({
        
         username: "",
@@ -26,6 +30,7 @@ const Login = () => {
         
 //    }
 const handleSubmit = async (e) => {
+
     // const navigateTo = useNavigate();
     e.preventDefault();
     console.log(formData);
@@ -38,12 +43,19 @@ const handleSubmit = async (e) => {
         console.log('response status', response.status)
         // console.log('login response', response)
         const token = response.data.token
+
+        //HS code
+        const userData = formData.username
+        
         // console.log('token', response.data.token)
         localStorage.setItem('token', token);
         console.log('Login successful');
         // redirect user
         // const navigateTo = useNavigate();
         // navigateTo('http://127.0.0.1:5000/discover');
+        login(formData.username);
+        console.log(userName)
+        
     } catch (error) {
         console.log("Error logging in", error);
         // display error message

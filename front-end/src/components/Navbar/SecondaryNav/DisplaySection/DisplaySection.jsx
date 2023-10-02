@@ -3,10 +3,10 @@ import Account from './Account/Account'
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
-
+import { useAuth } from '../../../Auth/AuthContext';
 
 const DisplaySection = ({navbarPosition, closeNavbar}) => {
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const { isLoggedIn, login, logout,userName } = useAuth();
 
     const navigate = useNavigate();
 
@@ -14,6 +14,11 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
         navigate('/login'); // Replace '/login' with the actual login page path
         closeNavbar();
       };
+
+      const handleRegisterClick = () => {
+        navigate('/register')
+        closeNavbar();
+      }
     const recipe = {
         title: 'Recipe of the Day',
         image: 'https://via.placeholder.com/150', // Replace with the actual recipe image URL
@@ -67,19 +72,36 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
         <Typography style={typographyStyles} variant="body2">
         <FaMapMarkerAlt/> {recipe.location}
       </Typography >
-      <div className="login-buttons-sec">
-      <div className="login-button-sec">
-        <Button variant="outlined" color="primary" style={loginButtonStyles} onClick={handleLoginClick}>
-          Log In
-        </Button>
-        </div>
-        <div className="login-button-sec">
-        <Button variant="outlined" color="secondary" style={signUpButtonStyles} onClick={handleLoginClick}
->
-          Sign Up
-        </Button>
+      {isLoggedIn ? (
+        // Display user's name when logged in
+        <Typography style={typographyStyles} variant="body2">
+          Welcome, {userName}! {/* Replace "User" with the actual user's name */}
+        </Typography>
+      ) : (
+        // Display login and sign-up buttons when not logged in
+        <div className="login-buttons-sec">
+          <div className="login-button-sec">
+            <Button
+              variant="outlined"
+              color="primary"
+              style={loginButtonStyles}
+              onClick={handleLoginClick}
+            >
+              Log In
+            </Button>
+          </div>
+          <div className="login-button-sec">
+            <Button
+              variant="outlined"
+              color="secondary"
+              style={signUpButtonStyles}
+              onClick={handleRegisterClick}
+            >
+              Sign Up
+            </Button>
         </div>
       </div>
+      )}
       </section>
   )
 }

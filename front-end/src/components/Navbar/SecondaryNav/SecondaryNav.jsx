@@ -8,7 +8,7 @@ import Account from './DisplaySection/Account/Account';
 import DisplaySection from './DisplaySection/DisplaySection';
 
 
-const SecondaryNav = () => {
+const SecondaryNav = ({ userName }) => {
   const [navbarPosition, setNavbarPosition] = useState('open');
   const [displayArrow, setDisplayArrow] = useState("show");
   const [displayArrowDown, setDisplayArrowDown] = useState("hide");
@@ -20,6 +20,14 @@ const SecondaryNav = () => {
     console.log("clicked!")
   };
 
+
+  const toggleAccountSection = () => {
+    setIsAccountMenuOpen(!isAccountMenuOpen);
+    console.log("click me bro")
+    if (navbarPosition === 'closed') {
+      openNavbar();
+    }
+  };
 
   const closeNavbar = () => {
     setNavbarPosition('closed');
@@ -55,10 +63,12 @@ const SecondaryNav = () => {
         <div className='icon-wrapper'>
           <NavItem className="icons" icon={<FaFacebookMessenger />} />
           <NavItem className="icons" icon={<FaMapMarkerAlt />} />
-          <NavItem className="icons" icon={<FaUserCircle />} onClick={toggleAccountMenu}/> 
+          <div onClick={toggleAccountSection}>
+          <NavItem className="icons" icon={<FaUserCircle />} /> </div>
         </div>
         <div className={`display ${displayArrow}`}>
-        <DisplaySection navbarPosition={navbarPosition} closeNavbar={closeNavbar}/>
+        {isAccountMenuOpen ? <Account /> :
+        <DisplaySection navbarPosition={navbarPosition} closeNavbar={closeNavbar}userName={userName}/>}
         </div>
         
         <div className={`arrow-wrap ${displayArrow}`} onClick={handleNavItemClick}>

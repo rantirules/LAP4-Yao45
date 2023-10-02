@@ -12,10 +12,12 @@ export function useAuth() {
 // AuthProvider component to wrap your app with
 export function AuthProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const [userName, setUserName] = useState('')
   // Function to handle user login
-  const login = () => {
+  const login = (userName) => {
     setIsLoggedIn(true);
+    setUserName(userName)
+    console.log(userName)
   };
 
   // Function to handle user logout
@@ -27,6 +29,7 @@ export function AuthProvider({ children }) {
     isLoggedIn,
     login,
     logout,
+    userName
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
