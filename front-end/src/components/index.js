@@ -11,6 +11,10 @@ export { default as Recipe } from "./Recipe"
 export { default as SaveRecipeButton } from './SaveRecipeButton'
 export { default as Ingredients } from './Ingredients'
 export { default as Steps } from './Steps'
+export { default as RecipeForm } from './RecipeForm'
+export { default as IngredientFields } from './IngredientFields'
+export { default as StepFields } from './StepFields'
+export { default as UploadImage } from './UploadImage'
 
 export { default as UserPost } from './UserPost'
 
