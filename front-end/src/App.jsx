@@ -9,7 +9,7 @@ import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
 
-import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage} from './pages';
+import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage, SavedRecipesPage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 
@@ -42,6 +42,7 @@ function App() {
         <Route path="/recipe" element={<RecipePage />} />
         <Route path="/new-recipe" element={<NewRecipePage />} />
         <Route path="/map" element={<MapPage />} />
+        <Route path="/saved" element={<SavedRecipesPage />} />
     </Route>
 </Routes>
 </UserContext.Provider>

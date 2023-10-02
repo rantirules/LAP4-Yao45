@@ -5,4 +5,4 @@ export { default as RecipePage } from './RecipePage'
 export { default as NewRecipePage } from './NewRecipePage'
 export { default as LoginPage } from './LoginPage'
 export { default as MapPage } from './MapPage'
-
+export { default as SavedRecipesPage } from './SavedRecipesPage'
