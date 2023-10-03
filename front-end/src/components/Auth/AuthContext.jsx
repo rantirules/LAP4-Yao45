@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState } from 'react';
+import axios from 'axios';
 
 // Create an authentication context
 const AuthContext = createContext();
@@ -14,15 +15,25 @@ export function AuthProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState('')
   // Function to handle user login
-  const login = (userName) => {
+  const login = async (userName) => {
     setIsLoggedIn(true);
     setUserName(userName)
     console.log(userName)
+    const res = await axios.get(`http://127.0.0.1:5000/users/${userName}`)
+
+    localStorage.setItem('user', res.data.user.id)
   };
+
+  // async function getId(userName) {
+  //   console.log(userName)
+  //   const res = await axios.get(`http://127.0.0.1:5000/users/${userName}`)
+  //   return res.data.user.id
+  // }
 
   // Function to handle user logout
   const logout = () => {
     setIsLoggedIn(false);
+    localStorage.clear()
   };
 
   const value = {

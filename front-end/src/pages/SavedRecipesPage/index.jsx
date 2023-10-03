@@ -9,7 +9,7 @@ import {Cloudinary} from "@cloudinary/url-gen";
 
 
 const SavedRecipesPage = () => {
-  const user_id = 4;
+const user_id = localStorage.getItem('user')
   const [recipeList, setRecipeList] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -20,6 +20,8 @@ const SavedRecipesPage = () => {
       cloudName: 'dvu7ysgku'
     }
   })
+
+  const recipeRef = useRef(recipeList)
 
   useEffect(() => {
     async function getSavedRecipes() {

@@ -8,7 +8,8 @@ import { alignProperty } from '@mui/material/styles/cssUtils';
 
 const Login = () => {
     const { isLoggedIn, login, setUserName, userName } = useAuth(); // Access the authentication context
- 
+    const navigate = useNavigate();
+    
 
     const [formData, setFormData] = useState({
        
@@ -26,10 +27,10 @@ const Login = () => {
         }))
     }
     // console.log(formData)
-//     function handleSubmit(event) {
-//         event.preventDefault()
+    //     function handleSubmit(event) {
+        //         event.preventDefault()
         
-//    }
+        //    }
 const handleSubmit = async (e) => {
 
     // const navigateTo = useNavigate();
@@ -52,12 +53,12 @@ const handleSubmit = async (e) => {
         localStorage.setItem('token', token);
         console.log('Login successful');
         // redirect user
-        // const navigateTo = useNavigate();
-        // navigateTo('http://127.0.0.1:5000/discover');
-
-          //HS code
+        console.log(formData.username)
         login(formData.username);
         console.log(userName)
+        navigate('/discover');
+
+          //HS code
         
     } catch (error) {
         console.log("Error logging in", error);
@@ -91,7 +92,7 @@ const handleSubmit = async (e) => {
                 
                 <button className="form-submit"> Sign in </button><br/>
                 { /* eslint-disable-next-line react/no-unescaped-entities */}
-                <p style={{textAlign: "right"}}><em> Don't have an account? </em> <a style={{color: "#FF8080"}}href="">Register Here</a></p>
+                <p style={{textAlign: "right"}}><em> Don't have an account? </em> <a style={{color: "#FF8080"}}href="http://localhost:5173/register">Register Here</a></p>
             </form>
         </div>
   )

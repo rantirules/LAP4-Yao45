@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Select from "react-select";
 import countryData from "../../assets/countrylist";
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
     const [formData, setFormData] = useState({
@@ -15,6 +16,8 @@ const Register = () => {
     const [selectedOptions, setSelectedOptions] = useState();
     const [usernameAvailable, setUsernameAvailable] = useState(true);
     const [emailAvailable, setEmailAvailable] = useState(true);
+
+    const navigate = useNavigate()
 
     const handleChange = (event) => {
         const { name, value } = event.target;
@@ -70,6 +73,7 @@ const Register = () => {
                 localStorage.setItem('token', token);
 
                 console.log('Registration successful:', response.data);
+                navigate('/login')
                 
                 // redirect user
             } catch (error) {
@@ -156,7 +160,7 @@ const Register = () => {
                 </label>
                 <button className="form-submit"> Sign up </button>
             </form><br/>
-            <p style={{textAlign: "right"}}><em>Already have an account? </em> <a style={{color: "#FF8080"}}href="">Login Here</a></p>
+            <p style={{textAlign: "right"}}><em>Already have an account? </em> <a style={{color: "#FF8080"}}href="http://localhost:5173/login">Login Here</a></p>
 
         </div>
     );

@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom'
 const RecipePage = () => {
   const [recipe, setRecipe] = useState({})
   const recipe_id = useParams().id
-  const user_id = 4 // remove and pass instead
+  const user_id = localStorage.getItem('user')
 
   useEffect(() => {
     async function loadRecipe() {
