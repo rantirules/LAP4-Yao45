@@ -53,6 +53,7 @@ const handleSubmit = async (e) => {
         localStorage.setItem('token', token);
         console.log('Login successful');
         // redirect user
+        console.log(formData.username)
         login(formData.username);
         console.log(userName)
         navigate('/discover');
