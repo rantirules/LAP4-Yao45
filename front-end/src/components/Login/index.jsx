@@ -8,7 +8,8 @@ import { alignProperty } from '@mui/material/styles/cssUtils';
 
 const Login = () => {
     const { isLoggedIn, login, setUserName, userName } = useAuth(); // Access the authentication context
- 
+    const navigate = useNavigate();
+    
 
     const [formData, setFormData] = useState({
        
@@ -26,10 +27,10 @@ const Login = () => {
         }))
     }
     // console.log(formData)
-//     function handleSubmit(event) {
-//         event.preventDefault()
+    //     function handleSubmit(event) {
+        //         event.preventDefault()
         
-//    }
+        //    }
 const handleSubmit = async (e) => {
 
     // const navigateTo = useNavigate();
@@ -52,8 +53,7 @@ const handleSubmit = async (e) => {
         localStorage.setItem('token', token);
         console.log('Login successful');
         // redirect user
-        // const navigateTo = useNavigate();
-        // navigateTo('http://127.0.0.1:5000/discover');
+        navigate('/discover');
 
           //HS code
         login(formData.username);
