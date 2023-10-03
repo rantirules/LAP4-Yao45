@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { Recipe, SaveRecipeButton } from '../../components'
+import { useParams } from 'react-router-dom'
 
 const RecipePage = () => {
   const [recipe, setRecipe] = useState({})
-  const recipe_id = 1 // remove this once id is passed
+  const recipe_id = useParams().id
   const user_id = 4 // remove and pass instead
 
   useEffect(() => {

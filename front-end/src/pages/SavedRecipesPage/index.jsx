@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const SavedRecipesPage = () => {
   const user_id = 4
@@ -18,7 +19,12 @@ const SavedRecipesPage = () => {
 
       if (recipes) {
         let list = recipes.map((recipe, index) => {
-          return <li key={index}>{recipe.name} {recipe.id}</li>
+          return (
+            <li key={index}>
+              {recipe.name} {recipe.id}
+              <Link className='saved-link' to={`/recipe/${recipe.id}`}>View</Link>
+            </li>
+          )
         })
         recipeRef.current = list
       }
