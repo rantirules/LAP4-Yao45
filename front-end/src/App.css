@@ -288,3 +288,7 @@ height: 3.1rem;
     visibility: hidden;
   }
 }
+
+.saved-link {
+  color: blue;
+}

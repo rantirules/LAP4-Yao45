@@ -23,10 +23,11 @@ const ProfileIcon = (props) => {
     }
     
   return (
-    <div>
-        <button onClick={handleClick}>
+    <div className='user-container' onClick={handleClick}>
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/017/592/small/ui-profile-icon-vector.jpg" alt="" />
+        <div>
             {props.receiver}
-        </button>
+        </div>
     </div>
   )
 }
