@@ -1,11 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Ingredients, Steps } from '..'
+import {AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+import {thumbnail} from "@cloudinary/url-gen/actions/resize";
 
 const Recipe = (props) => {
   const [loading, setLoading] = useState(false)
   const [creator, setCreator] = useState('')
-
+  
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'dvu7ysgku'
+    }
+  })
+  const image = cld.image(props.img)
+  
   useEffect(() => {
     setLoading(true)
     async function loadUser() {
@@ -34,7 +44,7 @@ const Recipe = (props) => {
           Description: {props.desc}
         </div>
         <div>
-          Image URL: {props.img}
+          <AdvancedImage cldImg={image} width={300} height={150}/>
         </div>
         <div>
           <Ingredients ingredients={props.ingredients}/>

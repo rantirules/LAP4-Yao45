@@ -36,7 +36,7 @@ const DropdownMenu = () => {
         classNames="menu-primary" 
         onEnter={calcHeight}>
         <div className='menu'>
-      <DropDownItem leftIcon={<FaUserCircle/>} rightIcon={<FaArrowRight/>} role="menuitem">My profile</DropDownItem>
+      
       <DropDownItem role="settings" leftIcon={<FaCog/>} rightIcon={<FaArrowRight/>} goToMenu="settings"> Settings</DropDownItem>
       </div>
       </CSSTransition>
