@@ -1,0 +1,24 @@
+#map-page-cont {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+#map-cont {
+    flex: 1;
+    position: relative;
+    height: 80vh;
+}
+
+#search-cont {
+    background-color: var(--bg);
+    border: none;
+    border-radius: 0 0 0 80px; 
+    width: 23.5rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 999;
+}

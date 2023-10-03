@@ -1,0 +1,37 @@
+/* Add this CSS to your stylesheet */
+
+.search-bar {
+    height: 20px;
+    background-color: #FFD3D3;
+    width: 30%;
+    display:flex;
+    justify-content: flex-start;
+    border-radius: 10px; /* Adjust the border-radius as needed */
+    padding: 8px;
+    margin: 10px;
+  }
+
+  .search-icon {
+    color: #FF8080;
+    stroke-width: 1px;
+  }
+  
+  .search-bar input {
+    background-color: #FFD3D3;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 4px;
+    border-radius: 0px; /* Adjust the border-radius to match the container */
+  }
+
+ 
+  
+  .search-bar button {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  

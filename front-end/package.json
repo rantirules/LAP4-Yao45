@@ -16,6 +16,8 @@
     "@cloudinary/url-gen": "^1.11.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@googlemaps/js-api-loader": "^1.16.2",
+    "@googlemaps/react-wrapper": "^1.1.35",
     "@mui/icons-material": "^5.14.11",
     "@mui/material": "^5.14.11",
     "axios": "^1.5.1",

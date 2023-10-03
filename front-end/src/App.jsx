@@ -7,7 +7,6 @@ import {FaBell, FaUser, FaEnvelope, FaCog} from 'react-icons/fa';
 
 import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
-import DropdownMenu from './components/Navbar/DropdownMenu';
 
 import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
@@ -17,7 +16,14 @@ export const UserContext = createContext()
 const user = 'charlie1'
 
 import { NavbarProvider } from './components/Navbar/NavbarContext'; 
-import { Chat } from './components';
+import { Chat, UserPost } from './components';
+import MapHighlighter from './components/Navbar/SecondaryNav/DisplaySection/Maps/Maps';
+
+import { Marker } from '@googlemaps/react-wrapper'
+
+function MyMarker() {
+  return <Marker position={{ lat: 37.7749, lng: -122.4194 }} />
+}
 
 
 function App() {
@@ -48,6 +54,13 @@ function App() {
         <Route path="/new-recipe" element={<NewRecipePage />} />
         <Route path="/messages" element={<Chat/>}/>
         <Route path="/map" element={<MapPage />} />
+        <Route path="/post" element ={<UserPost/>}/>
+        {/* <Route path="/mapSub" element={<MapHighlighter apiKey="AIzaSyALeh2Hsx18D8MKadj-ZQEOlxmtvWpzNro"
+          defaultZoom={8}
+          defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
+          // eslint-disable-next-line no-undef
+          defaultOptions={{ disableDefaultUI: true }}
+          > <MyMarker /></MapHighlighter>} /> */}
     </Route>
 </Routes>
 </NavbarProvider>
