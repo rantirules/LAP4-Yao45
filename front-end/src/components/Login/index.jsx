@@ -53,11 +53,11 @@ const handleSubmit = async (e) => {
         localStorage.setItem('token', token);
         console.log('Login successful');
         // redirect user
+        login(formData.username);
+        console.log(userName)
         navigate('/discover');
 
           //HS code
-        login(formData.username);
-        console.log(userName)
         
     } catch (error) {
         console.log("Error logging in", error);
