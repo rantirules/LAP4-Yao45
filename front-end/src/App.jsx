@@ -12,14 +12,17 @@ import DropdownMenu from './components/Navbar/DropdownMenu';
 import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
-
+import { AuthProvider } from './components/Auth/AuthContext';
 export const UserContext = createContext()
 const user = 'charlie1'
 
 import { NavbarProvider } from './components/Navbar/NavbarContext'; 
+import { Chat } from './components';
+
 
 function App() {
  return (
+  <AuthProvider>
   <UserContext.Provider value={user}>
     <NavbarProvider>
   <Routes>
@@ -43,12 +46,13 @@ function App() {
         <Route path="/search" element={<SearchPage/>}/>
         <Route path="/recipe" element={<RecipePage />} />
         <Route path="/new-recipe" element={<NewRecipePage />} />
+        <Route path="/messages" element={<Chat/>}/>
         <Route path="/map" element={<MapPage />} />
     </Route>
 </Routes>
 </NavbarProvider>
 </UserContext.Provider>
-
+</AuthProvider>
   )
 }
 

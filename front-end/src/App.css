@@ -59,13 +59,22 @@ margin-right: 28px;
 }
 
 .arrow-wrap {
-transform: translate(50%,1025%);
+transform: translate(50%,345%);
 }
 
 .arrow-up {
   fill:grey;
+  position: fixed;
 }
 
+.login-buttons {
+  display: flex;
+  flex-direction: column; /* Display buttons vertically */
+}
+
+.login-button {
+  margin-bottom: 8px; /* Add spacing between buttons */
+}
 
 :root {
   --bg: #FF8080;
@@ -169,6 +178,14 @@ height: 3.1rem;
   transition: height var(--speed) ease;
 }
 
+.display {
+  align-items: center;
+  justify-content: center;
+}
+
+.drop-item {
+  margin: 25px;
+}
 
 .menu-item {
   font-family: Arial, Helvetica, sans-serif;

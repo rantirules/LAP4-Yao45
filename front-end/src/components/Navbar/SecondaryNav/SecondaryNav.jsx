@@ -4,20 +4,47 @@ import { FaGlobeAfrica, FaUserCircle, FaFacebookMessenger, FaMapMarkedAlt, FaMap
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
 import DropdownMenu from '../DropdownMenu'
-DropdownMenu
+import Account from './DisplaySection/Account/Account';
+import DisplaySection from './DisplaySection/DisplaySection';
+import { useNavigate } from 'react-router-dom';
+
 
 
 import { useNavbar } from '../NavbarContext';
 
 
 
-const SecondaryNav = () => {
+const SecondaryNav = ({ userName }) => {
   // const [navbarPosition, setNavbarPosition] = useState('open');
 
   const {navbarPosition, updateNavbarPosition } = useNavbar()
   const [displayArrow, setDisplayArrow] = useState("show");
   const [displayArrowDown, setDisplayArrowDown] = useState("hide");
+  const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
 
+  const navigate = useNavigate();
+
+  const takeToMsgs = () => {
+    navigate('/messages');
+  }
+
+  const takeToMaps = () => {
+    navigate('/map');
+  }
+
+  const toggleAccountMenu = () => {
+    setIsAccountMenuOpen(!isAccountMenuOpen);
+    console.log("clicked!")
+  };
+
+
+  const toggleAccountSection = () => {
+    setIsAccountMenuOpen(!isAccountMenuOpen);
+    console.log("click me bro")
+    if (navbarPosition === 'closed') {
+      openNavbar();
+    }
+  };
 
   const closeNavbar = () => {
     updateNavbarPosition('closed');
@@ -52,10 +79,18 @@ const SecondaryNav = () => {
   return (
     <section className={`secondary-nav ${navbarPosition}`}>
         <div className='icon-wrapper'>
-          <NavItem className="icons" icon={<FaFacebookMessenger />} />
-          <NavItem className="icons" icon={<FaMapMarkerAlt />} />
-          <NavItem className="icons" icon={<FaUserCircle />}> </NavItem>
+          <div onClick={takeToMsgs}>
+          <NavItem className="icons" icon={<FaFacebookMessenger />} /></div>
+          
+          <div onClick={takeToMaps}><NavItem className="icons" icon={<FaMapMarkerAlt />} /> </div>
+          <div onClick={toggleAccountSection}>
+          <NavItem className="icons" icon={<FaUserCircle />} /> </div>
         </div>
+        <div className={`display ${displayArrow}`}>
+        {isAccountMenuOpen ? <Account /> :
+        <DisplaySection navbarPosition={navbarPosition} closeNavbar={closeNavbar}userName={userName}/>}
+        </div>
+        
         <div className={`arrow-wrap ${displayArrow}`} onClick={handleNavItemClick}>
           <NavItem className="arrow-up" icon={<KeyboardDoubleArrowUpIcon/>} />
 
