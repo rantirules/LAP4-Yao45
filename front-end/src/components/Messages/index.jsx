@@ -16,8 +16,9 @@ const Messages = (props) => {
         }
         console.log(message)
         e.preventDefault()
-        const response = await fetch('http://127.0.0.1:5000/messages', options)
-        const data = await response.json()
+        const response = await fetch(`http://127.0.0.1:5000/messages`, options)
+        const newMessages = await fetch(`http://127.0.0.1:5000/messages/${dialogue_id}`)
+        const data = await newMessages.json()
         props.setMessages(data.messages)
     }
 
@@ -28,12 +29,16 @@ const Messages = (props) => {
 
   return (
     <>
-        <div>
-            {props.messages && props.messages.map((msg, index) => <ChatMessage key={index} message={msg.text} username={msg.username}/>)}
+        <div className='message-box'>
+            {props.messages ? 
+            <>{props.messages && props.messages.map((msg, index) => <ChatMessage key={index} message={msg.text} username={msg.username}/>)}</>
+            : <p>Start a Conversation!</p>
+        }
+            
         </div>
         <form onSubmit={sendMessage} className='message-form'>
             <input value={props.formValue} onChange={handleChange}/>
-            <button type="submit">📮</button>
+            <button type="submit" className='message-input'>📮</button>
         </form>
     </>
   )
