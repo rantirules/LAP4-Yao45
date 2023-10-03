@@ -1,45 +1,59 @@
-import React, { useState, useEffect, useRef } from 'react'
-import axios from 'axios'
-import { Link } from 'react-router-dom'
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
+import './saved-recipe.css';
+import { useNavbar } from '../../components/Navbar/NavbarContext';
+
 
 const SavedRecipesPage = () => {
-  const user_id = 4
-  const [recipeList, setRecipeList] = useState([]) // { id: '', name: '' }
-  const [loading, setLoading] = useState(false)
-  const recipeRef = useRef(recipeList)
+  const user_id = 4;
+  const [recipeList, setRecipeList] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  const { navbarPosition } = useNavbar();
 
   useEffect(() => {
     async function getSavedRecipes() {
-      const res = await axios.get(`http://127.0.0.1:5000/saved/${user_id}`)
-      console.log(res.data.saved_recipes)
-      const recipes = await res.data.saved_recipes // name, id
-      setRecipeList(recipes)
-      recipeRef.current = recipes
-      console.log(recipeRef.current)
-
-      if (recipes) {
-        let list = recipes.map((recipe, index) => {
-          return (
-            <li key={index}>
-              {recipe.name} {recipe.id}
-              <Link className='saved-link' to={`/recipe/${recipe.id}`}>View</Link>
-            </li>
-          )
-        })
-        recipeRef.current = list
+      try {
+        const res = await axios.get(`http://127.0.0.1:5000/saved/${user_id}`);
+        const recipes = res.data.saved_recipes;
+        setRecipeList(recipes);
+      } catch (error) {
+        console.error('Error fetching saved recipes:', error);
       }
-      
-      console.log(recipeRef.current)
     }
-    getSavedRecipes()
-  }, [])
+    getSavedRecipes();
+  }, []);
+
+  console.log(recipeList)
 
   return (
-    <>
-      <h2>Saved Recipes</h2>
-      <ul>{recipeRef.current}</ul>
-    </>
-  )
-}
+    <div id='saved-recipe-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
+      <div id='saved-title'>
+        <h1>Saved Recipes</h1>
+      </div>
 
-export default SavedRecipesPage
+      <div id='saved-recipe-sect'>
+        {recipeList.map((recipe, index) => (
+          <Link id='recipe-card-saved' className='saved-link' to={`/recipe/${recipe.id}`}>
+          <div key={index} id='content-container'>
+            <div id='img-sect'>
+              <img src={recipe.img_url} alt={recipe.name} />
+            </div>
+            
+            <div id='info-sect-saved-card'>
+              <h3>{recipe.name}</h3>
+              <p>{recipe.culture}</p>
+            </div>
+            
+            <div id='view-recipe-link'>
+            </div>
+          </div>
+          </Link>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default SavedRecipesPage;

@@ -11,7 +11,7 @@ const HomePage = () => {
 
   const { navbarPosition } = useNavbar();
 
-  console.log('line 14 home', navbarPosition)
+  // console.log('line 14 home', navbarPosition)
 
   const [content, setContent] = useState([
     {id:1, image:"home1.jpg", title: "The Power of Sharing a Meal in Building Relationships", description: "Discover how sharing meals can be a catalyst for building meaningful relationships in this engaging article."},
