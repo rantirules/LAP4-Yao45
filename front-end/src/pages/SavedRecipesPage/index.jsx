@@ -3,7 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 
 const SavedRecipesPage = () => {
-  const user_id = 4
+  const user_id = localStorage.getItem('user')
   const [recipeList, setRecipeList] = useState([]) // { id: '', name: '' }
   const [loading, setLoading] = useState(false)
   const recipeRef = useRef(recipeList)
