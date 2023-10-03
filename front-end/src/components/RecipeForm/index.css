@@ -1,0 +1,89 @@
+.recipe-form {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 3%;
+    padding: 5%;
+    /* padding-top: 5%;
+    padding-bottom: 5%; */
+    border: 1px solid #ccc;
+    background-color: #ffff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.ingredient-box {
+    /* display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.step-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.ingredient-input {
+    /* width: 80%;
+    padding: 10px; */
+    /* margin: 0 auto; */
+    /* margin-bottom: 10px; */
+    /* border: 1px solid #ccc;
+    border-radius: 5px;
+    display: block; */
+    flex: 1;
+  padding: 8px;
+  margin: 0 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.ingredient-input:focus {
+    border-color: #FF8080 !important; 
+    outline: none;
+    border-width: 2px;
+}
+.remove-btn {
+    /* display: block; */
+    /* background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; */
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+    /* padding: 10px 20px; */
+   
+    /* font-size: 16px; */
+}
+.remove-btn:hover {
+    background-color: #bd2130;
+}
+.add-btn {
+    background-color: #f0f0f0;
+    color: #1c1c1c;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 5px;
+}
+.add-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.submit-btn {
+    background-color: #1c1c1c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}

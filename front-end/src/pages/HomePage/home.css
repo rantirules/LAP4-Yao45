@@ -1,0 +1,129 @@
+#home-page {
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    /* background-color: aquamarine; */
+    width: 80%;
+    transition: width 0.3s ease;
+}
+
+#home-page.closed {
+    width: 100%; /* Width when navbar is collapsed */
+  }
+
+#title {
+    /* background-color: aqua; */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+#title h1 {
+    font-size: 2.7rem;
+    color: #1c1c1c;
+}
+
+#title span {
+    font-family: 'Pacifico', cursive;
+    padding: 1rem;
+    font-size: 3.5rem;
+    color: #FF8080;
+    text-shadow:
+    -2px 5px 8px #bdbdbd;
+    font-weight: 550;
+}
+
+#content-cont {
+    /* background-color: aqua; */
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#content {
+    /* background-color: #FF8080; */
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    height: 100%;
+    width: 100%;
+    gap: 1.5rem;
+    padding: 5rem;
+}
+
+
+#home-card-cont {
+    /* background-color: bisque; */
+    /* border: #1c1c1c 1px solid; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 20rem;
+    width: 100%;
+}
+
+#home-card {
+    /* background-color: lime; */
+    border: 1px solid #ccc;
+    height: 90%;
+    width: 95%;
+    /* margin: 1rem; */
+    overflow: hidden;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+}
+
+
+#img-home-card {
+    /* background-color: #FF8080; */
+    /* margin: 1rem; */
+    height: 45%;
+    width: 90%;
+    border-radius: 15px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+#card-content {
+    /* background-color: yellow; */
+    /* overflow: auto; */
+    /* margin-left: 3rem; */
+    /* margin-right: 3rem; */
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    height: auto;
+}
+
+#card-content p {
+    padding-top: 0.5rem;
+    /* padding-bottom: 1rem; */
+    margin-bottom: 0;
+    /* font-size: 20px; */
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+#card-content h3 {
+    font-size: 20px;
+    width: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#img-home-card img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}

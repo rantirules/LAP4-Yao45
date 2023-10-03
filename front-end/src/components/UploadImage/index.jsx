@@ -19,7 +19,7 @@ const UploadImage = ({image, setImage}) => {
     })
   }, [])
   return (
-    <button onClick={() => widgetRef.current.open()}>Upload</button>
+    <button onClick={() => widgetRef.current.open()} className = "add-btn">Upload</button>
   )
 }
 
