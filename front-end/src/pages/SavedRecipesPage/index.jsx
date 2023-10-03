@@ -3,6 +3,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './saved-recipe.css';
 import { useNavbar } from '../../components/Navbar/NavbarContext';
+import {AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
+
 
 
 const SavedRecipesPage = () => {
@@ -11,6 +14,12 @@ const SavedRecipesPage = () => {
   const [loading, setLoading] = useState(false);
 
   const { navbarPosition } = useNavbar();
+
+  const cld = new Cloudinary({
+    cloud: {
+      cloudName: 'dvu7ysgku'
+    }
+  })
 
   useEffect(() => {
     async function getSavedRecipes() {
@@ -35,10 +44,10 @@ const SavedRecipesPage = () => {
 
       <div id='saved-recipe-sect'>
         {recipeList.map((recipe, index) => (
-          <Link id='recipe-card-saved' className='saved-link' to={`/recipe/${recipe.id}`}>
+          <Link id='recipe-card-saved' data-testid="recipe-card-saved" className='saved-link' to={`/recipe/${recipe.id}`}>
           <div key={index} id='content-container'>
             <div id='img-sect'>
-              <img src={recipe.img_url} alt={recipe.name} />
+            <AdvancedImage cldImg={cld.image(recipe.img_url)}/>
             </div>
             
             <div id='info-sect-saved-card'>

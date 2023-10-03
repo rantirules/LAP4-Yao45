@@ -26,12 +26,12 @@ const HomePage = () => {
   console.log('line 26 home', navbarPosition)
 
   return (
-    <div id='home-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
+    <div id='home-page' data-testid='home-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
       <div id='title'>
         <h1>Explore, Savour, Connect: <span> Culturify </span> Your World!</h1>
       </div>
       <div id='content-cont'>
-        <div id='content'>
+        <div id='content' data-testid='content'>
           {content.map((article) => {
             return <HomeCard key={article.id} article={article} />
           })}
