@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { IngredientFields, StepFields, UploadImage } from '..'
 import "./index.css";
 
-const RecipeForm = () => {
+const RecipeForm = (props) => {
   const [name, setName] = useState('')
   const [culture, setCulture] = useState('')
   const [ingredients, setIngredients] = useState([{ ingredient: '', amount: '' }])
@@ -27,7 +27,7 @@ const RecipeForm = () => {
   }
 
   function postRecipe(validIngredients, validSteps) {
-    const user_id = 3 // change
+    const user_id = localStorage.getItem('user')
     fetch('http://127.0.0.1:5000/recipes', {
       method: 'POST',
       body: JSON.stringify({
@@ -68,6 +68,7 @@ const RecipeForm = () => {
         setDescription('')
         setIngredients([{ ingredient: '', amount: '' }])
         setSteps([{ step: '' }])
+        props.setRecipePosted(true)
       } else {
         console.log("Please enter all fields.")
       }
@@ -118,10 +119,16 @@ const RecipeForm = () => {
         <StepFields steps={steps} setSteps={setSteps}/>
       </div> <br/>
       <div>
-        <p>Upload an image</p>
-        <UploadImage image={image} setImage={setImage} />
+        {image == '' ? (
+          <>
+            <p>Upload an image</p>
+            
+            <UploadImage image={image} setImage={setImage} />
+          </>)
+          : <p>Image uploaded</p>
+        }
       </div> <br/>
-      <button type="submit" className="submit-btn" class="form-submit" onClick={handleSubmit}>Submit Recipe</button>
+      <button type="submit" className="submit-btn" onClick={handleSubmit}>Submit Recipe</button>
     </form>
     </>
   )
