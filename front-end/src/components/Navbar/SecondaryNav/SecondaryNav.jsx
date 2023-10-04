@@ -3,8 +3,16 @@ import NavItem from '../NavItem'
 import { FaGlobeAfrica, FaUserCircle, FaFacebookMessenger, FaMapMarkedAlt, FaMapMarkerAlt, FaArrowAltCircleUp, FaArrowCircleDown } from 'react-icons/fa'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
+import InsertCommentOutlinedIcon from '@mui/icons-material/InsertCommentOutlined';
+import HorizontalRuleOutlinedIcon from '@mui/icons-material/HorizontalRuleOutlined';
+import ModeCommentOutlinedIcon from '@mui/icons-material/ModeCommentOutlined';
+import CommentOutlinedIcon from '@mui/icons-material/CommentOutlined';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import Account from './DisplaySection/Account/Account';
 import DisplaySection from './DisplaySection/DisplaySection';
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 
@@ -80,11 +88,11 @@ const SecondaryNav = ({ userName }) => {
     <section className={`secondary-nav ${navbarPosition}`}>
         <div className='icon-wrapper'>
           <div onClick={takeToMsgs}>
-          <NavItem className="icons" icon={<FaFacebookMessenger />} /></div>
+          <NavItem className="icons" icon={<InsertCommentOutlinedIcon />} /></div>
           
-          <div onClick={takeToMaps}><NavItem className="icons" icon={<FaMapMarkerAlt />} /> </div>
+          <div onClick={takeToMaps}><NavItem className="icons" icon={<LocationOnOutlinedIcon />} /> </div>
           <div onClick={toggleAccountSection}>
-          <NavItem className="icons" icon={<FaUserCircle />} /> </div>
+          <NavItem className="icons" icon={<AccountCircleOutlinedIcon />} /> </div>
         </div>
         <div className={`display ${displayArrow}`}>
        
