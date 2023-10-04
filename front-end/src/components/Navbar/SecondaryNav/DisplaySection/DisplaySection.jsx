@@ -15,10 +15,17 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
         closeNavbar();
       };
 
-      const handleRegisterClick = () => {
-        navigate('/register')
-        closeNavbar();
-      }
+    const handleRegisterClick = () => {
+      navigate('/register')
+      closeNavbar();
+    }
+
+    const handleLogoutClick = () => {
+      logout()
+      navigate('/logout')
+      closeNavbar()
+    }
+
     const recipe = {
         title: 'Recipe of the Day',
         image: 'https://via.placeholder.com/150', // Replace with the actual recipe image URL
@@ -72,11 +79,23 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
         <Typography style={typographyStyles} variant="body2">
         <FaMapMarkerAlt/> {recipe.location}
       </Typography >
-      {isLoggedIn ? (
+      {localStorage.getItem('token') ? (
         // Display user's name when logged in
-        <Typography style={typographyStyles} variant="body2">
-          Welcome, {userName}! {/* Replace "User" with the actual user's name */}
-        </Typography>
+        <>
+          <Typography style={typographyStyles} variant="body2">
+            Welcome, {userName}! {/* Replace "User" with the actual user's name */}
+          </Typography>
+          <div className="login-button-sec">
+            <Button
+              variant="outlined"
+              color="primary"
+              style={loginButtonStyles}
+              onClick={handleLogoutClick}
+            >
+              Logout
+            </Button>
+          </div>
+        </>
       ) : (
         // Display login and sign-up buttons when not logged in
         <div className="login-buttons-sec">

@@ -7,8 +7,14 @@ import {FaBell, FaUser, FaEnvelope, FaCog} from 'react-icons/fa';
 
 import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
+
 import Post from './components/Post/index';
-import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage, SavedRecipesPage, MessagePage} from './pages';
+
+
+import DropdownMenu from './components/Navbar/DropdownMenu';
+
+import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage, SavedRecipesPage, MessagePage, LogoutPage} from './pages';
+
 import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 import { AuthProvider } from './components/Auth/AuthContext';
@@ -63,6 +69,7 @@ function App() {
           > <MyMarker /></MapHighlighter>} /> */}
         <Route path="/saved" element={<SavedRecipesPage />} />
         <Route path='/messages' element={<MessagePage />} />
+        <Route path="/logout" element={<LogoutPage />} />
     </Route>
 </Routes>
 </NavbarProvider>

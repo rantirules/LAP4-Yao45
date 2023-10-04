@@ -9,20 +9,26 @@
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "vitest run --reporter verbose",
-    "start": "vite"
+    "start": "vite",
+    "coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@cloudinary/react": "^1.11.2",
     "@cloudinary/url-gen": "^1.11.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+
     "@googlemaps/js-api-loader": "^1.16.2",
     "@googlemaps/react-wrapper": "^1.1.35",
     "@mui/icons-material": "^5.14.11",
     "@mui/material": "^5.14.11",
+
+
     "@fortawesome/fontawesome-svg-core": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@mui/icons-material": "^5.14.11",
+    "@mui/material": "^5.14.11",
     "axios": "^1.5.1",
     "install": "^0.13.0",
     "leaflet": "^1.9.4",
@@ -43,6 +49,7 @@
     "@types/react-dom": "^18.2.8",
     "@vitejs/plugin-react": "^4.0.3",
     "@vitest/coverage-c8": "^0.33.0",
+    "@vitest/coverage-v8": "^0.34.6",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
