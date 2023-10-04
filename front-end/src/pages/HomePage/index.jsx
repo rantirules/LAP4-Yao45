@@ -11,7 +11,7 @@ const HomePage = () => {
 
   const { navbarPosition } = useNavbar();
 
-  console.log('line 14 home', navbarPosition)
+  // console.log('line 14 home', navbarPosition)
 
   const [content, setContent] = useState([
     {id:1, image:"home1.jpg", title: "The Power of Sharing a Meal in Building Relationships", description: "Discover how sharing meals can be a catalyst for building meaningful relationships in this engaging article."},
@@ -26,12 +26,12 @@ const HomePage = () => {
   console.log('line 26 home', navbarPosition)
 
   return (
-    <div id='home-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
+    <div id='home-page' data-testid='home-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
       <div id='title'>
         <h1>Explore, Savour, Connect: <span> Culturify </span> Your World!</h1>
       </div>
       <div id='content-cont'>
-        <div id='content'>
+        <div id='content' data-testid='content'>
           {content.map((article) => {
             return <HomeCard key={article.id} article={article} />
           })}

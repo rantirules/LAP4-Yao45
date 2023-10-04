@@ -9,7 +9,7 @@ import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
 import DropdownMenu from './components/Navbar/DropdownMenu';
 
-import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage, SavedRecipesPage, MessagePage} from './pages';
+import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage, SavedRecipesPage, MessagePage, LogoutPage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 import { AuthProvider } from './components/Auth/AuthContext';
@@ -50,6 +50,7 @@ function App() {
         <Route path="/map" element={<MapPage />} />
         <Route path="/saved" element={<SavedRecipesPage />} />
         <Route path='/messages' element={<MessagePage />} />
+        <Route path="/logout" element={<LogoutPage />} />
     </Route>
 </Routes>
 </NavbarProvider>
