@@ -21,7 +21,7 @@ const user_id = localStorage.getItem('user')
     }
   })
 
-  const recipeRef = useRef(recipeList)
+  // const recipeRef = useRef(recipeList)
 
   useEffect(() => {
     async function getSavedRecipes() {
@@ -46,8 +46,8 @@ const user_id = localStorage.getItem('user')
 
       <div id='saved-recipe-sect'>
         {recipeList.map((recipe, index) => (
-          <Link id='recipe-card-saved' data-testid="recipe-card-saved" className='saved-link' to={`/recipe/${recipe.id}`}>
-          <div key={index} id='content-container'>
+          <Link key={index} id='recipe-card-saved' data-testid="recipe-card-saved" className='saved-link' to={`/recipe/${recipe.id}`}>
+          <div  id='content-container'>
             <div id='img-sect'>
             <AdvancedImage cldImg={cld.image(recipe.img_url)}/>
             </div>
