@@ -9,8 +9,8 @@ import {Cloudinary} from "@cloudinary/url-gen";
 
 
 const SavedRecipesPage = () => {
-// const user_id = localStorage.getItem('user')
-const user_id = 4 
+const user_id = localStorage.getItem('user')
+// const user_id = 4 
   const [recipeList, setRecipeList] = useState([]);
   const [loading, setLoading] = useState(false);
 
