@@ -1,0 +1,96 @@
+#saved-recipe-page {
+    /* background-color: aqua; */
+    height: 75vh;
+    width: 80%;
+}
+
+#saved-recipe-page.closed {
+    width: 100%;
+}
+
+#saved-title {
+    /* background-color: aquamarine; */
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+#saved-title h1 {
+    font-size: 2.7rem;
+    color: #1c1c1c;
+}
+
+#saved-recipe-sect {
+    /* background-color: yellow; */
+    height: 100%;
+    overflow-y: auto;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#recipe-card-saved {
+    background-color: white;
+    height: 15rem;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content-container {
+    /* background-color: antiquewhite; */
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#img-sect {
+    background-color: black;
+    height: 45%;
+    width: 90%;
+    border-radius: 15px;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    margin-top: 2rem;
+    overflow: hidden;
+}
+
+#img-sect img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+#info-sect-saved-card {
+    /* background-color: bisque; */
+    color: #1c1c1c;
+}
+
+#info-sect-saved-card h3 {
+    font-size: 20px;
+}
+
+#info-sect-saved-card p {
+    padding-top: 0.5rem;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+
+#view-recipe-link {
+    background-color: lightblue;
+}
