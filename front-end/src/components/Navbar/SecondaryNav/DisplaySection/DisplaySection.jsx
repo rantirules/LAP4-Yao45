@@ -122,6 +122,8 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
       </div>
       )}
       </section>
+
+      
   )
 }
 

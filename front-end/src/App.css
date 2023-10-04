@@ -187,6 +187,11 @@ height: 3.1rem;
   margin: 25px;
 }
 
+.sec-nav-img {
+  width: 60%;
+  border-radius: 10px;
+  border: solid 1px
+}
 .menu-item {
   font-family: Arial, Helvetica, sans-serif;
   height: 50px;
@@ -286,4 +291,45 @@ height: 3.1rem;
 
 .saved-link {
   color: blue;
+}
+
+.cmnt {
+  align-items: flex-start;
+  display: flex;
+  border-radius: 0px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 2px 10px 0px 10px;
+  border-bottom: solid 1px #b96060;
+}
+
+
+.date-tag {
+  align-self: flex-end;
+  color: #b96060;
+}
+
+.commentSection {
+
+}
+
+.cmnt-sbmt-form input {
+  margin: 1rem;
+background-color: #b96060;
+border: solid 1px #b96060;;
+border-radius: 5px;
+}
+
+.cmnt-btn {
+  border-radius: 5px;
+  border: solid 1px #1C1C1C;
+  background-color: #1C1C1C;
+  color: white;
+}
+.cmnt-sbmt-form button {
+  font-family: Nunito, sans-serif;
+  border-radius: 5px;
+  border: solid 1px #1C1C1C;
+  background-color: #1C1C1C;
+  color: white;
 }

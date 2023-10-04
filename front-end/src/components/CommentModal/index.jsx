@@ -28,21 +28,18 @@ const CommentModal = (props) => {
       }
       const response = await fetch(`http://127.0.0.1:5000/posts/${props.post_id}/comments`, options)
     }
-  return createPortal(
-    <div className="overlay">
-            <div className='comments-modal'>
-        <div>{props.comments.map((c, idx) => {
+  return (
+    <section className='commentSection'>        
+      <div>{props.comments.map((c, idx) => {
           return <Comment key={idx} text={c.text} id={c.id} user_id={c.user_id} timestamp={c.time_posted}></Comment>
         })}</div>
-        <button onClick={handleClick}>Close</button>
-        <form onSubmit={handleSubmit}>
+        <form className='cmnt-sbmt-form' onSubmit={handleSubmit}>
       <input type="text" onChange={handleChange}/>
-      <button type="submit">Submit</button>
+      <button type="submit">Comment</button>
     </form>
-    </div>
+    </section>
 
-    </div>,
-    document.body
+
   )
 }
 
