@@ -1,7 +1,7 @@
 import React from "react";
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import { screen, cleanup, render } from '@testing-library/react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { MemoryRouter, BrowserRouter as Router } from 'react-router-dom';
 
 import * as matchers from '@testing-library/jest-dom/matchers';
 
@@ -13,11 +13,14 @@ expect.extend(matchers)
 describe('Saved Recipes Page', () => {
     beforeEach(() => {
         render(
-            <Router>
+            <MemoryRouter>
+               <Router>
                 <NavbarProvider>
                     <SavedRecipesPage />
                 </NavbarProvider> 
-            </Router>
+                </Router> 
+            </MemoryRouter>
+            
             
         )
     })
