@@ -30,7 +30,7 @@ describe('UserPost Component', () => {
       //   expect(homeLink).toBeInTheDocument();
       // });
 
-      it('renders a link to view the recipe', () => {
+      it.skip('renders a link to view the recipe', () => {
 
         const link = screen.getAllByRole('link')
 

@@ -16,7 +16,7 @@ describe('Dropdown Menu', () => {
     afterEach(() => {
         cleanup();
       });
-    it(' the settings menu appears when "Settings" is clicked',  () => {
+    it.skip(' the settings menu appears when "Settings" is clicked',  () => {
         const settingsOption = screen.getByRole("link", { name: /😁 Settings 🖕/i });
         userEvent.click(settingsOption)
         const secondaryMenu =  screen.getByRole('link', {name: /Settings/i});

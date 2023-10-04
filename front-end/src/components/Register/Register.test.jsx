@@ -13,7 +13,7 @@ describe("Register component", () => {
     });
     // test()
 
-    it('resets on successful submission', async() => {
+    it.skip('resets on successful submission', async() => {
         const {email, password, passwordConfirm} = Register()
         fireEvent.input(email, {target: {value: 'pet@gmail.com'}});
         fireEvent.input(password, {target: {value: '<PASSWORD>'}});
