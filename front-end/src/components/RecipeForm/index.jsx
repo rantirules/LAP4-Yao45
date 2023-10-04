@@ -118,10 +118,16 @@ const RecipeForm = () => {
         <StepFields steps={steps} setSteps={setSteps}/>
       </div> <br/>
       <div>
-        <p>Upload an image</p>
-        <UploadImage image={image} setImage={setImage} />
+        {image == '' ? (
+          <>
+            <p>Upload an image</p>
+            
+            <UploadImage image={image} setImage={setImage} />
+          </>)
+          : <p>Image uploaded</p>
+        }
       </div> <br/>
-      <button type="submit" className="submit-btn" class="form-submit" onClick={handleSubmit}>Submit Recipe</button>
+      <button type="submit" className="submit-btn" onClick={handleSubmit}>Submit Recipe</button>
     </form>
     </>
   )
