@@ -2,15 +2,30 @@ import React, { useState, useEffect, useContext } from 'react'
 import './index.css'
 import Messages from '../Messages';
 import ProfileIcon from '../ProfileIcon';
-import { UserContext } from '../../App';
+import { Button } from '@mui/material';
+import { useAuth } from '../Auth/AuthContext';
+
+const loginButtonStyles = {
+  backgroundColor: 'black', // Background color for the login button
+  color: 'white', // Text color for the login button
+  textTransform: 'none',
+  width: '200px',
+  fontFamily: 'Nunito, sans-serif',
+  borderRadius: '12px',
+  padding: '10px',
+  marginBottom: '20px',
+};
 
 const Chat = () => {
+  const { isLoggedIn, login, logout, userName } = useAuth();
     const [messages, setMessages] = useState()
     const [formValue, setFormValue] = useState('')
     const [users, setUsers] = useState([])
     const [dialogues, setDialogues] = useState([])
     const [currentDialogue, setCurrentDialogue] = useState()
-    const displayName = useContext(UserContext);
+    const displayName = userName
+
+
 
     useEffect(() => {
       const getUsers = async () => {
@@ -28,6 +43,10 @@ const Chat = () => {
       getDialogues()
     },[])
 
+    const createNewChat = () => {
+      console.log('CREATE NEW CHAT IS WORKING')
+    }
+
   return (
     <div className='chat-container'>
       <div className='sidebar'>
@@ -35,14 +54,21 @@ const Chat = () => {
           <h3 className='chat-title'>Culturify Chat</h3>
           <div className='user-log'>
             <p>{displayName}</p>
-            <button>Logout</button>
           </div>
         </div>
         <div className='chats'>
           <h4 className='user-title'>Users:</h4>
           {dialogues && dialogues.map((u, idx) => 
             <ProfileIcon username={u.username} receiver={u.receiver} key={idx} dialogue_id={u.id} currentDialogue={currentDialogue} setCurrentDialogue={setCurrentDialogue} setMessages={setMessages} messages={messages}/>
-          )}
+          )}  
+        </div>
+        <div className="btn-container">
+          <Button
+                variant="outlined"
+                color="primary"
+                style={loginButtonStyles}
+                onClick={createNewChat}
+              >Start a New Chat!</Button>
         </div>
       </div>
       {dialogues ? 

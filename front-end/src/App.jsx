@@ -16,7 +16,6 @@ import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 import { AuthProvider } from './components/Auth/AuthContext';
 export const UserContext = createContext()
-const user = 'charlie1'
 
 import { NavbarProvider } from './components/Navbar/NavbarContext'; 
 import { Chat, UserPost } from './components';
@@ -32,7 +31,6 @@ function MyMarker() {
 function App() {
  return (
   <AuthProvider>
-  <UserContext.Provider value={user}>
     <NavbarProvider>
   <Routes>
 
@@ -70,7 +68,6 @@ function App() {
     </Route>
 </Routes>
 </NavbarProvider>
-</UserContext.Provider>
 </AuthProvider>
   )
 }
