@@ -18,7 +18,7 @@ const Account = () => {
         <a href="">Settings</a>
       </li>
       <li className="drop-item">
-        <a href="https://lap4-backend.onrender.com/saved">Saved Recipes</a>
+        <a href="https://cucina-mondo.onrender.com/saved">Saved Recipes</a>
       </li>
       <li className="drop-item">
         <a href="">Privacy Notice</a>
