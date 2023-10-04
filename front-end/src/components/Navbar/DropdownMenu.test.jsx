@@ -5,7 +5,7 @@ import UserEvent, { userEvent }  from '@testing-library/user-event';
 import * as matchers from '@testing-library/jest-dom/matchers'
 import '@testing-library/jest-dom'
 import App from '../../App';
-import DropdownMenu, {DropdownItem} from './DropdownMenu';
+// import DropdownMenu, {DropdownItem} from './DropdownMenu';
 
 describe('Dropdown Menu', () => {
     beforeEach(() => {

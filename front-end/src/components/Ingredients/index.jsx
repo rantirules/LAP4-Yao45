@@ -13,7 +13,7 @@ const Ingredients = ({ ingredients }) => {
 
   return (
     <>
-      Ingredients:
+      <strong>Ingredients:</strong>
         <ol>
          {displayIngredients()}
         </ol>

@@ -2,15 +2,30 @@ import React, { useState, useEffect, useContext } from 'react'
 import './index.css'
 import Messages from '../Messages';
 import ProfileIcon from '../ProfileIcon';
-import { UserContext } from '../../App';
+import { Button } from '@mui/material';
+import { useAuth } from '../Auth/AuthContext';
+
+const loginButtonStyles = {
+  backgroundColor: 'black', // Background color for the login button
+  color: 'white', // Text color for the login button
+  textTransform: 'none',
+  width: '200px',
+  fontFamily: 'Nunito, sans-serif',
+  borderRadius: '12px',
+  padding: '10px',
+  marginBottom: '20px',
+};
 
 const Chat = () => {
+  const { isLoggedIn, login, logout, userName } = useAuth();
     const [messages, setMessages] = useState()
     const [formValue, setFormValue] = useState('')
     const [users, setUsers] = useState([])
     const [dialogues, setDialogues] = useState([])
     const [currentDialogue, setCurrentDialogue] = useState()
-    const displayName = useContext(UserContext);
+    const displayName = userName
+
+
 
     useEffect(() => {
       const getUsers = async () => {
@@ -19,7 +34,7 @@ const Chat = () => {
         setUsers(data.users)
       }
       const getDialogues = async () => {
-        const response = await fetch('http://127.0.0.1:5000/dialogues')
+        const response = await fetch(`http://127.0.0.1:5000/dialogues/${displayName}`)
         const data = await response.json()
         setDialogues(data.dialogues)
         console.log(data.dialogues);
@@ -28,6 +43,15 @@ const Chat = () => {
       getDialogues()
     },[])
 
+    const createNewChat = async () => {
+      const options = {method: "POST", headers: {
+        'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(displayName)
+    }
+      const response = await fetch('http://127.0.0.1:5000/dialogues', options)
+    }
+
   return (
     <div className='chat-container'>
       <div className='sidebar'>
@@ -35,14 +59,21 @@ const Chat = () => {
           <h3 className='chat-title'>Culturify Chat</h3>
           <div className='user-log'>
             <p>{displayName}</p>
-            <button>Logout</button>
           </div>
         </div>
         <div className='chats'>
           <h4 className='user-title'>Users:</h4>
           {dialogues && dialogues.map((u, idx) => 
             <ProfileIcon username={u.username} receiver={u.receiver} key={idx} dialogue_id={u.id} currentDialogue={currentDialogue} setCurrentDialogue={setCurrentDialogue} setMessages={setMessages} messages={messages}/>
-          )}
+          )}  
+        </div>
+        <div className="btn-container">
+          <Button
+                variant="outlined"
+                color="primary"
+                style={loginButtonStyles}
+                onClick={createNewChat}
+              >Start a New Chat!</Button>
         </div>
       </div>
       {dialogues ? 
