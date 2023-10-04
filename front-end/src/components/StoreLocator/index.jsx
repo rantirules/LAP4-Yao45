@@ -77,8 +77,8 @@ const StoreLocator = ({ selectedPosition }) => {
 
 
   const customIcon = new Icon({
-    iconUrl: 'location.png', // Replace with the URL of your marker icon
-    iconSize: [45, 45], // Set the size of the icon
+    iconUrl: 'location.png', 
+    iconSize: [45, 45], 
   });
 
   return (

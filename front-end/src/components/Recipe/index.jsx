@@ -5,13 +5,13 @@ import {AdvancedImage} from '@cloudinary/react';
 import {Cloudinary} from "@cloudinary/url-gen";
 import {thumbnail} from "@cloudinary/url-gen/actions/resize";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faHeart } from '@fortawesome/free-regular-svg-icons';
+
 
 import { BsGlobe } from 'react-icons/bs';
 import "./index.css"
 
 
-// import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 
 const Recipe = (props) => {
   const [loading, setLoading] = useState(false)

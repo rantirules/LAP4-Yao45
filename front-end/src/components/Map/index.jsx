@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import StoreLocator from '../StoreLocator';
+import { Icon } from 'leaflet'
+
 
 const Map = ({selectedPosition}) => {
     // console.log('the lat value from the map page is:', latValue)
@@ -27,7 +29,11 @@ const Map = ({selectedPosition}) => {
       
         return null;
       }
-      
+    
+      const customIcon = new Icon({
+        iconUrl: 'home1.png', 
+        iconSize: [45, 45], 
+      });
 
 
   return (
@@ -38,8 +44,10 @@ const Map = ({selectedPosition}) => {
           url="https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=ZKQ4muTT8XYkrSt11Kw0"
         />
       {selectedPosition && (
-        // <Marker position={location} />
+        <>
+        <Marker position={location} icon={customIcon}/>
         <StoreLocator selectedPosition={selectedPosition}/>
+        </>
       )}
       
         
