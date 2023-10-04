@@ -59,12 +59,16 @@ margin-right: 28px;
 }
 
 .arrow-wrap {
-transform: translate(50%,345%);
+/* transform: translate(50%,120%); */
+left: 191px;
+top: 551px;
+position: fixed;
 }
 
 .arrow-up {
   fill:grey;
   position: fixed;
+  align-self: center;
 }
 
 .login-buttons {
@@ -127,17 +131,24 @@ height: 3.1rem;
 }
 
 .arrow-down-wrap {
-  transform: translateY(-90%)
+  transform: translate(45%, -20%)
 }
 .icon-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 10px;
 }
 .secondary-nav a {
   color: #1C1C1C;
   
 }
+
+.history-recipe {
+  width: 300px;
+}
+
+
 
 .icons {
   fill: #FF8080;

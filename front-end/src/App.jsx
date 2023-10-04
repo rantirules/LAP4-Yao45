@@ -11,7 +11,7 @@ import NavItem from './components/Navbar/NavItem';
 import Post from './components/Post/index';
 
 
-import DropdownMenu from './components/Navbar/DropdownMenu';
+
 
 import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage, SavedRecipesPage, MessagePage, LogoutPage} from './pages';
 

@@ -1,0 +1,69 @@
+.postContainer {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    max-height: 60vh;
+    width: 50%;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    border-radius: 3rem;
+    /* box-shadow: 10px 10px rgba(255, 255, 255, 0.3); */
+    outline: solid 2px white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.user > img {
+    max-height: 40px;
+    border-radius: 2rem;
+}
+
+.left-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 0.4;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 3rem;
+    outline: solid 1px white
+}
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.3));
+    border-radius: 3rem;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0rem;
+}
+
+.recipe {
+    text-decoration: underline;
+}
+
+.card {
+    display: flex;
+    background: linear-gradient(to left top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8));
+    width: 95%;
+    height: 27%;
+    border-radius: 2rem;
+    text-align: end;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.text {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+}

@@ -28,7 +28,7 @@ const HomePage = () => {
   return (
     <div id='home-page' data-testid='home-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
       <div id='title'>
-        <h1>Explore, Savour, Connect: <span> Culturify </span> Your World!</h1>
+        <h1>It's time to<span> Culturify </span> your world.</h1>
       </div>
       <div id='content-cont'>
         <div id='content' data-testid='content'>

@@ -12,9 +12,11 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import ChatBubbleOutlineOutlinedIcon from '@mui/icons-material/ChatBubbleOutlineOutlined';
 import Account from './DisplaySection/Account/Account';
 import DisplaySection from './DisplaySection/DisplaySection';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import { useNavigate, useLocation } from 'react-router-dom';
-
+import { useAuth } from '../../Auth/AuthContext';
 
 
 import { useNavbar } from '../NavbarContext';
@@ -26,12 +28,20 @@ const SecondaryNav = ({ userName }) => {
   // const [navbarPosition, setNavbarPosition] = useState('open');
 
   const {navbarPosition, updateNavbarPosition } = useNavbar()
+  const { logout} = useAuth();
   const [displayArrow, setDisplayArrow] = useState("show");
   const [displayArrowDown, setDisplayArrowDown] = useState("hide");
   const [isAccountMenuOpen, setIsAccountMenuOpen] = useState(false);
 
   const navigate = useNavigate();
 
+  const handleLogoutClick = () => {
+    console.log("Click me sis")
+    logout();
+    navigate('/logout')
+    closeNavbar();
+  }
+  
   const takeToMsgs = () => {
     navigate('/messages');
   }
@@ -93,10 +103,21 @@ const SecondaryNav = ({ userName }) => {
           <div onClick={takeToMaps}><NavItem className="icons" icon={<LocationOnOutlinedIcon />} /> </div>
           <div onClick={toggleAccountSection}>
           <NavItem className="icons" icon={<AccountCircleOutlinedIcon />} /> </div>
+          {localStorage.getItem('token') ? ( <div className="logout-icon" onClick={handleLogoutClick} >
+            <NavItem className="icons" icon={<LogoutOutlinedIcon/>}/>
+            {/* <Button
+              color="primary"
+              style={logoutButtonStyles}
+              onClick={handleLogoutClick}
+            > */}
+              
+            {/* </Button> */}
+          </div>) : (<></>)}
         </div>
+        
         <div className={`display ${displayArrow}`}>
        
-       {location.pathname === '/recipe' ? <img className="sec-nav-img" src="src/assets/63796774-relief-map-of-italy-and-the-nearby-countries-italy-is-highlighted-in-red.jpeg" alt="Recipe"/>
+       {location.pathname === '/recipe/:id' ? <img className="sec-nav-img" src="src/assets/63796774-relief-map-of-italy-and-the-nearby-countries-italy-is-highlighted-in-red.jpeg" alt="Recipe"/>
 : (isAccountMenuOpen ? <Account /> :
         <DisplaySection navbarPosition={navbarPosition} closeNavbar={closeNavbar}userName={userName}/>)}
         </div>
@@ -105,7 +126,7 @@ const SecondaryNav = ({ userName }) => {
           <NavItem className="arrow-up" data-testid="arrow-up"icon={<KeyboardDoubleArrowUpIcon/>} />
 
   </div>
-  <div onClick={handleNavItemClick} className={`${displayArrowDown}`}>
+  <div onClick={handleNavItemClick} className={` arrow-down-wrap ${displayArrowDown}`}>
   <NavItem className='arrow-down' icon={<KeyboardArrowDownIcon/>}/> 
   </div>
     </section>
