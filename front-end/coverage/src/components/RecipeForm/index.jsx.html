@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">5.38% </span>
+                <span class="strong">5.1% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>7/130</span>
+                <span class='fraction'>7/137</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">5.38% </span>
+                <span class="strong">5.1% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>7/130</span>
+                <span class='fraction'>7/137</span>
             </div>
         
             
@@ -192,11 +192,25 @@
 <a name='L127'></a><a href='#L127'>127</a>
 <a name='L128'></a><a href='#L128'>128</a>
 <a name='L129'></a><a href='#L129'>129</a>
-<a name='L130'></a><a href='#L130'>130</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -325,7 +339,7 @@
 import { IngredientFields, StepFields, UploadImage } from '..'
 import "./index.css";
 &nbsp;
-const RecipeForm = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
+const RecipeForm = <span class="fstat-no" title="function not covered" >(props) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >  const [name, setName] = useState('')</span>
 <span class="cstat-no" title="statement not covered" >  const [culture, setCulture] = useState('')</span>
 <span class="cstat-no" title="statement not covered" >  const [ingredients, setIngredients] = useState([{ ingredient: '', amount: '' }])</span>
@@ -350,7 +364,7 @@ const RecipeForm = <span class="fstat-no" title="function not covered" >() =&gt;
 <span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  function postRecipe(validIngredients, validSteps) {</span>
-<span class="cstat-no" title="statement not covered" >    const user_id = 3 // change</span>
+<span class="cstat-no" title="statement not covered" >    const user_id = localStorage.getItem('user')</span>
 <span class="cstat-no" title="statement not covered" >    fetch('http://127.0.0.1:5000/recipes', {</span>
 <span class="cstat-no" title="statement not covered" >      method: 'POST',</span>
 <span class="cstat-no" title="statement not covered" >      body: JSON.stringify({</span>
@@ -391,6 +405,7 @@ const RecipeForm = <span class="fstat-no" title="function not covered" >() =&gt;
 <span class="cstat-no" title="statement not covered" >        setDescription('')</span>
 <span class="cstat-no" title="statement not covered" >        setIngredients([{ ingredient: '', amount: '' }])</span>
 <span class="cstat-no" title="statement not covered" >        setSteps([{ step: '' }])</span>
+<span class="cstat-no" title="statement not covered" >        props.setRecipePosted(true)</span>
 <span class="cstat-no" title="statement not covered" >      } else {</span>
 <span class="cstat-no" title="statement not covered" >        console.log("Please enter all fields.")</span>
 <span class="cstat-no" title="statement not covered" >      }</span>
@@ -441,10 +456,16 @@ const RecipeForm = <span class="fstat-no" title="function not covered" >() =&gt;
 <span class="cstat-no" title="statement not covered" >        &lt;StepFields steps={steps} setSteps={setSteps}/&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;/div&gt; &lt;br/&gt;</span>
 <span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;p&gt;Upload an image&lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;UploadImage image={image} setImage={setImage} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >        {image == '' ? (</span>
+<span class="cstat-no" title="statement not covered" >          &lt;&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;p&gt;Upload an image&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >            </span>
+<span class="cstat-no" title="statement not covered" >            &lt;UploadImage image={image} setImage={setImage} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >          &lt;/&gt;)</span>
+<span class="cstat-no" title="statement not covered" >          : &lt;p&gt;Image uploaded&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >        }</span>
 <span class="cstat-no" title="statement not covered" >      &lt;/div&gt; &lt;br/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;button type="submit" className="submit-btn" class="form-submit" onClick={handleSubmit}&gt;Submit Recipe&lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;button type="submit" className="submit-btn" onClick={handleSubmit}&gt;Submit Recipe&lt;/button&gt;</span>
 <span class="cstat-no" title="statement not covered" >    &lt;/form&gt;</span>
 <span class="cstat-no" title="statement not covered" >    &lt;/&gt;</span>
 <span class="cstat-no" title="statement not covered" >  )</span>
@@ -457,11 +478,7 @@ export default RecipeForm</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
-                at 2023-10-04T15:28:32.878Z
-=======
-                at 2023-10-04T16:21:36.903Z
->>>>>>> 00e77252b772138296e28b819aed5b6ea7c98ef3
+                at 2023-10-04T16:52:44.332Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

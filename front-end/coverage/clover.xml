@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<coverage generated="1696433312974" clover="3.2.0">
-  <project timestamp="1696433312974" name="All files">
-    <metrics statements="4151" coveredstatements="2344" conditionals="11" coveredconditionals="8" methods="47" coveredmethods="6" elements="4209" coveredelements="2358" complexity="0" loc="4151" ncloc="4151" packages="44" files="47" classes="47"/>
-=======
-<coverage generated="1696436496935" clover="3.2.0">
-  <project timestamp="1696436496935" name="All files">
-    <metrics statements="4351" coveredstatements="2563" conditionals="20" coveredconditionals="13" methods="62" coveredmethods="11" elements="4433" coveredelements="2587" complexity="0" loc="4351" ncloc="4351" packages="46" files="48" classes="48"/>
->>>>>>> 00e77252b772138296e28b819aed5b6ea7c98ef3
+<coverage generated="1696438364701" clover="3.2.0">
+  <project timestamp="1696438364702" name="All files">
+    <metrics statements="4498" coveredstatements="2599" conditionals="26" coveredconditionals="17" methods="65" coveredmethods="11" elements="4589" coveredelements="2627" complexity="0" loc="4498" ncloc="4498" packages="48" files="50" classes="50"/>
     <package name="src">
       <metrics statements="75" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <file name="App.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/App.jsx">
+      <file name="App.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/App.jsx">
         <metrics statements="75" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -91,7 +85,7 @@
     </package>
     <package name="src.assets">
       <metrics statements="1830" coveredstatements="1830" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="countrylist.js" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/assets/countrylist.js">
+      <file name="countrylist.js" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/assets/countrylist.js">
         <metrics statements="1830" coveredstatements="1830" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -1926,9 +1920,9 @@
       </file>
     </package>
     <package name="src.components">
-      <metrics statements="27" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.js" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/index.js">
-        <metrics statements="27" coveredstatements="27" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="index.js" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/index.js">
+        <metrics statements="26" coveredstatements="26" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -1955,12 +1949,11 @@
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
         <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Auth">
       <metrics statements="49" coveredstatements="39" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="2"/>
-      <file name="AuthContext.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Auth/AuthContext.jsx">
+      <file name="AuthContext.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Auth/AuthContext.jsx">
         <metrics statements="49" coveredstatements="39" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -1971,15 +1964,15 @@
         <line num="7" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
         <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
         <line num="12" count="1" type="stmt"/>
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
+        <line num="15" count="2" type="stmt"/>
+        <line num="16" count="2" type="stmt"/>
+        <line num="17" count="2" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
         <line num="19" count="0" type="stmt"/>
         <line num="20" count="0" type="stmt"/>
         <line num="21" count="0" type="stmt"/>
@@ -1987,35 +1980,35 @@
         <line num="23" count="0" type="stmt"/>
         <line num="24" count="0" type="stmt"/>
         <line num="25" count="0" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
+        <line num="26" count="2" type="stmt"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
         <line num="35" count="0" type="stmt"/>
         <line num="36" count="0" type="stmt"/>
         <line num="37" count="0" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
         <line num="48" count="1" type="stmt"/>
         <line num="49" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Chat">
       <metrics statements="87" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Chat/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Chat/index.jsx">
         <metrics statements="87" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2108,7 +2101,7 @@
     </package>
     <package name="src.components.ChatMessage">
       <metrics statements="24" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/ChatMessage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/ChatMessage/index.jsx">
         <metrics statements="24" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2138,7 +2131,7 @@
     </package>
     <package name="src.components.Comment">
       <metrics statements="26" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Comment/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Comment/index.jsx">
         <metrics statements="26" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2170,7 +2163,7 @@
     </package>
     <package name="src.components.CommentModal">
       <metrics statements="46" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/CommentModal/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/CommentModal/index.jsx">
         <metrics statements="46" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2222,7 +2215,7 @@
     </package>
     <package name="src.components.CommentSection">
       <metrics statements="54" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="CommentSection.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/CommentSection/CommentSection.jsx">
+      <file name="CommentSection.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/CommentSection/CommentSection.jsx">
         <metrics statements="54" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2282,7 +2275,7 @@
     </package>
     <package name="src.components.HomeCard">
       <metrics statements="22" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/HomeCard/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/HomeCard/index.jsx">
         <metrics statements="22" coveredstatements="22" conditionals="1" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2310,7 +2303,7 @@
     </package>
     <package name="src.components.IngredientFields">
       <metrics statements="55" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/IngredientFields/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/IngredientFields/index.jsx">
         <metrics statements="55" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2371,7 +2364,7 @@
     </package>
     <package name="src.components.Ingredients">
       <metrics statements="24" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Ingredients/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Ingredients/index.jsx">
         <metrics statements="24" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2401,7 +2394,7 @@
     </package>
     <package name="src.components.Login">
       <metrics statements="101" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Login/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Login/index.jsx">
         <metrics statements="101" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2508,7 +2501,7 @@
     </package>
     <package name="src.components.Map">
       <metrics statements="61" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Map/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Map/index.jsx">
         <metrics statements="61" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2575,7 +2568,7 @@
     </package>
     <package name="src.components.Messages">
       <metrics statements="47" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Messages/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Messages/index.jsx">
         <metrics statements="47" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2628,7 +2621,7 @@
     </package>
     <package name="src.components.Navbar">
       <metrics statements="90" coveredstatements="53" conditionals="4" coveredconditionals="3" methods="5" coveredmethods="3"/>
-      <file name="NavItem.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Navbar/NavItem.jsx">
+      <file name="NavItem.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Navbar/NavItem.jsx">
         <metrics statements="15" coveredstatements="15" conditionals="2" coveredconditionals="1" methods="2" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2646,31 +2639,31 @@
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
       </file>
-      <file name="NavbarContext.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Navbar/NavbarContext.jsx">
+      <file name="NavbarContext.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Navbar/NavbarContext.jsx">
         <metrics statements="21" coveredstatements="20" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
         <line num="5" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="6" count="6" type="stmt"/>
-        <line num="7" count="6" type="stmt"/>
-        <line num="8" count="6" type="stmt"/>
+        <line num="6" count="7" type="stmt"/>
+        <line num="7" count="7" type="stmt"/>
+        <line num="8" count="7" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
-        <line num="10" count="6" type="stmt"/>
-        <line num="11" count="6" type="stmt"/>
-        <line num="12" count="6" type="stmt"/>
-        <line num="13" count="6" type="stmt"/>
-        <line num="14" count="6" type="stmt"/>
-        <line num="15" count="6" type="stmt"/>
-        <line num="16" count="6" type="stmt"/>
-        <line num="17" count="6" type="stmt"/>
+        <line num="10" count="7" type="stmt"/>
+        <line num="11" count="7" type="stmt"/>
+        <line num="12" count="7" type="stmt"/>
+        <line num="13" count="7" type="stmt"/>
+        <line num="14" count="7" type="stmt"/>
+        <line num="15" count="7" type="stmt"/>
+        <line num="16" count="7" type="stmt"/>
+        <line num="17" count="7" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="cond" truecount="1" falsecount="0"/>
         <line num="20" count="6" type="stmt"/>
         <line num="21" count="6" type="stmt"/>
       </file>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Navbar/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Navbar/index.jsx">
         <metrics statements="54" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -2729,9 +2722,9 @@
       </file>
     </package>
     <package name="src.components.Navbar.SecondaryNav">
-      <metrics statements="107" coveredstatements="73" conditionals="3" coveredconditionals="1" methods="8" coveredmethods="1"/>
-      <file name="SecondaryNav.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Navbar/SecondaryNav/SecondaryNav.jsx">
-        <metrics statements="107" coveredstatements="73" conditionals="3" coveredconditionals="1" methods="8" coveredmethods="1"/>
+      <metrics statements="136" coveredstatements="89" conditionals="6" coveredconditionals="3" methods="9" coveredmethods="1"/>
+      <file name="SecondaryNav.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Navbar/SecondaryNav/SecondaryNav.jsx">
+        <metrics statements="136" coveredstatements="89" conditionals="6" coveredconditionals="3" methods="9" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -2747,7 +2740,7 @@
         <line num="13" count="1" type="stmt"/>
         <line num="14" count="1" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
-        <line num="16" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="16" count="1" type="stmt"/>
         <line num="17" count="1" type="stmt"/>
         <line num="18" count="1" type="stmt"/>
         <line num="19" count="1" type="stmt"/>
@@ -2757,176 +2750,63 @@
         <line num="23" count="1" type="stmt"/>
         <line num="24" count="1" type="stmt"/>
         <line num="25" count="1" type="stmt"/>
-        <line num="26" count="1" type="stmt"/>
-        <line num="27" count="1" type="stmt"/>
-        <line num="28" count="0" type="stmt"/>
-        <line num="29" count="0" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="0" type="stmt"/>
-        <line num="33" count="0" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="0" type="stmt"/>
-        <line num="37" count="0" type="stmt"/>
-        <line num="38" count="0" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
         <line num="42" count="0" type="stmt"/>
         <line num="43" count="0" type="stmt"/>
-        <line num="44" count="0" type="stmt"/>
-        <line num="45" count="0" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
         <line num="46" count="0" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
-        <line num="52" count="0" type="stmt"/>
-        <line num="53" count="0" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
         <line num="56" count="0" type="stmt"/>
-        <line num="57" count="0" type="stmt"/>
-        <line num="58" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
         <line num="62" count="0" type="stmt"/>
         <line num="63" count="0" type="stmt"/>
         <line num="64" count="0" type="stmt"/>
         <line num="65" count="0" type="stmt"/>
-        <line num="66" count="0" type="stmt"/>
-        <line num="67" count="0" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
         <line num="68" count="0" type="stmt"/>
         <line num="69" count="0" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
         <line num="71" count="0" type="stmt"/>
-        <line num="72" count="0" type="stmt"/>
-        <line num="73" count="0" type="stmt"/>
+        <line num="72" count="2" type="stmt"/>
+        <line num="73" count="2" type="stmt"/>
         <line num="74" count="0" type="stmt"/>
-        <line num="75" count="1" type="stmt"/>
-        <line num="76" count="1" type="stmt"/>
-        <line num="77" count="1" type="stmt"/>
-        <line num="78" count="1" type="stmt"/>
-        <line num="79" count="1" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
-        <line num="81" count="1" type="stmt"/>
-        <line num="82" count="1" type="stmt"/>
-        <line num="83" count="1" type="stmt"/>
-        <line num="84" count="1" type="stmt"/>
-        <line num="85" count="1" type="stmt"/>
-        <line num="86" count="1" type="stmt"/>
-        <line num="87" count="1" type="stmt"/>
-        <line num="88" count="1" type="stmt"/>
-        <line num="89" count="1" type="stmt"/>
-        <line num="90" count="1" type="stmt"/>
-        <line num="91" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="92" count="1" type="cond" truecount="0" falsecount="1"/>
-        <line num="93" count="1" type="stmt"/>
-        <line num="94" count="1" type="stmt"/>
-        <line num="95" count="1" type="stmt"/>
-        <line num="96" count="1" type="stmt"/>
-        <line num="97" count="1" type="stmt"/>
-        <line num="98" count="1" type="stmt"/>
-        <line num="99" count="1" type="stmt"/>
-        <line num="100" count="1" type="stmt"/>
-        <line num="101" count="1" type="stmt"/>
-        <line num="102" count="1" type="stmt"/>
-        <line num="103" count="1" type="stmt"/>
-        <line num="104" count="1" type="stmt"/>
-        <line num="105" count="1" type="stmt"/>
-        <line num="106" count="1" type="stmt"/>
-        <line num="107" count="1" type="stmt"/>
-      </file>
-    </package>
-    <package name="src.components.Navbar.SecondaryNav.DisplaySection">
-      <metrics statements="130" coveredstatements="104" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="1"/>
-      <file name="DisplaySection.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Navbar/SecondaryNav/DisplaySection/DisplaySection.jsx">
-        <metrics statements="130" coveredstatements="104" conditionals="2" coveredconditionals="1" methods="4" coveredmethods="1"/>
-        <line num="1" count="1" type="stmt"/>
-        <line num="2" count="1" type="stmt"/>
-        <line num="3" count="1" type="stmt"/>
-        <line num="4" count="1" type="stmt"/>
-        <line num="5" count="1" type="stmt"/>
-        <line num="6" count="1" type="stmt"/>
-        <line num="7" count="1" type="stmt"/>
-        <line num="8" count="1" type="cond" truecount="1" falsecount="0"/>
-        <line num="9" count="1" type="stmt"/>
-        <line num="10" count="1" type="stmt"/>
-        <line num="11" count="1" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
-        <line num="14" count="0" type="stmt"/>
-        <line num="15" count="0" type="stmt"/>
-        <line num="16" count="0" type="stmt"/>
-        <line num="17" count="1" type="stmt"/>
-        <line num="18" count="1" type="stmt"/>
-        <line num="19" count="0" type="stmt"/>
-        <line num="20" count="0" type="stmt"/>
-        <line num="21" count="0" type="stmt"/>
-        <line num="22" count="1" type="stmt"/>
-        <line num="23" count="1" type="stmt"/>
-        <line num="24" count="0" type="stmt"/>
-        <line num="25" count="0" type="stmt"/>
-        <line num="26" count="0" type="stmt"/>
-        <line num="27" count="0" type="stmt"/>
-        <line num="28" count="1" type="stmt"/>
-        <line num="29" count="1" type="stmt"/>
-        <line num="30" count="1" type="stmt"/>
-        <line num="31" count="1" type="stmt"/>
-        <line num="32" count="1" type="stmt"/>
-        <line num="33" count="1" type="stmt"/>
-        <line num="34" count="1" type="stmt"/>
-        <line num="35" count="1" type="stmt"/>
-        <line num="36" count="1" type="stmt"/>
-        <line num="37" count="1" type="stmt"/>
-        <line num="38" count="1" type="stmt"/>
-        <line num="39" count="1" type="stmt"/>
-        <line num="40" count="1" type="stmt"/>
-        <line num="41" count="1" type="stmt"/>
-        <line num="42" count="1" type="stmt"/>
-        <line num="43" count="1" type="stmt"/>
-        <line num="44" count="1" type="stmt"/>
-        <line num="45" count="1" type="stmt"/>
-        <line num="46" count="1" type="stmt"/>
-        <line num="47" count="1" type="stmt"/>
-        <line num="48" count="1" type="stmt"/>
-        <line num="49" count="1" type="stmt"/>
-        <line num="50" count="1" type="stmt"/>
-        <line num="51" count="1" type="stmt"/>
-        <line num="52" count="1" type="stmt"/>
-        <line num="53" count="1" type="stmt"/>
-        <line num="54" count="1" type="stmt"/>
-        <line num="55" count="1" type="stmt"/>
-        <line num="56" count="1" type="stmt"/>
-        <line num="57" count="1" type="stmt"/>
-        <line num="58" count="1" type="stmt"/>
-        <line num="59" count="1" type="stmt"/>
-        <line num="60" count="1" type="stmt"/>
-        <line num="61" count="1" type="stmt"/>
-        <line num="62" count="1" type="stmt"/>
-        <line num="63" count="1" type="stmt"/>
-        <line num="64" count="1" type="stmt"/>
-        <line num="65" count="1" type="stmt"/>
-        <line num="66" count="1" type="stmt"/>
-        <line num="67" count="1" type="stmt"/>
-        <line num="68" count="1" type="stmt"/>
-        <line num="69" count="1" type="stmt"/>
-        <line num="70" count="1" type="stmt"/>
-        <line num="71" count="1" type="stmt"/>
-        <line num="72" count="1" type="stmt"/>
-        <line num="73" count="1" type="stmt"/>
-        <line num="74" count="1" type="stmt"/>
-        <line num="75" count="1" type="stmt"/>
-        <line num="76" count="1" type="stmt"/>
-        <line num="77" count="1" type="stmt"/>
-        <line num="78" count="1" type="stmt"/>
-        <line num="79" count="1" type="stmt"/>
-        <line num="80" count="1" type="stmt"/>
-        <line num="81" count="1" type="stmt"/>
-        <line num="82" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
         <line num="83" count="0" type="stmt"/>
         <line num="84" count="0" type="stmt"/>
         <line num="85" count="0" type="stmt"/>
@@ -2937,13 +2817,155 @@
         <line num="90" count="0" type="stmt"/>
         <line num="91" count="0" type="stmt"/>
         <line num="92" count="0" type="stmt"/>
-        <line num="93" count="0" type="stmt"/>
-        <line num="94" count="0" type="stmt"/>
-        <line num="95" count="0" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
+        <line num="94" count="2" type="stmt"/>
+        <line num="95" count="2" type="stmt"/>
+        <line num="96" count="2" type="stmt"/>
+        <line num="97" count="2" type="stmt"/>
+        <line num="98" count="2" type="stmt"/>
+        <line num="99" count="2" type="stmt"/>
+        <line num="100" count="2" type="stmt"/>
+        <line num="101" count="2" type="stmt"/>
+        <line num="102" count="2" type="stmt"/>
+        <line num="103" count="2" type="stmt"/>
+        <line num="104" count="2" type="stmt"/>
+        <line num="105" count="2" type="stmt"/>
+        <line num="106" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="107" count="0" type="stmt"/>
+        <line num="108" count="0" type="stmt"/>
+        <line num="109" count="0" type="stmt"/>
+        <line num="110" count="0" type="stmt"/>
+        <line num="111" count="0" type="stmt"/>
+        <line num="112" count="0" type="stmt"/>
+        <line num="113" count="0" type="stmt"/>
+        <line num="114" count="0" type="stmt"/>
+        <line num="115" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="116" count="2" type="stmt"/>
+        <line num="117" count="2" type="stmt"/>
+        <line num="118" count="2" type="stmt"/>
+        <line num="119" count="2" type="stmt"/>
+        <line num="120" count="2" type="cond" truecount="1" falsecount="1"/>
+        <line num="121" count="1" type="cond" truecount="0" falsecount="1"/>
+        <line num="122" count="1" type="stmt"/>
+        <line num="123" count="2" type="stmt"/>
+        <line num="124" count="2" type="stmt"/>
+        <line num="125" count="2" type="stmt"/>
+        <line num="126" count="2" type="stmt"/>
+        <line num="127" count="2" type="stmt"/>
+        <line num="128" count="2" type="stmt"/>
+        <line num="129" count="2" type="stmt"/>
+        <line num="130" count="2" type="stmt"/>
+        <line num="131" count="2" type="stmt"/>
+        <line num="132" count="2" type="stmt"/>
+        <line num="133" count="2" type="stmt"/>
+        <line num="134" count="2" type="stmt"/>
+        <line num="135" count="1" type="stmt"/>
+        <line num="136" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.Navbar.SecondaryNav.DisplaySection">
+      <metrics statements="131" coveredstatements="113" conditionals="5" coveredconditionals="3" methods="4" coveredmethods="1"/>
+      <file name="DisplaySection.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Navbar/SecondaryNav/DisplaySection/DisplaySection.jsx">
+        <metrics statements="131" coveredstatements="113" conditionals="5" coveredconditionals="3" methods="4" coveredmethods="1"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="cond" truecount="1" falsecount="0"/>
+        <line num="10" count="2" type="stmt"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="13" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="2" type="stmt"/>
+        <line num="19" count="2" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="24" count="2" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+        <line num="38" count="2" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="42" count="2" type="stmt"/>
+        <line num="43" count="2" type="stmt"/>
+        <line num="44" count="2" type="stmt"/>
+        <line num="45" count="2" type="stmt"/>
+        <line num="46" count="2" type="stmt"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="48" count="2" type="stmt"/>
+        <line num="49" count="2" type="stmt"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="51" count="2" type="stmt"/>
+        <line num="52" count="2" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="54" count="2" type="stmt"/>
+        <line num="55" count="2" type="stmt"/>
+        <line num="56" count="2" type="stmt"/>
+        <line num="57" count="2" type="stmt"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="59" count="2" type="stmt"/>
+        <line num="60" count="2" type="stmt"/>
+        <line num="61" count="2" type="stmt"/>
+        <line num="62" count="2" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="64" count="2" type="stmt"/>
+        <line num="65" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="67" count="2" type="stmt"/>
+        <line num="68" count="2" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="70" count="2" type="cond" truecount="0" falsecount="1"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="2" type="cond" truecount="1" falsecount="0"/>
+        <line num="76" count="2" type="stmt"/>
+        <line num="77" count="2" type="stmt"/>
+        <line num="78" count="2" type="stmt"/>
+        <line num="79" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="81" count="2" type="stmt"/>
+        <line num="82" count="2" type="stmt"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="84" count="2" type="stmt"/>
+        <line num="85" count="2" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+        <line num="87" count="2" type="stmt"/>
+        <line num="88" count="2" type="stmt"/>
+        <line num="89" count="2" type="stmt"/>
+        <line num="90" count="2" type="stmt"/>
+        <line num="91" count="2" type="stmt"/>
+        <line num="92" count="2" type="stmt"/>
+        <line num="93" count="2" type="stmt"/>
+        <line num="94" count="2" type="stmt"/>
+        <line num="95" count="2" type="cond" truecount="0" falsecount="1"/>
         <line num="96" count="0" type="stmt"/>
         <line num="97" count="0" type="stmt"/>
         <line num="98" count="0" type="stmt"/>
-        <line num="99" count="1" type="stmt"/>
+        <line num="99" count="0" type="cond" truecount="1" falsecount="0"/>
         <line num="100" count="1" type="stmt"/>
         <line num="101" count="1" type="stmt"/>
         <line num="102" count="1" type="stmt"/>
@@ -2968,18 +2990,19 @@
         <line num="121" count="1" type="stmt"/>
         <line num="122" count="1" type="stmt"/>
         <line num="123" count="1" type="stmt"/>
-        <line num="124" count="1" type="stmt"/>
-        <line num="125" count="1" type="stmt"/>
-        <line num="126" count="1" type="stmt"/>
-        <line num="127" count="1" type="stmt"/>
-        <line num="128" count="1" type="stmt"/>
-        <line num="129" count="1" type="stmt"/>
+        <line num="124" count="2" type="stmt"/>
+        <line num="125" count="2" type="stmt"/>
+        <line num="126" count="2" type="stmt"/>
+        <line num="127" count="2" type="stmt"/>
+        <line num="128" count="2" type="stmt"/>
+        <line num="129" count="2" type="stmt"/>
         <line num="130" count="1" type="stmt"/>
+        <line num="131" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Navbar.SecondaryNav.DisplaySection.Account">
       <metrics statements="33" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="Account.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Navbar/SecondaryNav/DisplaySection/Account/Account.jsx">
+      <file name="Account.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Navbar/SecondaryNav/DisplaySection/Account/Account.jsx">
         <metrics statements="33" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3018,7 +3041,7 @@
     </package>
     <package name="src.components.Navbar.SecondaryNav.DisplaySection.Maps">
       <metrics statements="63" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="Maps.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Navbar/SecondaryNav/DisplaySection/Maps/Maps.jsx">
+      <file name="Maps.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Navbar/SecondaryNav/DisplaySection/Maps/Maps.jsx">
         <metrics statements="63" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3085,9 +3108,32 @@
         <line num="63" count="1" type="stmt"/>
       </file>
     </package>
+    <package name="src.components.NewRecipeButton">
+      <metrics statements="17" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/NewRecipeButton/index.jsx">
+        <metrics statements="17" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="0" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="src.components.Post">
       <metrics statements="78" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Post/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Post/index.jsx">
         <metrics statements="78" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3171,7 +3217,7 @@
     </package>
     <package name="src.components.ProfileIcon">
       <metrics statements="35" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/ProfileIcon/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/ProfileIcon/index.jsx">
         <metrics statements="35" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3212,7 +3258,7 @@
     </package>
     <package name="src.components.Recipe">
       <metrics statements="85" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Recipe/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Recipe/index.jsx">
         <metrics statements="85" coveredstatements="18" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3302,9 +3348,9 @@
       </file>
     </package>
     <package name="src.components.RecipeForm">
-      <metrics statements="130" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/RecipeForm/index.jsx">
-        <metrics statements="130" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="137" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/RecipeForm/index.jsx">
+        <metrics statements="137" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
@@ -3433,13 +3479,20 @@
         <line num="126" count="0" type="stmt"/>
         <line num="127" count="0" type="stmt"/>
         <line num="128" count="0" type="stmt"/>
-        <line num="129" count="1" type="stmt"/>
-        <line num="130" count="1" type="stmt"/>
+        <line num="129" count="0" type="stmt"/>
+        <line num="130" count="0" type="stmt"/>
+        <line num="131" count="0" type="stmt"/>
+        <line num="132" count="0" type="stmt"/>
+        <line num="133" count="0" type="stmt"/>
+        <line num="134" count="0" type="stmt"/>
+        <line num="135" count="0" type="stmt"/>
+        <line num="136" count="1" type="stmt"/>
+        <line num="137" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.components.Register">
       <metrics statements="169" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Register/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Register/index.jsx">
         <metrics statements="169" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3614,7 +3667,7 @@
     </package>
     <package name="src.components.SaveRecipeButton">
       <metrics statements="69" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/SaveRecipeButton/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/SaveRecipeButton/index.jsx">
         <metrics statements="69" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3689,7 +3742,7 @@
     </package>
     <package name="src.components.Search">
       <metrics statements="78" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="SearchBar.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Search/SearchBar.jsx">
+      <file name="SearchBar.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Search/SearchBar.jsx">
         <metrics statements="78" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3773,7 +3826,7 @@
     </package>
     <package name="src.components.SearchFilters">
       <metrics statements="103" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="SearchFilters.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/SearchFilters/SearchFilters.jsx">
+      <file name="SearchFilters.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/SearchFilters/SearchFilters.jsx">
         <metrics statements="103" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3882,7 +3935,7 @@
     </package>
     <package name="src.components.SearchMap">
       <metrics statements="56" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/SearchMap/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/SearchMap/index.jsx">
         <metrics statements="56" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3942,9 +3995,101 @@
         <line num="56" count="1" type="stmt"/>
       </file>
     </package>
+    <package name="src.components.ShareRecipe">
+      <metrics statements="86" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/ShareRecipe/index.jsx">
+        <metrics statements="86" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="6" count="0" type="stmt"/>
+        <line num="7" count="0" type="stmt"/>
+        <line num="8" count="0" type="stmt"/>
+        <line num="9" count="0" type="stmt"/>
+        <line num="10" count="0" type="stmt"/>
+        <line num="11" count="0" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="22" count="0" type="stmt"/>
+        <line num="23" count="0" type="stmt"/>
+        <line num="24" count="0" type="stmt"/>
+        <line num="25" count="0" type="stmt"/>
+        <line num="26" count="0" type="stmt"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="28" count="0" type="stmt"/>
+        <line num="29" count="0" type="stmt"/>
+        <line num="30" count="0" type="stmt"/>
+        <line num="31" count="0" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="33" count="0" type="stmt"/>
+        <line num="34" count="0" type="stmt"/>
+        <line num="35" count="0" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="37" count="0" type="stmt"/>
+        <line num="38" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="47" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+        <line num="49" count="0" type="stmt"/>
+        <line num="50" count="0" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="54" count="0" type="stmt"/>
+        <line num="55" count="0" type="stmt"/>
+        <line num="56" count="0" type="stmt"/>
+        <line num="57" count="0" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="59" count="0" type="stmt"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="61" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="63" count="0" type="stmt"/>
+        <line num="64" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
+        <line num="66" count="0" type="stmt"/>
+        <line num="67" count="0" type="stmt"/>
+        <line num="68" count="0" type="stmt"/>
+        <line num="69" count="0" type="stmt"/>
+        <line num="70" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
+        <line num="72" count="0" type="stmt"/>
+        <line num="73" count="0" type="stmt"/>
+        <line num="74" count="0" type="stmt"/>
+        <line num="75" count="0" type="stmt"/>
+        <line num="76" count="0" type="stmt"/>
+        <line num="77" count="0" type="stmt"/>
+        <line num="78" count="0" type="stmt"/>
+        <line num="79" count="0" type="stmt"/>
+        <line num="80" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="82" count="0" type="stmt"/>
+        <line num="83" count="0" type="stmt"/>
+        <line num="84" count="0" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="src.components.StepFields">
       <metrics statements="44" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/StepFields/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/StepFields/index.jsx">
         <metrics statements="44" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -3994,7 +4139,7 @@
     </package>
     <package name="src.components.Steps">
       <metrics statements="24" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/Steps/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/Steps/index.jsx">
         <metrics statements="24" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4024,7 +4169,7 @@
     </package>
     <package name="src.components.StoreLocator">
       <metrics statements="107" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/StoreLocator/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/StoreLocator/index.jsx">
         <metrics statements="107" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4137,7 +4282,7 @@
     </package>
     <package name="src.components.UploadImage">
       <metrics statements="26" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/UploadImage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/UploadImage/index.jsx">
         <metrics statements="26" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4169,7 +4314,7 @@
     </package>
     <package name="src.components.UserPost">
       <metrics statements="43" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/components/UserPost/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/components/UserPost/index.jsx">
         <metrics statements="43" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4218,7 +4363,7 @@
     </package>
     <package name="src.pages">
       <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
-      <file name="index.js" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/index.js">
+      <file name="index.js" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/index.js">
         <metrics statements="10" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4234,7 +4379,7 @@
     </package>
     <package name="src.pages.Discover">
       <metrics statements="35" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/Discover/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/Discover/index.jsx">
         <metrics statements="35" coveredstatements="10" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4275,7 +4420,7 @@
     </package>
     <package name="src.pages.HomePage">
       <metrics statements="44" coveredstatements="44" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/HomePage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/HomePage/index.jsx">
         <metrics statements="44" coveredstatements="44" conditionals="3" coveredconditionals="2" methods="1" coveredmethods="1"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4325,7 +4470,7 @@
     </package>
     <package name="src.pages.LoginPage">
       <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/LoginPage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/LoginPage/index.jsx">
         <metrics statements="9" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4340,7 +4485,7 @@
     </package>
     <package name="src.pages.LogoutPage">
       <metrics statements="22" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/LogoutPage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/LogoutPage/index.jsx">
         <metrics statements="22" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4368,7 +4513,7 @@
     </package>
     <package name="src.pages.MapPage">
       <metrics statements="73" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/MapPage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/MapPage/index.jsx">
         <metrics statements="73" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4447,7 +4592,7 @@
     </package>
     <package name="src.pages.MessagePage">
       <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/MessagePage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/MessagePage/index.jsx">
         <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4462,27 +4607,35 @@
       </file>
     </package>
     <package name="src.pages.NewRecipePage">
-      <metrics statements="13" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/NewRecipePage/index.jsx">
-        <metrics statements="13" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <metrics statements="21" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/NewRecipePage/index.jsx">
+        <metrics statements="21" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
         <line num="3" count="1" type="stmt"/>
         <line num="4" count="1" type="stmt"/>
-        <line num="5" count="0" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
         <line num="6" count="0" type="stmt"/>
         <line num="7" count="0" type="stmt"/>
         <line num="8" count="0" type="stmt"/>
         <line num="9" count="0" type="stmt"/>
         <line num="10" count="0" type="stmt"/>
         <line num="11" count="0" type="stmt"/>
-        <line num="12" count="1" type="stmt"/>
-        <line num="13" count="1" type="stmt"/>
+        <line num="12" count="0" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+        <line num="14" count="0" type="stmt"/>
+        <line num="15" count="0" type="stmt"/>
+        <line num="16" count="0" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
       </file>
     </package>
     <package name="src.pages.RecipePage">
       <metrics statements="41" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/RecipePage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/RecipePage/index.jsx">
         <metrics statements="41" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4529,7 +4682,7 @@
     </package>
     <package name="src.pages.RegisterPage">
       <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/RegisterPage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/RegisterPage/index.jsx">
         <metrics statements="12" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4547,7 +4700,7 @@
     </package>
     <package name="src.pages.SavedRecipesPage">
       <metrics statements="71" coveredstatements="51" conditionals="5" coveredconditionals="3" methods="2" coveredmethods="2"/>
-      <file name="index.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/SavedRecipesPage/index.jsx">
+      <file name="index.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/SavedRecipesPage/index.jsx">
         <metrics statements="71" coveredstatements="51" conditionals="5" coveredconditionals="3" methods="2" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -4624,7 +4777,7 @@
     </package>
     <package name="src.pages.SearchPage">
       <metrics statements="13" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="SearchPage.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/pages/SearchPage/SearchPage.jsx">
+      <file name="SearchPage.jsx" path="/home/rubinakumari/LFA/lap4/project/LAP4-Yao45/front-end/src/pages/SearchPage/SearchPage.jsx">
         <metrics statements="13" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
