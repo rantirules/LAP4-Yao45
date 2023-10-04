@@ -107,13 +107,17 @@
 }
 
 #card-content {
-    /* background-color: yellow; */
+    background-color: yellow;
     /* overflow: auto; */
     /* margin-left: 3rem; */
     /* margin-right: 3rem; */
     margin-top: 1rem;
     margin-bottom: 1.5rem;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #card-content p {
@@ -130,6 +134,8 @@
     width: 100%;
     margin-left: 1rem;
     margin-right: 1rem;
+    text-align: center;
+    background-color: #FF8080;
 }
 
 #img-home-card img {
