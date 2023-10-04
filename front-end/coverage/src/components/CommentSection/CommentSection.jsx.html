@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/CommentModal/index.jsx</title>
+    <title>Code coverage report for src/components/CommentSection/CommentSection.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/CommentModal</a> index.jsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/CommentSection</a> CommentSection.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">17.39% </span>
+                <span class="strong">12.96% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/46</span>
+                <span class='fraction'>7/54</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">17.39% </span>
+                <span class="strong">12.96% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/46</span>
+                <span class='fraction'>7/54</span>
             </div>
         
             
@@ -108,12 +108,28 @@
 <a name='L43'></a><a href='#L43'>43</a>
 <a name='L44'></a><a href='#L44'>44</a>
 <a name='L45'></a><a href='#L45'>45</a>
-<a name='L46'></a><a href='#L46'>46</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -154,16 +170,17 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState } from 'react'
-import {createPortal} from 'react-dom'
 import Comment from '../Comment'
 import './index.css'
 &nbsp;
-const CommentModal = <span class="fstat-no" title="function not covered" >(props) =&gt; {</span>
+const CommentSection= <span class="fstat-no" title="function not covered" >(props) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    const [commentText, setCommentText] = useState('')</span>
 <span class="cstat-no" title="statement not covered" >    if(!props.open) return null</span>
-<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    console.log('props.open:', props.open);</span>
+<span class="cstat-no" title="statement not covered" >    console.log('props.comments:', props.comments);</span>
+<span class="cstat-no" title="statement not covered" >    </span>
 <span class="cstat-no" title="statement not covered" >    const handleChange = (e) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      e.preventDefault</span>
+<span class="cstat-no" title="statement not covered" >      e.preventDefault();</span>
 <span class="cstat-no" title="statement not covered" >      setCommentText(e.target.value)</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 <span class="cstat-no" title="statement not covered" >    const handleClick = (e) =&gt; {</span>
@@ -184,21 +201,28 @@ const CommentModal = <span class="fstat-no" title="function not covered" >(props
 <span class="cstat-no" title="statement not covered" >      const response = await fetch(`http://127.0.0.1:5000/posts/${props.post_id}/comments`, options)</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;section className='commentSection'&gt;        </span>
-<span class="cstat-no" title="statement not covered" >      &lt;div&gt;{props.comments.map((c, idx) =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >          return &lt;Comment key={idx} text={c.text} id={c.id} user_id={c.user_id} timestamp={c.time_posted}&gt;&lt;/Comment&gt;</span>
-<span class="cstat-no" title="statement not covered" >        })}&lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;form className='cmnt-sbmt-form' onSubmit={handleSubmit}&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;input type="text" onChange={handleChange}/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;button type="submit"&gt;Comment&lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/form&gt;</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/section&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;h2&gt;Comments here &lt;/h2&gt;</span>
+<span class="cstat-no" title="statement not covered" >    </span>
+<span class="cstat-no" title="statement not covered" >    &lt;/&gt;</span>
+<span class="cstat-no" title="statement not covered" >    // &lt;section&gt;</span>
+<span class="cstat-no" title="statement not covered" >    //         &lt;div&gt;</span>
+<span class="cstat-no" title="statement not covered" >    //     &lt;div&gt;{props.comments.map((c, idx) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    //       return &lt;Comment key={idx} text={c.text} id={c.id} user_id={c.user_id} timestamp={c.time_posted}&gt;&lt;/Comment&gt;</span>
+<span class="cstat-no" title="statement not covered" >    //     })}&lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >    //     &lt;button onClick={handleClick}&gt;Close&lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >    //     &lt;form onSubmit={handleSubmit}&gt;</span>
+<span class="cstat-no" title="statement not covered" >    //   &lt;input type="text" onChange={handleChange}/&gt;</span>
+<span class="cstat-no" title="statement not covered" >    //   &lt;button type="submit"&gt;Submit&lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >    // &lt;/form&gt;</span>
+<span class="cstat-no" title="statement not covered" >    // &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >    // &lt;/section&gt;,</span>
+<span class="cstat-no" title="statement not covered" >    // document.body</span>
 <span class="cstat-no" title="statement not covered" >  )</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
-export default CommentModal</pre></td></tr></table></pre>
+export default CommentSection</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->

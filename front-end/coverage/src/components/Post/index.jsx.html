@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.43% </span>
+                <span class="strong">12.82% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>9/67</span>
+                <span class='fraction'>10/78</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">13.43% </span>
+                <span class="strong">12.82% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>9/67</span>
+                <span class='fraction'>10/78</span>
             </div>
         
             
@@ -129,13 +129,35 @@
 <a name='L64'></a><a href='#L64'>64</a>
 <a name='L65'></a><a href='#L65'>65</a>
 <a name='L66'></a><a href='#L66'>66</a>
-<a name='L67'></a><a href='#L67'>67</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -200,6 +222,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUser, faKitchenSet, faEarthAfrica} from '@fortawesome/free-solid-svg-icons'
 import CommentModal from '../CommentModal'
 import './index.css'
+import CommentSection from '../CommentSection/CommentSection'
 &nbsp;
 const Post = <span class="fstat-no" title="function not covered" >(props) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >    const [isOpen, setIsOpen] = useState(false)</span>
@@ -214,15 +237,18 @@ const Post = <span class="fstat-no" title="function not covered" >(props) =&gt; 
 <span class="cstat-no" title="statement not covered" >        getComments()</span>
 <span class="cstat-no" title="statement not covered" >    }, [])</span>
 <span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >    const showComments = (e) =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        e.preventDefault()</span>
 <span class="cstat-no" title="statement not covered" >        console.log('COMMENTS SHOWING')</span>
-<span class="cstat-no" title="statement not covered" >        setIsOpen(true)</span>
+<span class="cstat-no" title="statement not covered" >        setIsOpen(!isOpen)</span>
+<span class="cstat-no" title="statement not covered" >        console.log(isOpen);</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div className='postContainer'&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;&gt;    &lt;div className='postContainer'&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;div className="left-panel"&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;div className="user"&gt;</span>
 <span class="cstat-no" title="statement not covered" >                &lt;img src='https://t4.ftcdn.net/jpg/04/83/90/95/360_F_483909569_OI4LKNeFgHwvvVju60fejLd9gj43dIcd.jpg' alt="" /&gt;</span>
@@ -242,9 +268,11 @@ const Post = <span class="fstat-no" title="function not covered" >(props) =&gt; 
 <span class="cstat-no" title="statement not covered" >                    &lt;FontAwesomeIcon icon={faEarthAfrica}/&gt;</span>
 <span class="cstat-no" title="statement not covered" >                &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;button onClick={showComments}&gt;Comments&lt;/button&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments} post_id={props.id}/&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;button className="cmnt-btn" onClick={showComments}&gt;View Comments&lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >            {/* {isOpen &amp;&amp; &lt;CommentSection comments={comments} post_id={props.id}/&gt; &amp;&amp; console.log(props.id)  } */}</span>
+<span class="cstat-no" title="statement not covered" >             </span>
+<span class="cstat-no" title="statement not covered" >      </span>
 <span class="cstat-no" title="statement not covered" >        &lt;div className="right-panel"&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;div className="card food-image"&gt;</span>
 <span class="cstat-no" title="statement not covered" >                &lt;img src={props.recipePicture} alt="" /&gt;</span>
@@ -256,8 +284,13 @@ const Post = <span class="fstat-no" title="function not covered" >(props) =&gt; 
 <span class="cstat-no" title="statement not covered" >                &lt;p className='text'&gt;{props.personalDescription}&lt;/p&gt;</span>
 <span class="cstat-no" title="statement not covered" >            &lt;/div&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >        </span>
 <span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;div&gt;</span>
+<span class="cstat-no" title="statement not covered" >    {isOpen &amp;&amp; &lt;div className='commentContainer'&gt;&lt;CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments} post_id={props.id}/&gt;&lt;/div&gt;}</span>
+<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;/&gt;</span>
+<span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  )</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
@@ -268,7 +301,7 @@ export default Post</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-04T15:19:11.964Z
+                at 2023-10-04T16:21:36.903Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

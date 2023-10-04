@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25.8% </span>
+                <span class="strong">19.51% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>8/31</span>
+                <span class='fraction'>8/41</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">25.8% </span>
+                <span class="strong">19.51% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>8/31</span>
+                <span class='fraction'>8/41</span>
             </div>
         
             
@@ -93,12 +93,32 @@
 <a name='L28'></a><a href='#L28'>28</a>
 <a name='L29'></a><a href='#L29'>29</a>
 <a name='L30'></a><a href='#L30'>30</a>
-<a name='L31'></a><a href='#L31'>31</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -141,13 +161,23 @@ const RecipePage = <span class="fstat-no" title="function not covered" >() =&gt;
 <span class="cstat-no" title="statement not covered" >      setRecipe(recipe)</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
 <span class="cstat-no" title="statement not covered" >    loadRecipe()</span>
-<span class="cstat-no" title="statement not covered" >  }, [])</span>
+<span class="cstat-no" title="statement not covered" >  }, [recipe_id]) // changed this from []</span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
 <span class="cstat-no" title="statement not covered" >    // both components must know the recipe id</span>
 <span class="cstat-no" title="statement not covered" >    // the button must also know the user_id</span>
 <span class="cstat-no" title="statement not covered" >    &lt;&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;Recipe rid={recipe.id} name={recipe.name} culture={recipe.culture} desc={recipe.description} img={recipe.img_url} user_id={recipe.user_id} ingredients={recipe.ingredients} steps={recipe.steps} /&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;SaveRecipeButton rid={recipe.id} uid={user_id} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >    </span>
+<span class="cstat-no" title="statement not covered" >      &lt;Recipe</span>
+<span class="cstat-no" title="statement not covered" >      id={recipe.id}</span>
+<span class="cstat-no" title="statement not covered" >      name={recipe.name}</span>
+<span class="cstat-no" title="statement not covered" >      culture={recipe.culture}</span>
+<span class="cstat-no" title="statement not covered" >      desc={recipe.description}</span>
+<span class="cstat-no" title="statement not covered" >      img={recipe.img_url}</span>
+<span class="cstat-no" title="statement not covered" >      user_id={recipe.user_id}</span>
+<span class="cstat-no" title="statement not covered" >      ingredients={recipe.ingredients}</span>
+<span class="cstat-no" title="statement not covered" >      steps={recipe.steps}</span>
+<span class="cstat-no" title="statement not covered" >      /&gt;</span>
+<span class="cstat-no" title="statement not covered" >      {/* &lt;Recipe rid={recipe.id} name={recipe.name} culture={recipe.culture} desc={recipe.description} img={recipe.img_url} user_id={recipe.user_id} ingredients={recipe.ingredients} steps={recipe.steps} /&gt; */}</span>
 <span class="cstat-no" title="statement not covered" >    &lt;/&gt;</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  )</span>
@@ -160,7 +190,7 @@ export default RecipePage</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-04T15:19:11.964Z
+                at 2023-10-04T16:21:36.903Z
             </div>
         <script src="../../../prettify.js"></script>
         <script>

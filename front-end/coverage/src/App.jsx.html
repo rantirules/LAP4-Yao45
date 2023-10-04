@@ -23,9 +23,9 @@
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.7% </span>
+                <span class="strong">38.66% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>24/62</span>
+                <span class='fraction'>29/75</span>
             </div>
         
             
@@ -39,14 +39,14 @@
             <div class='fl pad1y space-right2'>
                 <span class="strong">0% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>0/1</span>
+                <span class='fraction'>0/2</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">38.7% </span>
+                <span class="strong">38.66% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>24/62</span>
+                <span class='fraction'>29/75</span>
             </div>
         
             
@@ -124,7 +124,20 @@
 <a name='L59'></a><a href='#L59'>59</a>
 <a name='L60'></a><a href='#L60'>60</a>
 <a name='L61'></a><a href='#L61'>61</a>
-<a name='L62'></a><a href='#L62'>62</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -146,6 +159,19 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
@@ -194,23 +220,30 @@ import {FaBell, FaUser, FaEnvelope, FaCog} from 'react-icons/fa';
 &nbsp;
 import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
-import DropdownMenu from './components/Navbar/DropdownMenu';
+&nbsp;
+import Post from './components/Post/index';
 &nbsp;
 import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage, SavedRecipesPage, MessagePage, LogoutPage} from './pages';
+&nbsp;
 import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
 import { AuthProvider } from './components/Auth/AuthContext';
 export const UserContext = createContext()
-const user = 'charlie1'
 &nbsp;
 import { NavbarProvider } from './components/Navbar/NavbarContext'; 
-import { Chat } from './components';
+import { Chat, UserPost } from './components';
+import MapHighlighter from './components/Navbar/SecondaryNav/DisplaySection/Maps/Maps';
+&nbsp;
+import { Marker } from '@googlemaps/react-wrapper'
+&nbsp;
+<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function MyMarker() {</span></span>
+<span class="cstat-no" title="statement not covered" >  return &lt;Marker position={{ lat: 37.7749, lng: -122.4194 }} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
 &nbsp;
 <span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function App() {</span></span>
 <span class="cstat-no" title="statement not covered" > return (</span>
 <span class="cstat-no" title="statement not covered" >  &lt;AuthProvider&gt;</span>
-<span class="cstat-no" title="statement not covered" >  &lt;UserContext.Provider value={user}&gt;</span>
 <span class="cstat-no" title="statement not covered" >    &lt;NavbarProvider&gt;</span>
 <span class="cstat-no" title="statement not covered" >  &lt;Routes&gt;</span>
 <span class="cstat-no" title="statement not covered" ></span>
@@ -235,13 +268,19 @@ import { Chat } from './components';
 <span class="cstat-no" title="statement not covered" >        &lt;Route path="/new-recipe" element={&lt;NewRecipePage /&gt;} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;Route path="/messages" element={&lt;Chat/&gt;}/&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;Route path="/map" element={&lt;MapPage /&gt;} /&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;Route path="/post" element ={&lt;Post/&gt;}/&gt;</span>
+<span class="cstat-no" title="statement not covered" >        {/* &lt;Route path="/mapSub" element={&lt;MapHighlighter apiKey="AIzaSyALeh2Hsx18D8MKadj-ZQEOlxmtvWpzNro"</span>
+<span class="cstat-no" title="statement not covered" >          defaultZoom={8}</span>
+<span class="cstat-no" title="statement not covered" >          defaultCenter={{ lat: 37.7749, lng: -122.4194 }}</span>
+<span class="cstat-no" title="statement not covered" >          // eslint-disable-next-line no-undef</span>
+<span class="cstat-no" title="statement not covered" >          defaultOptions={{ disableDefaultUI: true }}</span>
+<span class="cstat-no" title="statement not covered" >          &gt; &lt;MyMarker /&gt;&lt;/MapHighlighter&gt;} /&gt; */}</span>
 <span class="cstat-no" title="statement not covered" >        &lt;Route path="/saved" element={&lt;SavedRecipesPage /&gt;} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;Route path='/messages' element={&lt;MessagePage /&gt;} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >        &lt;Route path="/logout" element={&lt;LogoutPage /&gt;} /&gt;</span>
 <span class="cstat-no" title="statement not covered" >    &lt;/Route&gt;</span>
 <span class="cstat-no" title="statement not covered" >&lt;/Routes&gt;</span>
 <span class="cstat-no" title="statement not covered" >&lt;/NavbarProvider&gt;</span>
-<span class="cstat-no" title="statement not covered" >&lt;/UserContext.Provider&gt;</span>
 <span class="cstat-no" title="statement not covered" >&lt;/AuthProvider&gt;</span>
 <span class="cstat-no" title="statement not covered" >  )</span>
 <span class="cstat-no" title="statement not covered" >}</span>
@@ -253,7 +292,7 @@ export default App</pre></td></tr></table></pre>
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-10-04T15:19:11.964Z
+                at 2023-10-04T16:21:36.903Z
             </div>
         <script src="../prettify.js"></script>
         <script>
