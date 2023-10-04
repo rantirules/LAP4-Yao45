@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import axios from 'axios'
 
 const ShareRecipe = (props) => {
@@ -7,12 +7,16 @@ const ShareRecipe = (props) => {
   const [recipe, setRecipe] = useState()
   const recipeRef = useRef(recipe)
   
-  async function getRecipe() {
-    const res = await axios.get('http://127.0.0.1:5000/last_recipe')
-    console.log(res.data)
-    recipeRef.current = res.data.recipe
-    console.log(recipeRef.current)
-  }
+  useEffect(() => {
+    async function getRecipe() {
+      const res = await axios.get('http://127.0.0.1:5000/last_recipe')
+      console.log(res.data)
+      recipeRef.current = res.data.recipe
+      console.log(recipeRef.current)
+    }
+    getRecipe()
+  }, [])
+
 
   function handleDescription(e) {
     setDescription(e.target.value)
@@ -24,7 +28,7 @@ const ShareRecipe = (props) => {
 
   async function handleSubmit(e) {
     e.preventDefault()
-    await getRecipe()
+    // await getRecipe()
     console.log("first")
     if (description.length > 0 && story.length > 0) {
       postPost()
