@@ -1,7 +1,7 @@
 import React, { useRef, useState } from 'react'
 import axios from 'axios'
 
-const ShareRecipe = () => {
+const ShareRecipe = (props) => {
   const [description, setDescription] = useState('')
   const [story, setStory] = useState('')
   const [recipe, setRecipe] = useState()
@@ -22,13 +22,15 @@ const ShareRecipe = () => {
     setStory(e.target.value)
   }
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault()
-    getRecipe()
+    await getRecipe()
+    console.log("first")
     if (description.length > 0 && story.length > 0) {
       postPost()
       setStory('')
       setDescription('')
+      props.setRecipeShared(true)
     } else {
       console.log("Please enter all fields")
     }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { IngredientFields, StepFields, UploadImage } from '..'
 import "./index.css";
 
-const RecipeForm = () => {
+const RecipeForm = (props) => {
   const [name, setName] = useState('')
   const [culture, setCulture] = useState('')
   const [ingredients, setIngredients] = useState([{ ingredient: '', amount: '' }])
@@ -68,6 +68,7 @@ const RecipeForm = () => {
         setDescription('')
         setIngredients([{ ingredient: '', amount: '' }])
         setSteps([{ step: '' }])
+        props.setRecipePosted(true)
       } else {
         console.log("Please enter all fields.")
       }
