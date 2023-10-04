@@ -1,5 +1,5 @@
 import React from 'react'
-import { RecipeForm, ShareRecipe } from '../../components'
+import { RecipeForm, ShareRecipe, NewRecipeButton } from '../../components'
 import { useState } from 'react'
 
 const NewRecipePage = () => {
@@ -12,7 +12,7 @@ const NewRecipePage = () => {
         recipePosted ?
         <ShareRecipe recipeShared={recipeShared} setRecipeShared={setRecipeShared} /> :
         <RecipeForm recipePosted={recipePosted} setRecipePosted={setRecipePosted} />
-        ) : <h2>Recipe Shared!</h2>
+        ) : <NewRecipeButton setRecipePosted={setRecipePosted} setRecipeShared={setRecipeShared} />
       }
     </>
   )
