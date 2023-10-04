@@ -26,6 +26,7 @@ This repository contains the source code for a recipe sharing web application ma
 - Find shops based on location
 
 ## Installation
+Meant to be used in conjunction with our [back end](https://github.com/SamM71/lap4-project-backend).
 1. Clone the repository:
 ```bash
    git clone https://github.com/yourusername/LAP4-Yao45.git
@@ -39,6 +40,8 @@ npm install
 ```bash
 npm run dev
 ```
+
+
 ## Usage
 
 1. Register for an account or log in if you already have one.
