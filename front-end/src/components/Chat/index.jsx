@@ -43,8 +43,13 @@ const Chat = () => {
       getDialogues()
     },[])
 
-    const createNewChat = () => {
-      console.log('CREATE NEW CHAT IS WORKING')
+    const createNewChat = async () => {
+      const options = {method: "POST", headers: {
+        'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify(displayName)
+    }
+      const response = await fetch('http://127.0.0.1:5000/dialogues', options)
     }
 
   return (

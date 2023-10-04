@@ -5,9 +5,12 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   test: {
+    environment: 'jsdom',
+    globals: true,
     coverage: {
-      provider: 'istanbul' // or 'v8'
+      provider: 'v8'
     },
+  },
   setupfilesafterenv: [
     './setuptests.js',
   ],
@@ -15,4 +18,4 @@ export default defineConfig({
     host: true,
     port: 5173
   }
-}})
+})

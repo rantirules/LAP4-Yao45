@@ -9,7 +9,8 @@ import {Cloudinary} from "@cloudinary/url-gen";
 
 
 const SavedRecipesPage = () => {
-const user_id = localStorage.getItem('user')
+// const user_id = localStorage.getItem('user')
+const user_id = 4 
   const [recipeList, setRecipeList] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -44,9 +45,9 @@ const user_id = localStorage.getItem('user')
         <h1>Saved Recipes</h1>
       </div>
 
-      <div id='saved-recipe-sect'>
+      <div id='saved-recipe-sect' >
         {recipeList.map((recipe, index) => (
-          <Link key={index} id='recipe-card-saved' data-testid="recipe-card-saved" className='saved-link' to={`/recipe/${recipe.id}`}>
+          <Link key={index} id='recipe-card-saved' data-testid='recipe-card-saved' className='saved-link' to={`/recipe/${recipe.id}`}>
           <div  id='content-container'>
             <div id='img-sect'>
             <AdvancedImage cldImg={cld.image(recipe.img_url)}/>
