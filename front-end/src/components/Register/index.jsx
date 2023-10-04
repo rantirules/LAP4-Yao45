@@ -29,7 +29,7 @@ const Register = () => {
 
     const checkUsernameAvailability = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:5000/users/${formData.username}`);
+            const response = await axios.get(`https://lap4-backend.onrender.com/users/${formData.username}`);
             setUsernameAvailable(response.data.available);
         } catch (error) {
             console.error('Error checking username availability', error);
@@ -38,7 +38,7 @@ const Register = () => {
 
     const checkEmailAvailability = async () => {
         try {
-            const response = await axios.get(`http://127.0.0.1:5000/users/${formData.email}`);
+            const response = await axios.get(`https://lap4-backend.onrender.com/users/${formData.email}`);
             setEmailAvailable(response.data.available);
         } catch (error) {
             console.error('Error checking email availability', error);
@@ -61,7 +61,7 @@ const Register = () => {
         e.preventDefault();
         if (formData.password === formData.passwordConfirm) {
             try {
-                const response = await axios.post('http://127.0.0.1:5000/users/register', {
+                const response = await axios.post('https://lap4-backend.onrender.com/users/register', {
                     username: formData.username,
                     email: formData.email,
                     name: formData.name,

@@ -16,8 +16,8 @@ const Messages = (props) => {
         }
         console.log(message)
         e.preventDefault()
-        const response = await fetch(`http://127.0.0.1:5000/messages`, options)
-        const newMessages = await fetch(`http://127.0.0.1:5000/messages/${dialogue_id}`)
+        const response = await fetch(`https://lap4-backend.onrender.com/messages`, options)
+        const newMessages = await fetch(`https://lap4-backend.onrender.com/messages/${dialogue_id}`)
         const data = await newMessages.json()
         props.setMessages(data.messages)
     }

@@ -12,9 +12,9 @@ const ProfileIcon = (props) => {
         props.setCurrentDialogue(dialogue);
         console.log('CURRENT DIALOGUE IS');
         console.log(dialogue);
-        const response = await fetch(`http://127.0.0.1:5000/dialogues/${props.dialogue_id}`)
+        const response = await fetch(`https://lap4-backend.onrender.com/dialogues/${props.dialogue_id}`)
         const data = await response.json()
-        const messageResponse = await fetch(`http://127.0.0.1:5000/messages/${dialogue}`)
+        const messageResponse = await fetch(`https://lap4-backend.onrender.com/messages/${dialogue}`)
         const messageData = await messageResponse.json()
         props.setMessages(messageData.messages)
         console.log('DIALOGUE MESSAGES');

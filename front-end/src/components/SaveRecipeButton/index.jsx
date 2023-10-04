@@ -9,7 +9,7 @@ const SaveRecipeButton = (props) => {
   const [message, setMessage] = useState('')
   const [isSaved, setIsSaved] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
-  const url = `http://127.0.0.1:5000/saved/${props.uid}/${props.rid}`
+  const url = `https://lap4-backend.onrender.com/saved/${props.uid}/${props.rid}`
 
   const [isHovered, setIsHovered] = useState(false);
   
