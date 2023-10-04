@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<coverage generated="1696433312974" clover="3.2.0">
+  <project timestamp="1696433312974" name="All files">
+    <metrics statements="4151" coveredstatements="2344" conditionals="11" coveredconditionals="8" methods="47" coveredmethods="6" elements="4209" coveredelements="2358" complexity="0" loc="4151" ncloc="4151" packages="44" files="47" classes="47"/>
+=======
 <coverage generated="1696436496935" clover="3.2.0">
   <project timestamp="1696436496935" name="All files">
     <metrics statements="4351" coveredstatements="2563" conditionals="20" coveredconditionals="13" methods="62" coveredmethods="11" elements="4433" coveredelements="2587" complexity="0" loc="4351" ncloc="4351" packages="46" files="48" classes="48"/>
+>>>>>>> 00e77252b772138296e28b819aed5b6ea7c98ef3
     <package name="src">
       <metrics statements="75" coveredstatements="29" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <file name="App.jsx" path="/Users/charkie/LFA/lap4/project/fe/front-end/src/App.jsx">
