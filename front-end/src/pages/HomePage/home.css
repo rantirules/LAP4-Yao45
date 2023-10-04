@@ -107,7 +107,7 @@
 }
 
 #card-content {
-    background-color: yellow;
+    /* background-color: yellow; */
     /* overflow: auto; */
     /* margin-left: 3rem; */
     /* margin-right: 3rem; */
@@ -135,7 +135,7 @@
     margin-left: 1rem;
     margin-right: 1rem;
     text-align: center;
-    background-color: #FF8080;
+    /* background-color: #FF8080; */
 }
 
 #img-home-card img {
