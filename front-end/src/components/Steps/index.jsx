@@ -13,7 +13,7 @@ const Steps = ({ steps }) => {
 
   return (
     <>
-      Steps:
+      <strong>Steps:</strong>
         <ol>
          {displaySteps()}
         </ol>
