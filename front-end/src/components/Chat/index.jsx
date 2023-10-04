@@ -34,7 +34,7 @@ const Chat = () => {
         setUsers(data.users)
       }
       const getDialogues = async () => {
-        const response = await fetch('http://127.0.0.1:5000/dialogues')
+        const response = await fetch(`http://127.0.0.1:5000/dialogues/${displayName}`)
         const data = await response.json()
         setDialogues(data.dialogues)
         console.log(data.dialogues);
