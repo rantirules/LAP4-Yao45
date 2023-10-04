@@ -3,10 +3,9 @@ import NavItem from '../NavItem'
 import { FaGlobeAfrica, FaUserCircle, FaFacebookMessenger, FaMapMarkedAlt, FaMapMarkerAlt, FaArrowAltCircleUp, FaArrowCircleDown } from 'react-icons/fa'
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardDoubleArrowUpIcon from '@mui/icons-material/KeyboardDoubleArrowUp';
-import DropdownMenu from '../DropdownMenu'
 import Account from './DisplaySection/Account/Account';
 import DisplaySection from './DisplaySection/DisplaySection';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 
 
@@ -15,6 +14,7 @@ import { useNavbar } from '../NavbarContext';
 
 
 const SecondaryNav = ({ userName }) => {
+  const location = useLocation();
   // const [navbarPosition, setNavbarPosition] = useState('open');
 
   const {navbarPosition, updateNavbarPosition } = useNavbar()
@@ -87,12 +87,14 @@ const SecondaryNav = ({ userName }) => {
           <NavItem className="icons" icon={<FaUserCircle />} /> </div>
         </div>
         <div className={`display ${displayArrow}`}>
-        {isAccountMenuOpen ? <Account /> :
-        <DisplaySection navbarPosition={navbarPosition} closeNavbar={closeNavbar}userName={userName}/>}
+       
+       {location.pathname === '/recipe' ? <img className="sec-nav-img" src="src/assets/63796774-relief-map-of-italy-and-the-nearby-countries-italy-is-highlighted-in-red.jpeg" alt="Recipe"/>
+: (isAccountMenuOpen ? <Account /> :
+        <DisplaySection navbarPosition={navbarPosition} closeNavbar={closeNavbar}userName={userName}/>)}
         </div>
         
-        <div className={`arrow-wrap ${displayArrow}`} onClick={handleNavItemClick}>
-          <NavItem className="arrow-up" icon={<KeyboardDoubleArrowUpIcon/>} />
+        <div className={`arrow-wrap ${displayArrow}`} data-testid="arrow-div" onClick={handleNavItemClick}>
+          <NavItem className="arrow-up" data-testid="arrow-up"icon={<KeyboardDoubleArrowUpIcon/>} />
 
   </div>
   <div onClick={handleNavItemClick} className={`${displayArrowDown}`}>

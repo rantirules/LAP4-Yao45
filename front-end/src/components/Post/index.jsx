@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUser, faKitchenSet, faEarthAfrica} from '@fortawesome/free-solid-svg-icons'
 import CommentModal from '../CommentModal'
 import './index.css'
+import CommentSection from '../CommentSection/CommentSection'
 
 const Post = (props) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -17,15 +18,18 @@ const Post = (props) => {
         getComments()
     }, [])
 
+
+
     const showComments = (e) => {
         e.preventDefault()
         console.log('COMMENTS SHOWING')
-        setIsOpen(true)
+        setIsOpen(!isOpen)
+        console.log(isOpen);
     }
 
 
   return (
-    <div className='postContainer'>
+    <>    <div className='postContainer'>
         <div className="left-panel">
             <div className="user">
                 <img src='https://t4.ftcdn.net/jpg/04/83/90/95/360_F_483909569_OI4LKNeFgHwvvVju60fejLd9gj43dIcd.jpg' alt="" />
@@ -45,9 +49,11 @@ const Post = (props) => {
                     <FontAwesomeIcon icon={faEarthAfrica}/>
                 </div>
             </div>
-            <button onClick={showComments}>Comments</button>
-            <CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments} post_id={props.id}/>
-        </div>
+            <button className="cmnt-btn" onClick={showComments}>View Comments</button>
+            </div>
+            {/* {isOpen && <CommentSection comments={comments} post_id={props.id}/> && console.log(props.id)  } */}
+             
+      
         <div className="right-panel">
             <div className="card food-image">
                 <img src={props.recipePicture} alt="" />
@@ -59,8 +65,13 @@ const Post = (props) => {
                 <p className='text'>{props.personalDescription}</p>
             </div>
         </div>
-
+        
     </div>
+    <div>
+    {isOpen && <div className='commentContainer'><CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments} post_id={props.id}/></div>}
+    </div>
+    </>
+
   )
 }
 

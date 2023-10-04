@@ -6,7 +6,7 @@ const NavItem = (props) => {
 
   return (
     <li>
-      <NavLink className='icon-button' onClick={() => setOpen(!open)}>{props.icon}</NavLink>
+      <NavLink  className='icon-button' onClick={() => setOpen(!open)}>{props.icon}</NavLink>
       { open && props.children}
     </li>
   )
