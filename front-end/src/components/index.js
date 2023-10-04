@@ -17,12 +17,10 @@ export { default as RecipeForm } from './RecipeForm'
 export { default as IngredientFields } from './IngredientFields'
 export { default as StepFields } from './StepFields'
 export { default as UploadImage } from './UploadImage'
-
 export { default as UserPost } from './UserPost'
-
 export { default as Map } from './Map'
 export { default as SearchMap } from './SearchMap'
 export { default as StoreLocator } from './StoreLocator'
-
 export { default as HomeCard } from './HomeCard'
-
+export { default as ShareRecipe } from './ShareRecipe'
+export { default as NewRecipeButton } from './NewRecipeButton'
