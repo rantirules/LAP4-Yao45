@@ -27,7 +27,7 @@ const RecipeForm = () => {
   }
 
   function postRecipe(validIngredients, validSteps) {
-    const user_id = 3 // change
+    const user_id = localStorage.getItem('user')
     fetch('http://127.0.0.1:5000/recipes', {
       method: 'POST',
       body: JSON.stringify({
