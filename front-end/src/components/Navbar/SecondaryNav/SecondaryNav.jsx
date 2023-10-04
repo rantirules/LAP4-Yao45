@@ -93,8 +93,8 @@ const SecondaryNav = ({ userName }) => {
         <DisplaySection navbarPosition={navbarPosition} closeNavbar={closeNavbar}userName={userName}/>)}
         </div>
         
-        <div className={`arrow-wrap ${displayArrow}`} onClick={handleNavItemClick}>
-          <NavItem className="arrow-up" icon={<KeyboardDoubleArrowUpIcon/>} />
+        <div className={`arrow-wrap ${displayArrow}`} data-testid="arrow-div" onClick={handleNavItemClick}>
+          <NavItem className="arrow-up" data-testid="arrow-up"icon={<KeyboardDoubleArrowUpIcon/>} />
 
   </div>
   <div onClick={handleNavItemClick} className={`${displayArrowDown}`}>

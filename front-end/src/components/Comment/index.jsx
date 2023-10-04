@@ -1,11 +1,24 @@
 import React from 'react'
 
 const Comment = (props) => {
+  const formattedTimestamp = (timestamp) => {
+    const date = new Date(timestamp);
+    const options = {
+      hour: '2-digit',
+      minute: '2-digit',
+      month: 'short',
+    day: '2-digit',
+    };
+    return date.toLocaleString('en-US', options);
+  };
+
+  const originalTimeStamp = props.timestamp
+  const formatted = formattedTimestamp(originalTimeStamp)
   return (
-    <div>
-        <h3>User: {props.user_id}</h3>
-        <p>{props.text}</p>
-        <p>Posted: {props.timestamp}</p>
+    <div className='cmnt'>
+        <h3 className='user-tag'>User: {props.user_id}</h3>
+        <p className='user-cmnt'>{props.text}</p>
+        <p className='date-tag'>{formatted}</p>
     </div>
   )
 }

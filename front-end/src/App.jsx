@@ -7,7 +7,7 @@ import {FaBell, FaUser, FaEnvelope, FaCog} from 'react-icons/fa';
 
 import Navbar from './components/Navbar/index'
 import NavItem from './components/Navbar/NavItem';
-
+import Post from './components/Post/index';
 import {HomePage, RegisterPage, LoginPage, Discover, RecipePage, MapPage, NewRecipePage, SavedRecipesPage, MessagePage} from './pages';
 import SearchPage from './pages/SearchPage/SearchPage';
 import SecondaryNav from './components/Navbar/SecondaryNav/SecondaryNav';
@@ -54,7 +54,7 @@ function App() {
         <Route path="/new-recipe" element={<NewRecipePage />} />
         <Route path="/messages" element={<Chat/>}/>
         <Route path="/map" element={<MapPage />} />
-        <Route path="/post" element ={<UserPost/>}/>
+        <Route path="/post" element ={<Post/>}/>
         {/* <Route path="/mapSub" element={<MapHighlighter apiKey="AIzaSyALeh2Hsx18D8MKadj-ZQEOlxmtvWpzNro"
           defaultZoom={8}
           defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
