@@ -8,7 +8,8 @@ const Comment = (props) => {
       hour: '2-digit',
       minute: '2-digit',
       month: 'short',
-    day: '2-digit',
+      day: '2-digit',
+      timeZone: 'Atlantic/Reykjavik'
     };
     return date.toLocaleString('en-US', options);
   };
