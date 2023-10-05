@@ -17,6 +17,7 @@ h1 {
 }
 
 .navbar {
+  /* position: fixed; */
 display: flex;
  height: var(--nav-size);
  padding: 0 1rem;
@@ -29,6 +30,7 @@ display: flex;
 
 }
 .sidebar {
+  position: fixed;
   width: 30%;
   display: flex;
   background-color: #484a4d;
@@ -43,13 +45,13 @@ margin-right: 28px;
 }
 
 .navbar-links li {
-  padding:0% 20%;
+  padding:0% 30%;
   position: relative;
   
 }
-.navbar-links li:hover {
-  border-bottom: solid 1px #F6F3E4;
-  filter: invert(.7);  /* transform: scale(1.3); */
+
+.navbar-links li a:hover {
+  color:#FF8080; 
 }
 .navbar-nav {
   max-width: 100%;
@@ -61,7 +63,7 @@ margin-right: 28px;
 .arrow-wrap {
 /* transform: translate(50%,120%); */
 left: 191px;
-top: 551px;
+top: 565px;
 position: fixed;
 }
 
@@ -70,7 +72,21 @@ position: fixed;
   position: fixed;
   align-self: center;
 }
+.mui-btn {
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: none;
+  background-color: #1C1C1C;
+  color: #fff;
+  transition: ease;
+  height: 30px;
+}
 
+.mui-btn:hover{
+  cursor: pointer;
+}
 .login-buttons {
   display: flex;
   flex-direction: column; /* Display buttons vertically */
@@ -106,7 +122,7 @@ a {
   transform: translateX(10%);
   width: 25rem;
   background-color: #FF8080;
-  height: 35rem;
+  height: 36rem;
   border-bottom-left-radius:80px;
 
 }
@@ -173,7 +189,7 @@ height: 3.1rem;
 }
 
 .icon-button:hover {
-  filter: invert(.9);
+  filter: invert(1);
 }
 
 .dropdown {
@@ -343,4 +359,9 @@ border-radius: 5px;
   border: solid 1px #1C1C1C;
   background-color: #1C1C1C;
   color: white;
+}
+
+.add-recipe {
+  margin-left: 5px;
+  align-self: center;
 }
