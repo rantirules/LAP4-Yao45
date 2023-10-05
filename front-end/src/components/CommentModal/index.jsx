@@ -2,10 +2,18 @@ import React, { useState } from 'react'
 import {createPortal} from 'react-dom'
 import Comment from '../Comment'
 import './index.css'
+import AddCommentIcon from '@mui/icons-material/AddComment';
+import SendIcon from '@mui/icons-material/Send';
+
+
+
 
 const CommentModal = (props) => {
     const [commentText, setCommentText] = useState('')
     if(!props.open) return null
+
+
+   
 
     const handleChange = (e) => {
       e.preventDefault
@@ -35,7 +43,7 @@ const CommentModal = (props) => {
         })}</div>
         <form className='cmnt-sbmt-form' onSubmit={handleSubmit}>
       <input type="text" onChange={handleChange}/>
-      <button type="submit">Comment</button>
+      <button type="submit"> Send </button>
     </form>
     </section>
 
