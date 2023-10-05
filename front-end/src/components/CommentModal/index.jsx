@@ -26,7 +26,7 @@ const CommentModal = (props) => {
           },
           body: JSON.stringify(comment)
       }
-      const response = await fetch(`http://127.0.0.1:5000/posts/${props.post_id}/comments`, options)
+      const response = await fetch(`https://lap4-backend.onrender.com/posts/${props.post_id}/comments`, options)
     }
   return (
     <section className='commentSection'>        

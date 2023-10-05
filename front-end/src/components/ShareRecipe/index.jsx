@@ -9,7 +9,7 @@ const ShareRecipe = (props) => {
   
   useEffect(() => {
     async function getRecipe() {
-      const res = await axios.get('http://127.0.0.1:5000/last_recipe')
+      const res = await axios.get('https://lap4-backend.onrender.com/last_recipe')
       console.log(res.data)
       recipeRef.current = res.data.recipe
       console.log(recipeRef.current)
@@ -42,7 +42,7 @@ const ShareRecipe = (props) => {
 
   function postPost() {
     const user_id = localStorage.getItem('user')
-    fetch(`http://127.0.0.1:5000/posts`, {
+    fetch(`https://lap4-backend.onrender.com/posts`, {
       method: 'POST',
       body: JSON. stringify({
         user_id: user_id,

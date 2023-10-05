@@ -29,12 +29,12 @@ const Chat = () => {
 
     useEffect(() => {
       const getUsers = async () => {
-        const response = await fetch('http://127.0.0.1:5000/users')
+        const response = await fetch('https://lap4-backend.onrender.com/users')
         const data = await response.json()
         setUsers(data.users)
       }
       const getDialogues = async () => {
-        const response = await fetch(`http://127.0.0.1:5000/dialogues/${displayName}`)
+        const response = await fetch(`https://lap4-backend.onrender.com/dialogues/${displayName}`)
         const data = await response.json()
         setDialogues(data.dialogues)
         console.log(data.dialogues);
@@ -49,7 +49,7 @@ const Chat = () => {
         },
         body: JSON.stringify(displayName)
     }
-      const response = await fetch('http://127.0.0.1:5000/dialogues', options)
+      const response = await fetch('https://lap4-backend.onrender.com/dialogues', options)
     }
 
   return (

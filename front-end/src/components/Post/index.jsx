@@ -11,7 +11,7 @@ const Post = (props) => {
 
     useEffect(() => {
         const getComments = async () => {
-            const response = await fetch(`http://127.0.0.1:5000/posts/${props.id}/comments`)
+            const response = await fetch(`https://lap4-backend.onrender.com/posts/${props.id}/comments`)
             const data = await response.json()
             setComments(data.comments)
         }

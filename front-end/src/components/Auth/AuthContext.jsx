@@ -19,14 +19,14 @@ export function AuthProvider({ children }) {
     setIsLoggedIn(true);
     setUserName(userName)
     console.log(userName)
-    const res = await axios.get(`http://127.0.0.1:5000/users/${userName}`)
+    const res = await axios.get(`https://lap4-backend.onrender.com/users/${userName}`)
 
     localStorage.setItem('user', res.data.user.id)
   };
 
   // async function getId(userName) {
   //   console.log(userName)
-  //   const res = await axios.get(`http://127.0.0.1:5000/users/${userName}`)
+  //   const res = await axios.get(`https://lap4-backend.onrender.com/users/${userName}`)
   //   return res.data.user.id
   // }
 
