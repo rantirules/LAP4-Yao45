@@ -42,7 +42,7 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
 
       const cardStyles = {
         backgroundColor: 'transparent', // Background color set to #FF8080
-        border: 'none'
+        border: 'none',
       };
        // Define inline styles for the buttons
   const loginButtonStyles = {
@@ -73,7 +73,7 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
 
   };
   return (
-    <section>
+    <section className='display-section'>
       {localStorage.getItem('token') ? (
         // Display user's name when logged in
         <>
@@ -83,6 +83,7 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
          <Typography style={typographyStyles} variant="h6" gutterBottom>
         {recipe.title}
       </Typography>
+     
     <CardMedia style={cardStyles}
       component="img"
       height="140"

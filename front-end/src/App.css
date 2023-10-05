@@ -365,3 +365,10 @@ border-radius: 5px;
   margin-left: 5px;
   align-self: center;
 }
+
+.display-section {
+  padding-right: 10px;
+}
+.rotd {
+  margin-right: 15px;
+}
