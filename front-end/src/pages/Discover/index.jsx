@@ -13,6 +13,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
+
 const Discover = () => {
 
   const { navbarPosition } = useNavbar();

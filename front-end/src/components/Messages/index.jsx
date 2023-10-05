@@ -39,7 +39,7 @@ const Messages = (props) => {
         </div>
         <form onSubmit={sendMessage} className='message-form'>
             <input value={props.formValue} onChange={handleChange}/>
-            <button type="submit" className='message-input'>📮</button>
+            <button type="submit" className='message-input'> <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
         </form>
     </>
   )
