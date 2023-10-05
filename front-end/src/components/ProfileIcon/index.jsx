@@ -27,6 +27,7 @@ const ProfileIcon = (props) => {
         <img src="https://static.vecteezy.com/system/resources/thumbnails/006/017/592/small/ui-profile-icon-vector.jpg" alt="" />
         <div>
             {props.receiver}
+            🇬🇲
         </div>
     </div>
   )
