@@ -3,6 +3,7 @@ import Account from './Account/Account'
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { useAuth } from '../../../Auth/AuthContext';
 
@@ -26,6 +27,10 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
       navigate('/logout')
       closeNavbar()
     }
+    const handleAddRecipeClick = () => {
+      navigate('/new-recipe')
+      closeNavbar()
+    }
 
     const recipe = {
         title: 'Try our Recipe of the Day',
@@ -37,16 +42,18 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
 
       const cardStyles = {
         backgroundColor: 'transparent', // Background color set to #FF8080
-        border: 'none'
+        border: 'none',
       };
        // Define inline styles for the buttons
   const loginButtonStyles = {
-    backgroundColor: 'black', // Background color for the login button
+    backgroundColor: '#1c1c1c', // Background color for the login button
     color: 'white', // Text color for the login button
     textTransform: 'none',
     width: '200px',
     fontFamily: 'Nunito, sans-serif',
-    borderRadius: '12px'
+    borderRadius: '12px',
+
+   
   };
 
   
@@ -66,16 +73,17 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
 
   };
   return (
-    <section>
+    <section className='display-section'>
       {localStorage.getItem('token') ? (
         // Display user's name when logged in
         <>
-          <Typography style={typographyStyles} variant="body2">
+          <Typography role="text"style={typographyStyles} variant="body2">
             Need some inspiration, {userName}?
           </Typography> </> ) : (<></>)}
          <Typography style={typographyStyles} variant="h6" gutterBottom>
         {recipe.title}
       </Typography>
+     
     <CardMedia style={cardStyles}
       component="img"
       height="140"
@@ -94,9 +102,14 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
       </Typography >
       {localStorage.getItem('token') ? (
         // Display user's name when logged in
-        <>
-          
-        </>
+       
+          <button 
+            className='mui-btn'
+            onClick={handleAddRecipeClick}> 
+              <AddCircleOutlineIcon/> 
+              <p className='add-recipe'>Add your own recipe</p>
+          </button>
+    
       ) : (
         // Display login and sign-up buttons when not logged in
         <div className="login-buttons-sec">

@@ -123,7 +123,7 @@ const SecondaryNav = ({ userName }) => {
         </div>
         
         <div className={`arrow-wrap ${displayArrow}`} data-testid="arrow-div" onClick={handleNavItemClick}>
-          <NavItem className="arrow-up" data-testid="arrow-up"icon={<KeyboardDoubleArrowUpIcon/>} />
+          <NavItem className="arrow-up" data-testid="arrow-up" icon={<KeyboardDoubleArrowUpIcon/>} />
 
   </div>
   <div onClick={handleNavItemClick} className={` arrow-down-wrap ${displayArrowDown}`}>

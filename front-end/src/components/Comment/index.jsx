@@ -17,7 +17,7 @@ const Comment = (props) => {
   const formatted = formattedTimestamp(originalTimeStamp)
   return (
     <div className='cmnt'>
-        <h3 className='user-tag'>User: {props.user_id}</h3>
+        <h3 className='user-tag'>User: {props.username}</h3>
         <p className='user-cmnt'>{props.text}</p>
         <p className='date-tag'>{formatted}</p>
     </div>
