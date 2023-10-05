@@ -11,7 +11,24 @@
     margin-bottom: 5rem;
 }
 
+#recipe-share-page {
+    /* background-color: lightpink; */
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    /* background-color: aquamarine; */
+    width: 80%;
+    transition: width 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    /* margin-bottom: 5rem; */
+}
+
 #recipe-form-page.closed {
+    width: 100%;
+}
+
+#recipe-share-page.closed {
     width: 100%;
 }
 

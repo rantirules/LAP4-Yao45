@@ -5,18 +5,17 @@ import ProfileIcon from '../ProfileIcon';
 import { Button } from '@mui/material';
 import { useAuth } from '../Auth/AuthContext';
 
-const loginButtonStyles = {
-  backgroundColor: 'black', // Background color for the login button
-  color: 'white', // Text color for the login button
-  textTransform: 'none',
-  width: '200px',
-  fontFamily: 'Nunito, sans-serif',
-  borderRadius: '12px',
-  padding: '10px',
-  marginBottom: '20px',
-};
+import { useNavbar } from '../Navbar/NavbarContext';
+
+// const loginButtonStyles = {
+//   fontSize:'15px'
+// };
 
 const Chat = () => {
+
+  const { navbarPosition } = useNavbar();
+
+
   const { isLoggedIn, login, logout, userName } = useAuth();
     const [messages, setMessages] = useState()
     const [formValue, setFormValue] = useState('')
@@ -56,10 +55,10 @@ const Chat = () => {
       const getReceiver = await fetch('http://127.0.0.1:5000/users')
       const receiverData = await getReceiver.json()
       const receiver = receiverData.users[Math.floor(Math.random() * receiverData.users.length)].username
-      console.log(receiver)
+      // console.log(receiver)
       const dialogue_arr = await fetch('http://127.0.0.1:5000/dialogues')
       const arr_data = await dialogue_arr.json()
-      console.log(arr_data);
+      // console.log(arr_data);
       const dialogue_id = arr_data.dialogues.length + 1
       if (!user){
         console.log('USER NOT DEFINED')
@@ -78,34 +77,42 @@ const Chat = () => {
     }
     console.log(dialogues)
   return (
+    <div id='chat-page-cont' className={navbarPosition === 'closed' ? 'closed' : ''}>
     <div className='chat-container'>
-      <div className='sidebar'>
-        <div className='navbar-chat'>
+      <div id='sidebar'>
+        <div id='navbar-chat'>
           <h3 className='chat-title'>Culturify Chat</h3>
           <div className='user-log'>
             <p>{user}</p>
           </div>
         </div>
-        <div className='chats'>
-          <h4 className='user-title'>Users:</h4>
+
+        <div id='second-cont'>        
+        <div id='chats'>
+          <h4 className='user-title'>Users</h4>
           {dialogues.map((u, idx) => 
             <ProfileIcon username={u.username} receiver={u.receiver} key={idx} dialogue_id={u.id} currentDialogue={currentDialogue} setCurrentDialogue={setCurrentDialogue} setMessages={setMessages} messages={messages}/>
           )}  
         </div>
-        <div className="btn-container">
-          <Button
-                variant="outlined"
-                color="primary"
-                style={loginButtonStyles}
-                onClick={createNewChat}
-              >Start a New Chat!</Button>
+        <div id="btn-container">
+          <button
+                // variant="outlined"
+                // color="primary"
+                id='chat-btn'
+                // style={loginButtonStyles}
+                onClick={createNewChat}>
+            Start a New Chat!
+          </button>
+        </div>
         </div>
       </div>
       {dialogues ? 
-      <div className='message-container'>
+      <div id='message-container'>
           <Messages messages={messages} setMessages={setMessages} formValue={formValue} setFormValue={setFormValue} currentDialogue={currentDialogue} currentUser={user}/>
       </div> : <div>No chat loaded</div>}
     </div>
+    </div>
+
   )
 }
 

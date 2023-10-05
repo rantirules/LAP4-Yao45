@@ -5,40 +5,99 @@
     --red: #FF8080;
 }
 
+#chat-page-cont {
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    /* background-color: aquamarine; */
+    width: 80%;
+    transition: width 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+#chat-page-cont.closed {
+    width: 100%;
+}
+
 .chat-container {
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    height: 90%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* .chat-container {
     position: absolute;
     bottom: 8%;
     left: 4%;
-    background-color: var(--off-white);
+    background-color: yellow;
     height: 80vh;
     width: 120vh;
     display: flex;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
+} */
 
 .user-log {
     display: flex;
     padding: 10px;
     justify-content: space-between;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    font-size: 20px;
 }
 
 .chat-title {
     padding: 10px;
+    /* background-color: yellow; */
+    font-size: 20px;
 }
 
-.sidebar {
-    background-color: var(--red);
+#chat-btn {
+    background-color: #1c1c1c;
+    color: white;
+    width: 55%;
+    border: none;
+    border-radius: 15px;
+    padding: 10px;
+    margin-bottom: 1rem;
+    font-size: 15px;
+    height: 3rem;
+}
+
+#chat-btn:hover {
+    background-color: #FF8080;
+}
+
+/* .sidebar {
+    background-color: yellow;
     flex: 1;
     border-right: 1px solid black;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+} */
+
+#sidebar {
+    background-color: #FFD3D3;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+    border-radius: 15px 0 0 15px;
 }
 
-.navbar-chat {
+/* .navbar-chat {
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: var(--off-pink);
     border-bottom: 1px black solid;
@@ -47,40 +106,92 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+} */
+
+#navbar-chat {
+    /* background-color: lime; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    padding: 1rem;
+    height: 10%;
 }
 
-.message-box {
+#second-cont {
+    /* background-color: #1c1c1c; */
+    height: 90%;
+    width: 90%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-items: center; */
+
+}
+
+#chats {
+    /* height: 100%;
+    width: 100%; */
+    /* background-color: aliceblue; */
+    max-height: 60%;
+    /* height: 80%; */
     overflow-y: auto;
 }
 
-.message-container {
+#btn-container {
+    /* background-color: rebeccapurple; */
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    padding: 3%;
-    flex: 2;
-    height: 100%;
+    align-items: center;
+    justify-content: center;
 }
 
 
-.user-container {
+
+
+.message-box {
+    overflow-y: auto;
+    /* background-color: lightyellow; */
+}
+
+#message-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    /* padding: 3%; */
+    /* flex: 2; */
+    height: 90%;
+    padding: 2rem;
+    width: 70%;
+    /* background-color: lightgreen; */
+}
+
+#user-container {
     padding: 10px;
     display: flex;
     /* align-items: flex-start; */
     gap: 10px;
     cursor: pointer;
+    /* border: #1c1c1c 1px solid; */
+    border-radius: 15px;
 
     &:hover{
-        background-color: var(--off-pink);
+        background-color: white;
     }
+    /* background-color: yellow; */
+
+    /* &:active {
+        background-color: wheat;
+    } */
 }
 
-.user-container > img{
+/* .user-container > img{
     height: 48px;
     width: 48px;
     border-radius: 50%;
     object-fit: cover;
-}
+} */
 
 
 .user-title {
@@ -89,30 +200,49 @@
 }
 
 .message-form {
-    position: relative;
+    /* position: relative; */
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     justify-self: end;
-    padding: 50px;
+    /* padding: 50px; */
+    background-color: #FFD3D3;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding-right: 1rem;
+    align-items: center;
 }
 
 .message-form > input{
     font-size: 20px;
     background-color: #FFD3D3;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
     border: none;
     outline: none;
-    flex: 1;
-    padding: 4px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* flex: 1; */
+    width: 80%;
+    padding: 0.25rem;
+    padding-left: 1rem;
+    border-radius: 15px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    text-align: start;
+    height: 3rem;
 }
 
 .message-form > button {
-    height: 74px;
-    width: 20%;
-    font-size: 40px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    height: 3rem;
+    width: 5rem;
+    padding: 0.25rem;
+    font-size: 25px;
+    /* padding-right: 2rem; */
+    background: none;
+    border: none;
+    color: #1c1c1c;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    cursor: pointer;
+
+    &:hover {
+        color: #FF8080;
+    }
 }
 
 .message {
@@ -157,19 +287,43 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-
-
 }
 
-.messageContent >     p{
-    background-color: aquamarine;
+.messageContent > p{
+    background-color: #FF8080;
     padding: 10px;
+    
+}
+
+/* #somethin {
+    background-color: yellow;
+    font-size: 18px;
+} */
+
+/* #somethin:active {
+    text-decoration: underline;
+} */
+
+
+#somethin {
+    /* background-color: yellow; */
+    font-size: 18px;
+}
+
+#somethin::selection {
+    text-decoration: underline;
+}
+
+#user-container.clicked {
+    background-color: white;
+}
+
+.message.sent .messageContent p{
+    background-color: #FFD3D3;
+    border-radius: 10px 0px 10px 10px;
+}
+
+.message.received .messageContent p{
+    background-color: #ccc;
     border-radius: 0px 10px 10px 10px;
 }
-
-.chats {
-    height: 100%;
-    width: 100%;
-}
-
-

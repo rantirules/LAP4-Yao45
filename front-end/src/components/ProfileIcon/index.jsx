@@ -1,8 +1,11 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import { UserContext } from '../../App'
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+
 
 const ProfileIcon = (props) => {
     const currentUser = useContext(UserContext)
+    const [ clicked, setClicked ] = useState(false)
     let name = props.username 
     console.log(name)
     
@@ -20,12 +23,13 @@ const ProfileIcon = (props) => {
         console.log('DIALOGUE MESSAGES');
         console.log(messageData.messages);
         console.log(props.messages);
+        setClicked(true)
     }
     
   return (
-    <div className='user-container' onClick={handleClick}>
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/006/017/592/small/ui-profile-icon-vector.jpg" alt="" />
-        <div>
+    <div id='user-container' onClick={handleClick} className={clicked ? 'clicked' : ''}>
+        <AccountCircleOutlinedIcon style={{color:'#1c1c1c'}}/>
+        <div id='somethin'>
             {props.receiver}
             🇬🇲
         </div>

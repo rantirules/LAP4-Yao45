@@ -49,10 +49,11 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
     backgroundColor: '#1c1c1c', // Background color for the login button
     color: 'white', // Text color for the login button
     textTransform: 'none',
-    width: '200px',
+    width: '10rem',
+    height:'3rem',
     fontFamily: 'Nunito, sans-serif',
-    borderRadius: '12px',
-
+    borderRadius: '15px',
+    fontSize: '15px'
    
   };
 
@@ -66,7 +67,7 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
   const signUpButtonStyles = {
     backgroundColor: 'transparent', // Transparent background for the sign-up button
     border: 'none', // Remove the border
-    color: 'black', // Text color for the sign-up button
+    color: '#1c1c1c', // Text color for the sign-up button
     fontWeight:'bold',
     textTransform: 'none',
     fontFamily: 'Nunito, sans-serif',
@@ -115,8 +116,9 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
         <div className="login-buttons-sec">
           <div className="login-button-sec">
             <Button
-              variant="outlined"
-              color="primary"
+              id='button-for-login'
+              // variant="outlined"
+              // color="primary"
               style={loginButtonStyles}
               onClick={handleLoginClick}
             >

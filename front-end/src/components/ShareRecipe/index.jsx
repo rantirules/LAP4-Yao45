@@ -2,12 +2,16 @@ import React, { useRef, useState, useEffect } from 'react'
 import axios from 'axios'
 import { useNavbar } from '../Navbar/NavbarContext';
 
+
+
 const ShareRecipe = (props) => {
+  const { navbarPosition } = useNavbar();
+
   const [description, setDescription] = useState('')
   const [story, setStory] = useState('')
   const [recipe, setRecipe] = useState()
   const recipeRef = useRef(recipe)
-  const { navbarPosition } = useNavbar();
+  // const { navbarPosition } = useNavbar();
   
   useEffect(() => {
     async function getRecipe() {
@@ -70,20 +74,20 @@ const ShareRecipe = (props) => {
   }
 
   return (
-    <div id='recipe-form-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
-      <form className='recipe-form' onSubmit={handleSubmit}>
-        <h2>Share Recipe</h2>
-        <div>
-          <p>Brief description:</p>
-          <input type="text" value={description} onChange={handleDescription} required className="form-input"/>
-        </div><br/>
-        <div>
-          <p>Brief story:</p>
-          <input type="text" value={story} onChange={handleStory} required className="form-input"/>
-        </div><br/>
-        <button type="submit" onClick={handleSubmit}>Share</button>
-      </form>
-    </div>  
+    <div id='recipe-share-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
+    <form className='recipe-form' onSubmit={handleSubmit}>
+      <h2>Share Recipe</h2>
+      <div>
+        <p>Brief description:</p>
+        <input type="text" value={description} onChange={handleDescription} required className="form-input"/>
+      </div><br/>
+      <div>
+        <p>Brief story:</p>
+        <input type="text" value={story} onChange={handleStory} required className="form-input"/>
+      </div><br/>
+      <button type="submit" className="submit-btn" onClick={handleSubmit}>Share</button>
+    </form>
+    </div>
   )
 }
 

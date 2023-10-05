@@ -1,26 +1,62 @@
-.main-recipe {
-    max-width: 800px;
-    margin: auto;
-    padding: 20px;
 
-    
-    /* background-color: #f8f8f8;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+#main-recipe {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  /* background-color: aquamarine; */
+  width: 80%;
+  transition: width 0.3s ease;
+  align-items: center;
+  /* padding-left: 5rem; */
+  justify-content: start;
+  /* margin-top: 3.5rem; */
+  overflow-y: auto;
 }
+
+#main-recipe.closed {
+  width: 100%;
+}
+
+#main-recipe h1 {
+  font-size: 2.7rem;
+    color: #1c1c1c;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+/* #recipe-img {
+  height: 100rem;
+  width: 70%;
+  height: 50%;
+  background-color: yellow;
+  border-radius: 15px;
+  padding: 0;
+  
+} */
+
+
 .content-info {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     margin-bottom: 10px;
+    /* background-color: green; */
+    /* margin-top: 2rem; */
+    width: 40%;
+    font-size: 15px;
 }
+
+
 img {
-    max-width: 100%;
-    max-height: 300px;
+    /* max-width: 100%; */
+    /* max-height: 300px; */
+    /* height: 100%; */
+    width: 100%;
     object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 20px;
+    border-radius: 15px;
+    margin-bottom: 1rem;
   }
+
 .creator-info {
     display: flex;
     align-items: center;
@@ -29,23 +65,45 @@ img {
     margin-right: 10px;
     font-size: 1rem;
     margin-top: 0px;
+    color: #1c1c1c;
   }
   
   .creator-info svg {
     margin-right: 8px;
+    font-size: 20px;
   }
+
+#description-main-recipe {
+  /* background-color: lightgreen; */
+  padding: 1rem;
+  font-size: 20px;
+  text-align: start;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  max-width: 50%;
+  white-space: normal;
+}
+
+#description-main-recipe p {
+  text-align: start;
+  padding: 0;
+}
   
   .ingredients-list,
   .steps-list {
-    margin-top: 20px;
+    margin-top: 2rem;
     text-align: left;
-    padding-left: 30%;
+    /* padding-left: 30%; */
+    width: 40%;
+    /* background-color: bisque; */
+    font-size: 20px;
   }
   
   .ingredients-list li,
   .steps-list li {
-    font-size: 1rem;
-    margin-bottom: 8px;
+    /* font-size: 1rem; */
+    /* margin-bottom: 8px; */
     text-align: left;
    
   }
@@ -56,16 +114,18 @@ img {
   }
 
   li {
-    padding-right: 30%;
+    /* padding-right: 30%; */
     /* list-style-position: inside;  */
+    padding: 0.5rem;
   }
   
   .save-button {
     
     background-color: #F9F9F9;
-    color: #000;
+    color: #1c1c1c;
     border-style: none;
     cursor: pointer;
     display: block;
+    font-size: 15px;
   }
   

@@ -88,6 +88,7 @@ position: fixed;
 
 .mui-btn p {
   margin-left: 0.5rem;
+  /* color: rebeccapurple; */
 }
 
 .mui-btn:hover{
@@ -131,8 +132,9 @@ a {
   transform: translateX(10%);
   width: 25rem;
   background-color: #FF8080;
-  height: 37rem;
+  height: 40rem;
   border-bottom-left-radius:80px;
+  font-size: 15px;
 
 }
 .closed {
@@ -217,6 +219,14 @@ height: 3.1rem;
 .display {
   align-items: center;
   justify-content: center;
+}
+
+.display ul {
+  font-size: 20px;
+}
+
+.display li:hover {
+  font-weight: bold;
 }
 
 .drop-item {
@@ -403,6 +413,8 @@ border-radius: 5px; */
 .cmnt-sbmt-form button:hover {
   color: #FF8080;
 }
+
+
 
   /* border-radius: 5px;
   border: none 1px #1C1C1C;
