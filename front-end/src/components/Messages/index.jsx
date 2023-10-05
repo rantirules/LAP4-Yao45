@@ -20,6 +20,7 @@ const Messages = (props) => {
         const newMessages = await fetch(`http://127.0.0.1:5000/messages/${dialogue_id}`)
         const data = await newMessages.json()
         props.setMessages(data.messages)
+        props.setFormValue('')
     }
 
     const handleChange = (e) => {

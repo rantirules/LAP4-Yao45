@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUser, faKitchenSet, faEarthAfrica} from '@fortawesome/free-solid-svg-icons'
 import CommentModal from '../CommentModal'
+import { useAuth } from '../Auth/AuthContext';
 
 import CommentSection from '../CommentSection/CommentSection'
 import './index-2.css'
 const Post = (props) => {
+    const { isLoggedIn, login, logout, userName, displayName } = useAuth();
     const [isOpen, setIsOpen] = useState(false)
     const [comments, setComments] = useState([])
 
@@ -68,7 +70,7 @@ const Post = (props) => {
         
     </div>
     <div>
-    {isOpen && <div className='commentContainer2'><CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments} post_id={props.id}/></div>}
+    {isOpen && <div className='commentContainer2'><CommentModal currentUserId={userName} currentUser={displayName} open={isOpen} setIsOpen={setIsOpen} comments={comments} setComments={setComments}post_id={props.id}/></div>}
     </div>
     </>
 
