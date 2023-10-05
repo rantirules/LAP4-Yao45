@@ -96,7 +96,7 @@ const Register = () => {
 
     return (
         <div className="form-container">
-            <h1>Welcome to Cultrify</h1>
+            <h1>Welcome to Culturify</h1>
             <form className="form" onSubmit={handleSubmit}>
             <label> Name <br/>
                 <input

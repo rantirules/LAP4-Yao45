@@ -69,7 +69,7 @@ const handleSubmit = async (e) => {
   return (
     
     <div className="form-container">
-        <h1>Welcome to Cultrify</h1><br/>
+        <h1>Welcome to Culturify</h1><br/>
             <form className="form" onSubmit={handleSubmit}>
                 <label> Username </label><br/>
                 <input 
