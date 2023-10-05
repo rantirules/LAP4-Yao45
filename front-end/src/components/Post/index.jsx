@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faUser, faKitchenSet, faEarthAfrica} from '@fortawesome/free-solid-svg-icons'
 import CommentModal from '../CommentModal'
-
+import {AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
 import CommentSection from '../CommentSection/CommentSection'
 import './index-2.css'
 import { useNavigate } from 'react-router-dom'
@@ -14,6 +15,13 @@ const Post = (props) => {
     const [username, setUsername] = useState('')
     const [recipeName, setRecipeName] = useState('')
     const navigate = useNavigate()
+
+    const cld = new Cloudinary({
+        cloud: {
+          cloudName: 'dvu7ysgku'
+        }
+      })
+    const image = cld.image(props.recipePicture)
 
     useEffect(() => {
         const getComments = async () => {
@@ -80,7 +88,7 @@ const Post = (props) => {
       
         <div className="right-panel2">
             <div className="card2 food-image">
-                <img src={props.recipePicture} alt="" />
+                <AdvancedImage cldImg={image} width={300} height={150}/>
             </div>
             <div className="card2 dish-description">
                 <p className='text'>{props.recipeDescription}</p>
