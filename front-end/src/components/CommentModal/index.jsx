@@ -9,12 +9,12 @@ import SendIcon from '@mui/icons-material/Send';
 
 
 const CommentModal = (props) => {
+
+  console.log(props)
     
     const [commentText, setCommentText] = useState('')
     if(!props.open) return null
 
-
-   
 
     const handleChange = (e) => {
       e.preventDefault
@@ -48,10 +48,10 @@ const CommentModal = (props) => {
       <div>{props.comments.map((c, idx) => {
           return <Comment key={idx} text={c.text} id={c.id} user_id={c.user_id} username={c.username} timestamp={c.time_posted}></Comment>
         })}</div>
-        <form className='cmnt-sbmt-form' onSubmit={handleSubmit}>
-      <input type="text" onChange={handleChange}/>
-      <button type="submit"> Send </button>
-    </form>
+      <form className='cmnt-sbmt-form' onSubmit={handleSubmit}>
+        <input type="text" onChange={handleChange}/>
+        <button type="submit"> Send </button>
+      </form>
     </section>
 
 
