@@ -49,7 +49,7 @@ margin-right: 28px;
 }
 .navbar-links li:hover {
   border-bottom: solid 1px #F6F3E4;
-  filter: invert(.9);  /* transform: scale(1.3); */
+  filter: invert(.7);  /* transform: scale(1.3); */
 }
 .navbar-nav {
   max-width: 100%;

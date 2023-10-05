@@ -70,7 +70,7 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
       {localStorage.getItem('token') ? (
         // Display user's name when logged in
         <>
-          <Typography style={typographyStyles} variant="body2">
+          <Typography role="text"style={typographyStyles} variant="body2">
             Need some inspiration, {userName}?
           </Typography> </> ) : (<></>)}
          <Typography style={typographyStyles} variant="h6" gutterBottom>
