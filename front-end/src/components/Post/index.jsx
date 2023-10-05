@@ -5,9 +5,15 @@ import CommentModal from '../CommentModal'
 
 import CommentSection from '../CommentSection/CommentSection'
 import './index-2.css'
+import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
+
 const Post = (props) => {
     const [isOpen, setIsOpen] = useState(false)
     const [comments, setComments] = useState([])
+    const [username, setUsername] = useState('')
+    const [recipeName, setRecipeName] = useState('')
+    const navigate = useNavigate()
 
     useEffect(() => {
         const getComments = async () => {
@@ -15,7 +21,20 @@ const Post = (props) => {
             const data = await response.json()
             setComments(data.comments)
         }
+        async function getUsername() {
+            const res = await axios.get(`http://127.0.0.1:5000/users/${props.userId}`)
+            const username = await res.data.user.username
+            setUsername(username)
+        }
+    
+        async function getRecipeName() {
+            const res = await axios.get(`http://127.0.0.1:5000/recipes/${props.recipeId}`)
+            const recipeName = await res.data.recipe.name
+            setRecipeName(recipeName)
+        }
         getComments()
+        getRecipeName()
+        getUsername()
     }, [])
 
 
@@ -27,16 +46,21 @@ const Post = (props) => {
         console.log(isOpen);
     }
 
+    const handleClickRecipe = (e) => {
+        e.preventDefault()
+        navigate(`/recipe/${props.recipeId}`)
+    }
+
 
   return (
     <>    <div className='postContainer2'>
         <div className="left-panel2">
             <div className="user2">
                 <img src='https://t4.ftcdn.net/jpg/04/83/90/95/360_F_483909569_OI4LKNeFgHwvvVju60fejLd9gj43dIcd.jpg' alt="" />
-                <h3>{props.username}</h3>
+                <h3>{username}</h3>
             </div>
-            <div className="recipe2">
-                {props.recipeName}
+            <div className="recipe2" onClick={handleClickRecipe}>
+                {recipeName}
             </div>
             <div className="links2">
                 <div className="link2">
