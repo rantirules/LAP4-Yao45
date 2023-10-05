@@ -92,7 +92,7 @@ const handleSubmit = async (e) => {
                 
                 <button className="form-submit"> Sign in </button><br/>
                 { /* eslint-disable-next-line react/no-unescaped-entities */}
-                <p style={{textAlign: "right"}}><em> Don't have an account? </em> <a style={{color: "#FF8080"}}href="http://localhost:5173/register">Register Here</a></p>
+                <p style={{textAlign: "right"}}><em> Don't have an account? </em> <a style={{color: "#FF8080"}}href="https://cucina-mondo.onrender.com/register">Register Here</a></p>
             </form>
         </div>
   )
