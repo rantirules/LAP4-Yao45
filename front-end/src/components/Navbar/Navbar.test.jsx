@@ -23,17 +23,17 @@ describe('Navbar', () => {
     cleanup();
   });
 
-  it.skip('renders the Home link', () => {
+  it('renders the Home link', () => {
     const homeLink = screen.getByRole('link', { name: /home/i });
     expect(homeLink).toBeInTheDocument();
   });
 
-  it.skip('renders the Discover link', () => {
+  it('renders the Discover link', () => {
     const discoverLink = screen.getByRole('link', { name: /discover/i });
     expect(discoverLink).toBeInTheDocument();
   });
 
-it.skip('renders searchBar', () => {
+it('renders searchBar', () => {
     const searchBar = screen.getByRole("textbox")
     expect(searchBar).toBeInTheDocument();
 }) 

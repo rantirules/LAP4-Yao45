@@ -1,5 +1,5 @@
 import React from 'react';
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import { screen, render, cleanup } from '@testing-library/react';
 import {FaUserCircle, FaFacebookMessenger, FaMapMarkedAlt, FaMapMarkerAlt, FaArrowAltCircleUp, FaArrowCircleDown } from 'react-icons/fa'; // Import the icon components
 import userEvent from "@testing-library/user-event";
@@ -31,12 +31,13 @@ describe('Secondary Nav', () => {
       expect(NavLinks.length).toBeGreaterThanOrEqual(3);
     });
 
-    // it(' closes the secondaryNav on the click of the arrow', async () => {
+
+    it(' closes the secondaryNav on the click of the arrow',  () => {
         
-    //     const arrowUp = screen.findByTestId('arrow-up')
-    //     userEvent.click(arrowUp)
-    //     const arrowUpDiv =  await screen.findByTestId('arrow-div');
-    //     expect(arrowUpDiv).toBeInTheDocument();
-    // })
+        const arrowUp =  screen.findByRole
+        // userEvent.click(arrowUp)
+        // const arrowUpDiv =  screen.findByTestId('arrow-div');
+        // expect(arrowUpDiv).toBeInTheDocument();
+    })
 
     })
