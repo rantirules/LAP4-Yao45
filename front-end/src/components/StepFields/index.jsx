@@ -30,6 +30,7 @@ const StepFields = ({steps, setSteps}) => {
                 value={input.step}
                 onChange={event => handleSteps(index, event)}
                 className = "form-input"
+                id='step-input'
                 />
               <button onClick={() => removeFields(index)} className = "remove-btn">Remove</button>
             </div>

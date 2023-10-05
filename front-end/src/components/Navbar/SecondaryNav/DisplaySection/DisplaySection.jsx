@@ -104,10 +104,11 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
         // Display user's name when logged in
        
           <button 
-          className='mui-btn'
-              
-              onClick={handleAddRecipeClick}
-            > <AddCircleOutlineIcon/> <p className='add-recipe'>Add your own recipe</p></button>
+            className='mui-btn'
+            onClick={handleAddRecipeClick}> 
+              <AddCircleOutlineIcon/> 
+              <p className='add-recipe'>Add your own recipe</p>
+          </button>
     
       ) : (
         // Display login and sign-up buttons when not logged in

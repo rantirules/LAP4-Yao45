@@ -2,6 +2,7 @@ import React from 'react'
 import { RecipeForm, ShareRecipe, NewRecipeButton } from '../../components'
 import { useState } from 'react'
 
+
 const NewRecipePage = () => {
   const [recipePosted, setRecipePosted] = useState(false)
   const [recipeShared, setRecipeShared] = useState(false)
