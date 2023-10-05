@@ -11,6 +11,7 @@ const ShareRecipe = (props) => {
   const [story, setStory] = useState('')
   const [recipe, setRecipe] = useState()
   const recipeRef = useRef(recipe)
+  // const { navbarPosition } = useNavbar();
   
   useEffect(() => {
     async function getRecipe() {

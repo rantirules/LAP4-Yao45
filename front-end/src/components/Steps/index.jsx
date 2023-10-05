@@ -13,7 +13,7 @@ const Steps = ({ steps }) => {
 
   return (
     <>
-      <strong>Steps:</strong>
+      <strong style={{fontSize:'22px', color:'#FF8080'}}>Steps:</strong>
         <ol>
          {displaySteps()}
         </ol>

@@ -13,6 +13,8 @@ import "./index.css"
 
 import { faUser } from '@fortawesome/free-regular-svg-icons';
 
+import { useNavbar } from '../Navbar/NavbarContext';
+
 const Recipe = (props) => {
   const [loading, setLoading] = useState(false)
   const [creator, setCreator] = useState('')
@@ -38,13 +40,16 @@ const Recipe = (props) => {
     loadUser()
   }, [props.user_id])
 
+  const { navbarPosition } = useNavbar();
+
+
   function displayRecipe() {
     return (
-      <main className ="main-recipe">
+      <main id="main-recipe" className={navbarPosition === 'closed' ? 'closed' : ''}>
         <br/>
         <h1>{props.name}</h1><br/>
-        <div>
-          <AdvancedImage cldImg={image} width={300} height={150}/>
+        <div id='recipe-img'>
+          <AdvancedImage cldImg={image} width={800} height={350}/>
         </div>
         <div className ="content-info">
         <div className ="creator-info">
@@ -63,9 +68,9 @@ const Recipe = (props) => {
           <SaveRecipeButton rid={props.id} uid={props.user_id} />
         </div>
         </div>
-        <div> 
+        <div id='description-main-recipe'> 
           {/* Description */}
-          {props.desc}
+          <p>{props.desc}</p>
         </div>
         
         <div className="ingredients-list">
