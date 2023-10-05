@@ -7,7 +7,7 @@ const ChatMessage = (props) => {
     const username = useContext(UserContext)
     console.log(username);
 
-    const messageClass = username === props.username ? 'sent' : 'received'
+    const messageClass = props.currentUser === props.username ? 'sent' : 'received'
   return (
     <div className={`message ${messageClass}`}>
       <div className="messageInfo">
