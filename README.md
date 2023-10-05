@@ -1,7 +1,8 @@
 # Culturify 🧑‍🍳 🌐
-<p text-align="center"> <strong> Welcome to Culturify! Meet new people, share recipes and learn more about different cultures through food! </strong></p>
-<img width="1421" alt="image" src="https://github.com/rantirules/LAP4-Yao45/assets/13412593/d9b8b6ef-3fbd-45e8-bc9d-5bb11d7453fd">
+<p text-align="center"> <strong> Welcome to Cultrify! Meet new people, share recipes and learn more about different cultures through food! </strong></p>
+<!-- <img width="1421" alt="image" src="https://github.com/rantirules/LAP4-Yao45/assets/13412593/d9b8b6ef-3fbd-45e8-bc9d-5bb11d7453fd"> -->
 
+![cultrifyreadme1](https://github.com/rantirules/LAP4-Yao45/assets/13412593/5d53ad09-996a-4816-91fc-a4501b304528)
 
 ## Table of Contents
 

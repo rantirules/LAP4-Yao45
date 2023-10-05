@@ -3,6 +3,7 @@ import Account from './Account/Account'
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { FaMapMarkerAlt } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { useAuth } from '../../../Auth/AuthContext';
 
 const DisplaySection = ({navbarPosition, closeNavbar}) => {
@@ -27,10 +28,11 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
     }
 
     const recipe = {
-        title: 'Recipe of the Day',
-        image: 'https://via.placeholder.com/150', // Replace with the actual recipe image URL
+        title: 'Try our Recipe of the Day',
+        image: '/src/assets/pasta.jpeg', // Replace with the actual recipe image URL
         dishName: 'Delicious Pasta',
         location: 'Italy',
+        history: "Pasta dishes originate from the Greeks but were perfected by the Romans. The use of tomato sauces were only introduced in the 18th century and became highly popular due to the high level of Italian immigration in this period."
       };
 
       const cardStyles = {
@@ -46,6 +48,8 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
     fontFamily: 'Nunito, sans-serif',
     borderRadius: '12px'
   };
+
+  
  
   const typographyStyles = {
     margin: '16px', // Adjust the value to control the gap
@@ -63,6 +67,12 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
   };
   return (
     <section>
+      {localStorage.getItem('token') ? (
+        // Display user's name when logged in
+        <>
+          <Typography style={typographyStyles} variant="body2">
+            Need some inspiration, {userName}?
+          </Typography> </> ) : (<></>)}
          <Typography style={typographyStyles} variant="h6" gutterBottom>
         {recipe.title}
       </Typography>
@@ -78,23 +88,14 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
         </Typography >
         <Typography style={typographyStyles} variant="body2">
         <FaMapMarkerAlt/> {recipe.location}
+        <br/>
+        <br/>
+        <p className='history-recipe'>{recipe.history}</p>
       </Typography >
       {localStorage.getItem('token') ? (
         // Display user's name when logged in
         <>
-          <Typography style={typographyStyles} variant="body2">
-            Welcome, {userName}! {/* Replace "User" with the actual user's name */}
-          </Typography>
-          <div className="login-button-sec">
-            <Button
-              variant="outlined"
-              color="primary"
-              style={loginButtonStyles}
-              onClick={handleLogoutClick}
-            >
-              Logout
-            </Button>
-          </div>
+          
         </>
       ) : (
         // Display login and sign-up buttons when not logged in
