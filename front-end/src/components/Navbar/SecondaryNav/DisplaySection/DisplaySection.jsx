@@ -78,7 +78,7 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
         // Display user's name when logged in
         <>
           <Typography role="text"style={typographyStyles} variant="body2">
-            Need some inspiration, {userName}?
+            Need some inspiration?
           </Typography> </> ) : (<></>)}
          <Typography style={typographyStyles} variant="h6" gutterBottom>
         {recipe.title}

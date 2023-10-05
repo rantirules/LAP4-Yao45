@@ -19,6 +19,7 @@ const Post = (props) => {
     const [comments, setComments] = useState([])
     const [username, setUsername] = useState('')
     const [recipeName, setRecipeName] = useState('')
+    const [culture, setCulture] = useState('')
 
     const cld = new Cloudinary({
         cloud: {
@@ -39,13 +40,15 @@ const Post = (props) => {
             setUsername(username)
         }
     
-        async function getRecipeName() {
+        async function getRecipe() {
             const res = await axios.get(`http://127.0.0.1:5000/recipes/${props.recipeId}`)
             const recipeName = await res.data.recipe.name
+            const culture = await res.data.recipe.culture
             setRecipeName(recipeName)
+            setCulture(culture)
         }
         getComments()
-        getRecipeName()
+        getRecipe()
         getUsername()
     }, [])
 
@@ -78,7 +81,7 @@ const Post = (props) => {
                 
                 <div className="link2">
                         <FontAwesomeIcon icon={faEarthAfrica}/>
-                        <p> Culture </p>
+                        <p> {culture} </p>
                 </div>
 
                 <Link to={`/recipe/${props.id}`} className="link2">

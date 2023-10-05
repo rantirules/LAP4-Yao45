@@ -9,7 +9,8 @@ const SaveRecipeButton = (props) => {
   const [message, setMessage] = useState('')
   const [isSaved, setIsSaved] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
-  const url = `http://127.0.0.1:5000/saved/${props.uid}/${props.rid}`
+  const uid = localStorage.getItem('user')
+  const url = `http://127.0.0.1:5000/saved/${uid}/${props.rid}`
 
   const [isHovered, setIsHovered] = useState(false);
   
@@ -32,12 +33,12 @@ const SaveRecipeButton = (props) => {
     if (res.data.error) {
       console.log("Recipe already saved")
       setIsSaved(true);
-      setMessage('Recipe is already saved.')
+      // setMessage('Recipe is already saved.')
     } else if (res.status === 201) {
       setIsSaved(true);
       setIsAdded(true);
       console.log("Recipe saved.")
-      setMessage("Recipe saved.")
+      // setMessage("Recipe saved.")
     }
     setTimeout(() => {
       setMessage('')
@@ -59,7 +60,7 @@ const SaveRecipeButton = (props) => {
       icon={isSaved ? solidHeart : (isHovered ? solidHeart : regularHeart)}
         style={{ color: "#ff8080" }}
       />
-        {isAdded ? 'Added!' : 'Add'}
+        {isAdded ? 'Saved!' : 'Save'}
         </button><br/>
       <p>{message}</p>
     </>
