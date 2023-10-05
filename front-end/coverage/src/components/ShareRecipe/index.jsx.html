@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for src/components/Chat/index.jsx</title>
+    <title>Code coverage report for src/components/ShareRecipe/index.jsx</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="../../../prettify.css" />
     <link rel="stylesheet" href="../../../base.css" />
@@ -19,13 +19,13 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/Chat</a> index.jsx</h1>
+        <h1><a href="../../../index.html">All files</a> / <a href="index.html">src/components/ShareRecipe</a> index.jsx</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">24.13% </span>
+                <span class="strong">6.97% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>21/87</span>
+                <span class='fraction'>6/86</span>
             </div>
         
             
@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">24.13% </span>
+                <span class="strong">6.97% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>21/87</span>
+                <span class='fraction'>6/86</span>
             </div>
         
             
@@ -148,23 +148,7 @@
 <a name='L83'></a><a href='#L83'>83</a>
 <a name='L84'></a><a href='#L84'>84</a>
 <a name='L85'></a><a href='#L85'>85</a>
-<a name='L86'></a><a href='#L86'>86</a>
-<a name='L87'></a><a href='#L87'>87</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<a name='L86'></a><a href='#L86'>86</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -234,105 +218,114 @@
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useState, useEffect, useContext } from 'react'
-import './index.css'
-import Messages from '../Messages';
-import ProfileIcon from '../ProfileIcon';
-import { Button } from '@mui/material';
-import { useAuth } from '../Auth/AuthContext';
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">import React, { useRef, useState, useEffect } from 'react'
+import axios from 'axios'
 &nbsp;
-const loginButtonStyles = {
-  backgroundColor: 'black', // Background color for the login button
-  color: 'white', // Text color for the login button
-  textTransform: 'none',
-  width: '200px',
-  fontFamily: 'Nunito, sans-serif',
-  borderRadius: '12px',
-  padding: '10px',
-  marginBottom: '20px',
-};
-&nbsp;
-const Chat = <span class="fstat-no" title="function not covered" >() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >  const { isLoggedIn, login, logout, userName } = useAuth();</span>
-<span class="cstat-no" title="statement not covered" >    const [messages, setMessages] = useState()</span>
-<span class="cstat-no" title="statement not covered" >    const [formValue, setFormValue] = useState('')</span>
-<span class="cstat-no" title="statement not covered" >    const [users, setUsers] = useState([])</span>
-<span class="cstat-no" title="statement not covered" >    const [dialogues, setDialogues] = useState([])</span>
-<span class="cstat-no" title="statement not covered" >    const [currentDialogue, setCurrentDialogue] = useState()</span>
-<span class="cstat-no" title="statement not covered" >    const displayName = userName</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    useEffect(() =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      const getUsers = async () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        const response = await fetch('http://127.0.0.1:5000/users')</span>
-<span class="cstat-no" title="statement not covered" >        const data = await response.json()</span>
-<span class="cstat-no" title="statement not covered" >        setUsers(data.users)</span>
-<span class="cstat-no" title="statement not covered" >      }</span>
-<span class="cstat-no" title="statement not covered" >      const getDialogues = async () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >        const response = await fetch(`http://127.0.0.1:5000/dialogues/${displayName}`)</span>
-<span class="cstat-no" title="statement not covered" >        const data = await response.json()</span>
-<span class="cstat-no" title="statement not covered" >        setDialogues(data.dialogues)</span>
-<span class="cstat-no" title="statement not covered" >        console.log(data.dialogues);</span>
-<span class="cstat-no" title="statement not covered" >      }</span>
-<span class="cstat-no" title="statement not covered" >      getUsers()</span>
-<span class="cstat-no" title="statement not covered" >      getDialogues()</span>
-<span class="cstat-no" title="statement not covered" >    },[])</span>
-<span class="cstat-no" title="statement not covered" ></span>
-<span class="cstat-no" title="statement not covered" >    const createNewChat = async () =&gt; {</span>
-<span class="cstat-no" title="statement not covered" >      const options = {method: "POST", headers: {</span>
-<span class="cstat-no" title="statement not covered" >        'Content-Type' : 'application/json'</span>
-<span class="cstat-no" title="statement not covered" >        },</span>
-<span class="cstat-no" title="statement not covered" >        body: JSON.stringify(displayName)</span>
+const ShareRecipe = <span class="fstat-no" title="function not covered" >(props) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >  const [description, setDescription] = useState('')</span>
+<span class="cstat-no" title="statement not covered" >  const [story, setStory] = useState('')</span>
+<span class="cstat-no" title="statement not covered" >  const [recipe, setRecipe] = useState()</span>
+<span class="cstat-no" title="statement not covered" >  const recipeRef = useRef(recipe)</span>
+<span class="cstat-no" title="statement not covered" >  </span>
+<span class="cstat-no" title="statement not covered" >  useEffect(() =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >    async function getRecipe() {</span>
+<span class="cstat-no" title="statement not covered" >      const res = await axios.get('http://127.0.0.1:5000/last_recipe')</span>
+<span class="cstat-no" title="statement not covered" >      console.log(res.data)</span>
+<span class="cstat-no" title="statement not covered" >      recipeRef.current = res.data.recipe</span>
+<span class="cstat-no" title="statement not covered" >      console.log(recipeRef.current)</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >      const response = await fetch('http://127.0.0.1:5000/dialogues', options)</span>
+<span class="cstat-no" title="statement not covered" >    getRecipe()</span>
+<span class="cstat-no" title="statement not covered" >  }, [])</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  function handleDescription(e) {</span>
+<span class="cstat-no" title="statement not covered" >    setDescription(e.target.value)</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  function handleStory(e) {</span>
+<span class="cstat-no" title="statement not covered" >    setStory(e.target.value)</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  async function handleSubmit(e) {</span>
+<span class="cstat-no" title="statement not covered" >    e.preventDefault()</span>
+<span class="cstat-no" title="statement not covered" >    // await getRecipe()</span>
+<span class="cstat-no" title="statement not covered" >    console.log("first")</span>
+<span class="cstat-no" title="statement not covered" >    if (description.length &gt; 0 &amp;&amp; story.length &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >      postPost()</span>
+<span class="cstat-no" title="statement not covered" >      setStory('')</span>
+<span class="cstat-no" title="statement not covered" >      setDescription('')</span>
+<span class="cstat-no" title="statement not covered" >      props.setRecipeShared(true)</span>
+<span class="cstat-no" title="statement not covered" >    } else {</span>
+<span class="cstat-no" title="statement not covered" >      console.log("Please enter all fields")</span>
 <span class="cstat-no" title="statement not covered" >    }</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
+<span class="cstat-no" title="statement not covered" ></span>
+<span class="cstat-no" title="statement not covered" >  function postPost() {</span>
+<span class="cstat-no" title="statement not covered" >    const user_id = localStorage.getItem('user')</span>
+<span class="cstat-no" title="statement not covered" >    fetch(`http://127.0.0.1:5000/posts`, {</span>
+<span class="cstat-no" title="statement not covered" >      method: 'POST',</span>
+<span class="cstat-no" title="statement not covered" >      body: JSON. stringify({</span>
+<span class="cstat-no" title="statement not covered" >        user_id: user_id,</span>
+<span class="cstat-no" title="statement not covered" >        recipe_id: recipeRef.current.id,</span>
+<span class="cstat-no" title="statement not covered" >        description: description,</span>
+<span class="cstat-no" title="statement not covered" >        story: story,</span>
+<span class="cstat-no" title="statement not covered" >        img_url: recipeRef.current.img_url</span>
+<span class="cstat-no" title="statement not covered" >      }),</span>
+<span class="cstat-no" title="statement not covered" >      headers: {</span>
+<span class="cstat-no" title="statement not covered" >        'Content-type': 'application/json; charset=UTF-8'</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >    })</span>
+<span class="cstat-no" title="statement not covered" >    .then((res) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if (res.ok) {</span>
+<span class="cstat-no" title="statement not covered" >        return res.json()</span>
+<span class="cstat-no" title="statement not covered" >      }</span>
+<span class="cstat-no" title="statement not covered" >      throw new Error('Post couldn\'t be created')</span>
+<span class="cstat-no" title="statement not covered" >    })</span>
+<span class="cstat-no" title="statement not covered" >    .then(console.log('Post created.'))</span>
+<span class="cstat-no" title="statement not covered" >    .catch((err) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      console.log(err.message)</span>
+<span class="cstat-no" title="statement not covered" >    })</span>
+<span class="cstat-no" title="statement not covered" >  }</span>
 <span class="cstat-no" title="statement not covered" ></span>
 <span class="cstat-no" title="statement not covered" >  return (</span>
-<span class="cstat-no" title="statement not covered" >    &lt;div className='chat-container'&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className='sidebar'&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className='navbar-chat'&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;h3 className='chat-title'&gt;Culturify Chat&lt;/h3&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;div className='user-log'&gt;</span>
-<span class="cstat-no" title="statement not covered" >            &lt;p&gt;{displayName}&lt;/p&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className='chats'&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;h4 className='user-title'&gt;Users:&lt;/h4&gt;</span>
-<span class="cstat-no" title="statement not covered" >          {dialogues &amp;&amp; dialogues.map((u, idx) =&gt; </span>
-<span class="cstat-no" title="statement not covered" >            &lt;ProfileIcon username={u.username} receiver={u.receiver} key={idx} dialogue_id={u.id} currentDialogue={currentDialogue} setCurrentDialogue={setCurrentDialogue} setMessages={setMessages} messages={messages}/&gt;</span>
-<span class="cstat-no" title="statement not covered" >          )}  </span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;div className="btn-container"&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;Button</span>
-<span class="cstat-no" title="statement not covered" >                variant="outlined"</span>
-<span class="cstat-no" title="statement not covered" >                color="primary"</span>
-<span class="cstat-no" title="statement not covered" >                style={loginButtonStyles}</span>
-<span class="cstat-no" title="statement not covered" >                onClick={createNewChat}</span>
-<span class="cstat-no" title="statement not covered" >              &gt;Start a New Chat!&lt;/Button&gt;</span>
-<span class="cstat-no" title="statement not covered" >        &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;</span>
-<span class="cstat-no" title="statement not covered" >      {dialogues ? </span>
-<span class="cstat-no" title="statement not covered" >      &lt;div className='message-container'&gt;</span>
-<span class="cstat-no" title="statement not covered" >          &lt;Messages messages={messages} setMessages={setMessages} formValue={formValue} setFormValue={setFormValue} currentDialogue={currentDialogue}/&gt;</span>
-<span class="cstat-no" title="statement not covered" >      &lt;/div&gt; : &lt;div&gt;No chat loaded&lt;/div&gt;}</span>
-<span class="cstat-no" title="statement not covered" >    &lt;/div&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;form className='recipe-form' onSubmit={handleSubmit}&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;h2&gt;Share Recipe&lt;/h2&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;p&gt;Brief description:&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;input type="text" value={description} onChange={handleDescription} required className="form-input"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;&lt;br/&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;div&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;p&gt;Brief story:&lt;/p&gt;</span>
+<span class="cstat-no" title="statement not covered" >        &lt;input type="text" value={story} onChange={handleStory} required className="form-input"/&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;/div&gt;&lt;br/&gt;</span>
+<span class="cstat-no" title="statement not covered" >      &lt;button type="submit" onClick={handleSubmit}&gt;Share&lt;/button&gt;</span>
+<span class="cstat-no" title="statement not covered" >    &lt;/form&gt;</span>
 <span class="cstat-no" title="statement not covered" >  )</span>
 <span class="cstat-no" title="statement not covered" >}</span>
 &nbsp;
-export default Chat</pre></td></tr></table></pre>
+export default ShareRecipe</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-<<<<<<< HEAD
                 at 2023-10-04T21:11:26.841Z
-=======
-                at 2023-10-04T16:52:44.332Z
->>>>>>> staging
             </div>
         <script src="../../../prettify.js"></script>
         <script>

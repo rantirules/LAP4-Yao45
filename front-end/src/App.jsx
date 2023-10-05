@@ -22,6 +22,7 @@ import { Chat, UserPost } from './components';
 import MapHighlighter from './components/Navbar/SecondaryNav/DisplaySection/Maps/Maps';
 
 import { Marker } from '@googlemaps/react-wrapper'
+import { divIcon } from 'leaflet';
 
 function MyMarker() {
   return <Marker position={{ lat: 37.7749, lng: -122.4194 }} />
@@ -35,6 +36,7 @@ function App() {
   <Routes>
 
   <Route path="/" element={
+  
   <Navbar>
     <SecondaryNav/>
   {/* <NavItem icon={<FaEnvelope/>}/>
