@@ -1,8 +1,29 @@
-.discover {
+#discover-page {
+    /* background-color: aqua; */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    height: auto;
+    /* background-color: aquamarine; */
+    width: 80%;
+    transition: width 0.3s ease;
+    overflow-y: scroll; 
+    height: 90vh;
+    justify-content: start;
+    align-items: center;
+}
+
+#discover-page.closed {
+    width: 100%; /* Width when navbar is collapsed */
+}
+
+
+.discover {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
     align-items: center;
     /* background: linear-gradient(to right top, #FF5757, #dadce1); */
     min-height: 100vh;
+    /* background-color: aquamarine; */
+    margin-bottom: 5rem;
 }

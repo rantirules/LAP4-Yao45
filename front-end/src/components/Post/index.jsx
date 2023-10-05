@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faUser, faKitchenSet, faEarthAfrica} from '@fortawesome/free-solid-svg-icons'
+import {faUser, faKitchenSet, faEarthAfrica, faLink} from '@fortawesome/free-solid-svg-icons'
 import CommentModal from '../CommentModal'
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+
+import { Link } from 'react-router-dom';
+
 
 import CommentSection from '../CommentSection/CommentSection'
 import './index-2.css'
@@ -22,55 +26,67 @@ const Post = (props) => {
 
     const showComments = (e) => {
         e.preventDefault()
-        console.log('COMMENTS SHOWING')
+        // console.log('COMMENTS SHOWING')
         setIsOpen(!isOpen)
-        console.log(isOpen);
+        console.log('line 29', isOpen);
     }
 
 
   return (
-    <>    <div className='postContainer2'>
+    <div id='indiv-post-cont'>    
+    <div className='postContainer2'>
         <div className="left-panel2">
             <div className="user2">
-                <img src='https://t4.ftcdn.net/jpg/04/83/90/95/360_F_483909569_OI4LKNeFgHwvvVju60fejLd9gj43dIcd.jpg' alt="" />
+                <div id='user-icon-posts'><AccountCircleOutlinedIcon id='usericon'/></div>
                 <h3>{props.username}</h3>
             </div>
             <div className="recipe2">
                 {props.recipeName}
             </div>
-            <div className="links2">
-                <div className="link2">
+            {/* <div className="links2"> */}
+                {/* <div className="link2">
                     <FontAwesomeIcon icon={faUser}/>
-                </div>
+                </div> */}
+                
                 <div className="link2">
-                    <FontAwesomeIcon icon={faKitchenSet}/>
+                        <FontAwesomeIcon icon={faEarthAfrica}/>
+                        <p> Culture </p>
                 </div>
-                <div className="link2">
-                    <FontAwesomeIcon icon={faEarthAfrica}/>
-                </div>
+
+                <Link to={`/recipe/${props.id}`} className="link2">
+                    <FontAwesomeIcon icon={faLink} />
+                    <p id='view-recipe'>View Recipe</p>
+                </Link>
+            {/* </div> */}
+
+            <div id='commet-link'>
+                <a className="cmnt-btn2" onClick={showComments}> {isOpen ? 'Hide Comments' : 'View Comments'} </a>
             </div>
-            <button className="cmnt-btn2" onClick={showComments}>View Comments</button>
-            </div>
+            
+        </div>
             {/* {isOpen && <CommentSection comments={comments} post_id={props.id}/> && console.log(props.id)  } */}
              
       
         <div className="right-panel2">
-            <div className="card2 food-image">
-                <img src={props.recipePicture} alt="" />
+            <div id='food-image'>
+                {/* <img src={props.recipePicture} alt="" /> */}
+                <img src='home4.jpg' alt="" />
             </div>
-            <div className="card2 dish-description">
-                <p className='text'>{props.recipeDescription}</p>
+
+            <div className="card2" id='dish-description'>
+                <p className='text'> <span>Description: </span> {props.recipeDescription} </p>
             </div>
-            <div className="card2 personal-description">
-                <p className='text2'>{props.personalDescription}</p>
+
+            <div className="card2" id='personal-description'>
+                <p className='text2'> <span>Story: </span>{props.personalDescription}</p>
             </div>
         </div>
         
     </div>
-    <div>
+    <div id='comment-cont'>
     {isOpen && <div className='commentContainer2'><CommentModal open={isOpen} setIsOpen={setIsOpen} comments={comments} post_id={props.id}/></div>}
     </div>
-    </>
+    </div>
 
   )
 }

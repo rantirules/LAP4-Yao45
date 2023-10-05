@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.css'
 
 const Comment = (props) => {
   const formattedTimestamp = (timestamp) => {
