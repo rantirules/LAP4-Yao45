@@ -76,7 +76,7 @@ const handleSubmit = async (e) => {
     <div className="form-container">
         <h1>Welcome to Culturify</h1><br/>
             <form className="form" onSubmit={handleSubmit}>
-                <label> Username </label><br/>
+                <label> Username
                 <input 
                     type="text" 
                     placeholder="Username"
@@ -84,8 +84,8 @@ const handleSubmit = async (e) => {
                     name="username"
                     onChange={handleChange}
                     value={formData.username}
-                /><br/>
-                <label> Password </label><br/>
+                /> </label> <br/>
+                <label> Password 
                 <input 
                     type="password" 
                     placeholder="Password"
@@ -93,9 +93,9 @@ const handleSubmit = async (e) => {
                     name="password"
                     onChange={handleChange}
                     value={formData.password}
-                /><br/>
+                /> </label> <br/>
                 <div id="submit-btn-cont">
-                    <button className="form-submit"> Sign in </button><br/>
+                    <button className="form-submit"> Log in </button><br/>
                 </div>
                 
                 { /* eslint-disable-next-line react/no-unescaped-entities */}
