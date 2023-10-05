@@ -7,13 +7,25 @@ import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined
 import { Link } from 'react-router-dom';
 
 import { useAuth } from '../Auth/AuthContext';
-
+import {AdvancedImage} from '@cloudinary/react';
+import {Cloudinary} from "@cloudinary/url-gen";
 import CommentSection from '../CommentSection/CommentSection'
 import './index-2.css'
+import axios from 'axios'
+
 const Post = (props) => {
     const { isLoggedIn, login, logout, userName, displayName } = useAuth();
     const [isOpen, setIsOpen] = useState(false)
     const [comments, setComments] = useState([])
+    const [username, setUsername] = useState('')
+    const [recipeName, setRecipeName] = useState('')
+
+    const cld = new Cloudinary({
+        cloud: {
+          cloudName: 'dvu7ysgku'
+        }
+      })
+    const image = cld.image(props.recipePicture)
 
     useEffect(() => {
         const getComments = async () => {
@@ -21,7 +33,20 @@ const Post = (props) => {
             const data = await response.json()
             setComments(data.comments)
         }
+        async function getUsername() {
+            const res = await axios.get(`http://127.0.0.1:5000/users/${props.userId}`)
+            const username = await res.data.user.username
+            setUsername(username)
+        }
+    
+        async function getRecipeName() {
+            const res = await axios.get(`http://127.0.0.1:5000/recipes/${props.recipeId}`)
+            const recipeName = await res.data.recipe.name
+            setRecipeName(recipeName)
+        }
         getComments()
+        getRecipeName()
+        getUsername()
     }, [])
 
 
@@ -30,8 +55,9 @@ const Post = (props) => {
         e.preventDefault()
         // console.log('COMMENTS SHOWING')
         setIsOpen(!isOpen)
-        console.log('line 29', isOpen);
+        console.log(isOpen);
     }
+
 
 
   return (
@@ -40,10 +66,10 @@ const Post = (props) => {
         <div className="left-panel2">
             <div className="user2">
                 <div id='user-icon-posts'><AccountCircleOutlinedIcon id='usericon'/></div>
-                <h3>{props.username}</h3>
+                <h3>{username}</h3>
             </div>
             <div className="recipe2">
-                {props.recipeName}
+                {recipeName}
             </div>
             {/* <div className="links2"> */}
                 {/* <div className="link2">
@@ -71,8 +97,7 @@ const Post = (props) => {
       
         <div className="right-panel2">
             <div id='food-image'>
-                {/* <img src={props.recipePicture} alt="" /> */}
-                <img src='home4.jpg' alt="" />
+                <AdvancedImage cldImg={image} width={300} height={150}/>
             </div>
 
             <div className="card2" id='dish-description'>

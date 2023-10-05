@@ -44,7 +44,7 @@ const Discover = () => {
       
       <div className="discover">
         {posts && posts.map((p, idx) => {
-          return <Post key={idx} id={p.id} username={p.user_id} displayName={p.username} recipePicture={p.img_url} recipeDescription={p.description} recipeName={p.recipe_id} personalDescription={p.story} timeStamp={p.time_posted} />
+          return <Post key={idx} id={p.id} userId={p.user_id} recipePicture={p.img_url} recipeDescription={p.description} recipeId={p.recipe_id} personalDescription={p.story} timeStamp={p.time_posted} />
         })}
       </div>
 
