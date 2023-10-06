@@ -1,18 +1,21 @@
 import React, {useContext} from 'react'
 import { UserContext } from '../../App'
 
+import AccountCircleOutlinedIcon from '@mui/icons-material/AccountCircleOutlined';
+
+
 const ChatMessage = (props) => {
     // const { text, username, imageUrl } = props.message
     console.log(props.message)
     const username = useContext(UserContext)
     console.log(username);
 
-    const messageClass = username === props.username ? 'sent' : 'received'
+    const messageClass = props.currentUser === props.username ? 'sent' : 'received'
   return (
     <div className={`message ${messageClass}`}>
       <div className="messageInfo">
-        <img src='https://static.vecteezy.com/system/resources/thumbnails/006/017/592/small/ui-profile-icon-vector.jpg' alt="profile-picture" />
-        <h4>{props.username}</h4>
+          <AccountCircleOutlinedIcon style={{color:'#1c1c1c'}}/>
+        <h4 style={{color:'#1c1c1c'}}>{props.username}</h4>
       </div>
       <div className="messageContent">
         <p>{props.message}</p>

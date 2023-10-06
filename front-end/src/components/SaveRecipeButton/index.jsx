@@ -2,14 +2,15 @@ import React, { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart as solidHeart } from '@fortawesome/free-solid-svg-icons';
 import { faHeart as regularHeart } from '@fortawesome/free-regular-svg-icons';
-// import HeartIcon from ".."
+// import "HeartIcon" from ".."
 import axios from 'axios'
 
 const SaveRecipeButton = (props) => {
   const [message, setMessage] = useState('')
   const [isSaved, setIsSaved] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
-  const url = `https://lap4-backend.onrender.com/saved/${props.uid}/${props.rid}`
+  const uid = localStorage.getItem('user')
+  const url = `http://127.0.0.1:5000/saved/${uid}/${props.rid}`
 
   const [isHovered, setIsHovered] = useState(false);
   
@@ -32,12 +33,12 @@ const SaveRecipeButton = (props) => {
     if (res.data.error) {
       console.log("Recipe already saved")
       setIsSaved(true);
-      setMessage('Recipe is already saved.')
+      // setMessage('Recipe is already saved.')
     } else if (res.status === 201) {
       setIsSaved(true);
       setIsAdded(true);
       console.log("Recipe saved.")
-      setMessage("Recipe saved.")
+      // setMessage("Recipe saved.")
     }
     setTimeout(() => {
       setMessage('')
@@ -59,7 +60,7 @@ const SaveRecipeButton = (props) => {
       icon={isSaved ? solidHeart : (isHovered ? solidHeart : regularHeart)}
         style={{ color: "#ff8080" }}
       />
-        {isAdded ? 'Added!' : 'Add'}
+        {isAdded ? 'Saved!' : 'Save'}
         </button><br/>
       <p>{message}</p>
     </>

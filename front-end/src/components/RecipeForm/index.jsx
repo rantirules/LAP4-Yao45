@@ -2,7 +2,11 @@ import React, { useState } from 'react'
 import { IngredientFields, StepFields, UploadImage } from '..'
 import "./index.css";
 
+import { useNavbar } from '../Navbar/NavbarContext';
+
 const RecipeForm = (props) => {
+  const { navbarPosition } = useNavbar();
+
   const [name, setName] = useState('')
   const [culture, setCulture] = useState('')
   const [ingredients, setIngredients] = useState([{ ingredient: '', amount: '' }])
@@ -96,32 +100,37 @@ const RecipeForm = (props) => {
   }
 
   return (
-    <>
+    <div id='recipe-form-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
     
     <form className ="recipe-form" onSubmit={handleSubmit}>
-      <h2>Add a new recipe:</h2><br/>
-      <p>Recipe Name:</p>
-      <div>
+      <h2>Add a new recipe</h2><br/><br/>
+      <label id='new-recipe-lable'>
+        <p>Recipe Name:</p>
         <input type="text" value={name} onChange={handleName} required className="form-input"/>
-      </div><br/>
-      <div>
+      </label><br/><br/>
+      
+      <label id='new-recipe-lable'>
         <p>Culture/Cuisine:</p>
         <input type="text" value={culture} onChange={handleCulture} required className="form-input"/>
-      </div><br/>
-      <div>
+      </label><br/><br/>
+
+      <label id='new-recipe-lable'>
         <p>Description:</p>
         <input type="text" value={description} onChange={handleDescription} required className="form-input"/>
-      </div> <br/>
-      <div>
+      </label> <br/><br/>
+
+      <label id='new-recipe-lable'>
         <IngredientFields ingredients={ingredients} setIngredients={setIngredients} />
-      </div> <br/>
-      <div>
+      </label> <br/><br/>
+
+      <label id='new-recipe-lable'>
         <StepFields steps={steps} setSteps={setSteps}/>
-      </div> <br/>
-      <div>
+      </label> <br/><br/>
+      
+      <div id='new-recipe-lable'>
         {image == '' ? (
           <>
-            <p>Upload an image</p>
+            <p style={{fontWeight:'bold', fontSize:'20px'}}>Upload an image</p>
             
             <UploadImage image={image} setImage={setImage} />
           </>)
@@ -130,7 +139,7 @@ const RecipeForm = (props) => {
       </div> <br/>
       <button type="submit" className="submit-btn" onClick={handleSubmit}>Submit Recipe</button>
     </form>
-    </>
+    </div>
   )
 }
 

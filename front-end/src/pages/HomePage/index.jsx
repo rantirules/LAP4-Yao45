@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-
 import React, { useState } from 'react'
 
 import { HomeCard } from '../../components'
@@ -23,12 +21,12 @@ const HomePage = () => {
     {id:4, image:"home4.jpg", title: "Food and Culture: How What We Eat Defines Who We Are", description: "Discover the profound connection between food and culture, unraveling how our culinary choices shape our identities."}
   ])
 
-  console.log('line 26 home', navbarPosition)
+  // console.log('line 26 home', navbarPosition)
 
   return (
     <div id='home-page' data-testid='home-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
       <div id='title'>
-        <h1>Explore, Savour, Connect: <span> Culturify </span> Your World!</h1>
+        <h1>It's time to<span> Culturify </span> your world.</h1>
       </div>
       <div id='content-cont'>
         <div id='content' data-testid='content'>

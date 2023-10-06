@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
 // Create an authentication context
@@ -14,6 +14,24 @@ export function useAuth() {
 export function AuthProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [userName, setUserName] = useState('')
+  const [displayName, setDisplayName] = useState('')
+  const [userId, setUserId] = useState()
+  console.log({userId})
+  console.log(userName);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const response = await fetch(`http://127.0.0.1:5000/users/${userName}`)
+      const data = response.json()
+      setDisplayName(data.user.username)
+      setUserId(data.user.id)
+      console.log(displayName);
+      console.log('AUTH HERE');
+      console.log(userId);
+    }
+
+  })
+
   // Function to handle user login
   const login = async (userName) => {
     setIsLoggedIn(true);
@@ -40,7 +58,8 @@ export function AuthProvider({ children }) {
     isLoggedIn,
     login,
     logout,
-    userName
+    userName,
+    userId
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

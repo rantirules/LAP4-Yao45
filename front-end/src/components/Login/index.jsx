@@ -4,11 +4,16 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../Auth/AuthContext';
 import './index.css';
 import { alignProperty } from '@mui/material/styles/cssUtils';
+import { useNavbar } from '../Navbar/NavbarContext';
+
 
 
 const Login = () => {
     const { isLoggedIn, login, setUserName, userName } = useAuth(); // Access the authentication context
     const navigate = useNavigate();
+
+  const { navbarPosition } = useNavbar();
+
     
 
     const [formData, setFormData] = useState({
@@ -67,20 +72,20 @@ const handleSubmit = async (e) => {
 }
 
   return (
-    
+    <div id='login-page-cont' className={navbarPosition === 'closed' ? 'closed' : ''}>
     <div className="form-container">
-        <h1>Welcome to Cultrify</h1><br/>
+        <h1>Welcome to Culturify</h1><br/>
             <form className="form" onSubmit={handleSubmit}>
-                <label> Username </label><br/>
+                <label> Username
                 <input 
                     type="text" 
-                    placeholder="username"
+                    placeholder="Username"
                     className="form-input"
                     name="username"
                     onChange={handleChange}
                     value={formData.username}
-                /><br/>
-                <label> Password </label><br/>
+                /> </label> <br/>
+                <label> Password 
                 <input 
                     type="password" 
                     placeholder="Password"
@@ -88,12 +93,15 @@ const handleSubmit = async (e) => {
                     name="password"
                     onChange={handleChange}
                     value={formData.password}
-                /><br/>
+                /> </label> <br/>
+                <div id="submit-btn-cont">
+                    <button className="form-submit"> Log in </button><br/>
+                </div>
                 
-                <button className="form-submit"> Sign in </button><br/>
                 { /* eslint-disable-next-line react/no-unescaped-entities */}
                 <p style={{textAlign: "right"}}><em> Don't have an account? </em> <a style={{color: "#FF8080"}}href="https://cucina-mondo.onrender.com/register">Register Here</a></p>
             </form>
+        </div>
         </div>
   )
 }

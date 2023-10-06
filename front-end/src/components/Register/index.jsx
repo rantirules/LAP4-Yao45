@@ -3,8 +3,15 @@ import Select from "react-select";
 import countryData from "../../assets/countrylist";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import { useNavbar } from '../Navbar/NavbarContext';
+
+import '../Login/index.css'
 
 const Register = () => {
+
+  const { navbarPosition } = useNavbar();
+
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -95,8 +102,9 @@ const Register = () => {
     };
 
     return (
+        <div id='login-page-cont' className={navbarPosition === 'closed' ? 'closed' : ''}>
         <div className="form-container">
-            <h1>Welcome to Cultrify</h1>
+            <h1>Welcome to Culturify</h1>
             <form className="form" onSubmit={handleSubmit}>
             <label> Name <br/>
                 <input
@@ -158,10 +166,14 @@ const Register = () => {
                     />
                 </div>
                 </label>
-                <button className="form-submit"> Sign up </button>
+                <div id="submit-btn-cont">
+                    <button className="form-submit"> Sign up </button>
+                </div>
+                
             </form><br/>
             <p style={{textAlign: "right"}}><em>Already have an account? </em> <a style={{color: "#FF8080"}}href="https://cucina-mondo.onrender.com/login">Login Here</a></p>
 
+        </div>
         </div>
     );
 };
