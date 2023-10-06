@@ -25,6 +25,7 @@ const Chat = () => {
     const [user, setUser] = useState('')
     const currentUserId = userName
     const [loading, setLoading] = useState(false)
+    const [usersOpen, setUsersOpen] = useState(false)
 
 
 
@@ -52,28 +53,7 @@ const Chat = () => {
     },[])
 
     const createNewChat = async () => {
-      const getReceiver = await fetch('http://127.0.0.1:5000/users')
-      const receiverData = await getReceiver.json()
-      const receiver = receiverData.users[Math.floor(Math.random() * receiverData.users.length)].username
-      // console.log(receiver)
-      const dialogue_arr = await fetch('http://127.0.0.1:5000/dialogues')
-      const arr_data = await dialogue_arr.json()
-      // console.log(arr_data);
-      const dialogue_id = arr_data.dialogues.length + 1
-      if (!user){
-        console.log('USER NOT DEFINED')
-        return
-      }
-      const newDialogue = { user, receiver, dialogue_id}
-      const options = {method: "POST", headers: {
-        'Content-Type' : 'application/json'
-        },
-        body: JSON.stringify(newDialogue)
-    }
-      const create = await fetch('http://127.0.0.1:5000/dialogues', options)
-      const refreshDialogues = await fetch(`http://127.0.0.1:5000/dialogues/${user}`)
-      const data = await refreshDialogues.json()
-      console.log(dialogues);
+      setUsersOpen(true)
     }
     console.log(dialogues)
   return (
@@ -90,7 +70,7 @@ const Chat = () => {
         <div id='second-cont'>        
         <div id='chats'>
           <h4 className='user-title'>Users</h4>
-          {dialogues.map((u, idx) => 
+          {usersOpen && dialogues.map((u, idx) => 
             <ProfileIcon username={u.username} receiver={u.receiver} key={idx} dialogue_id={u.id} currentDialogue={currentDialogue} setCurrentDialogue={setCurrentDialogue} setMessages={setMessages} messages={messages}/>
           )}  
         </div>

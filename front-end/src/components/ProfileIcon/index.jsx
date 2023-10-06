@@ -31,7 +31,7 @@ const ProfileIcon = (props) => {
         <AccountCircleOutlinedIcon style={{color:'#1c1c1c'}}/>
         <div id='somethin'>
             {props.receiver}
-            🇬🇲
+            🇮🇹
         </div>
     </div>
   )
