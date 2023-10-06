@@ -27,7 +27,7 @@ const CommentSection= (props) => {
           },
           body: JSON.stringify(comment)
       }
-      const response = await fetch(`http://127.0.0.1:5000/posts/${props.post_id}/comments`, options)
+      const response = await fetch(`https://cucina-mondo.onrender.com/posts/${props.post_id}/comments`, options)
     }
   return (
     <>

@@ -35,13 +35,13 @@ const Post = (props) => {
             setComments(data.comments)
         }
         async function getUsername() {
-            const res = await axios.get(`http://127.0.0.1:5000/users/${props.userId}`)
+            const res = await axios.get(`https://cucina-mondo.onrender.com/users/${props.userId}`)
             const username = await res.data.user.username
             setUsername(username)
         }
     
         async function getRecipe() {
-            const res = await axios.get(`http://127.0.0.1:5000/recipes/${props.recipeId}`)
+            const res = await axios.get(`https://cucina-mondo.onrender.com/recipes/${props.recipeId}`)
             const recipeName = await res.data.recipe.name
             const culture = await res.data.recipe.culture
             setRecipeName(recipeName)

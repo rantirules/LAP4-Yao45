@@ -10,7 +10,7 @@ const SaveRecipeButton = (props) => {
   const [isSaved, setIsSaved] = useState(false);
   const [isAdded, setIsAdded] = useState(false);
   const uid = localStorage.getItem('user')
-  const url = `http://127.0.0.1:5000/saved/${uid}/${props.rid}`
+  const url = `https://cucina-mondo.onrender.com/saved/${uid}/${props.rid}`
 
   const [isHovered, setIsHovered] = useState(false);
   
@@ -52,7 +52,7 @@ const SaveRecipeButton = (props) => {
       <button onClick={saveRecipe} className ="save-button" 
       onMouseEnter={handleMouseEnter} 
       onMouseLeave={handleMouseLeave}
-      onMouseClick={handleMouseEnter}
+      // onMouseClick={handleMouseEnter}
       disabled={isSaved}
       >
       <FontAwesomeIcon

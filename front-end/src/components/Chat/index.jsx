@@ -32,7 +32,7 @@ const Chat = () => {
     useEffect(() => {
       console.log(currentUserId);
       const getCurrentUser = async () => {
-        const response = await fetch(`http://127.0.0.1:5000/users/${currentUserId}`)
+        const response = await fetch(`https://cucina-mondo.onrender.com/users/${currentUserId}`)
         const data = await response.json()
         setUser(data.user.username)
       }
@@ -42,7 +42,7 @@ const Chat = () => {
         setUsers(data.users)
       }
       const getDialogues = async () => {
-        const response = await fetch(`http://127.0.0.1:5000/dialogues`)
+        const response = await fetch(`https://cucina-mondo.onrender.com/dialogues`)
         const data = await response.json()
         setDialogues(data.dialogues)
         console.log(dialogues);

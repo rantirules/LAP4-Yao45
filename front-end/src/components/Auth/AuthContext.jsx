@@ -21,7 +21,7 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const getUser = async () => {
-      const response = await fetch(`http://127.0.0.1:5000/users/${userName}`)
+      const response = await fetch(`https://cucina-mondo.onrender.com/users/${userName}`)
       const data = response.json()
       setDisplayName(data.user.username)
       setUserId(data.user.id)
