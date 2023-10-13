@@ -38,8 +38,8 @@ const CommentModal = (props) => {
           body: JSON.stringify(comment)
       }
       console.log(comment);
-      const response = await fetch(`https://cucina-mondo.onrender.com/posts/${props.post_id}/comments`, options)
-      const newComments = await fetch(`https://cucina-mondo.onrender.com/posts/${props.post_id}/comments`)
+      const response = await fetch(`https://lap4-backend.onrender.com/posts/${props.post_id}/comments`, options)
+      const newComments = await fetch(`https://lap4-backend.onrender.com/posts/${props.post_id}/comments`)
       const data = await newComments.json()
       props.setComments(data.comments)
     }

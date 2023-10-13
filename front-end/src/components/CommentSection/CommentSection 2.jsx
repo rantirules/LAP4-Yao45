@@ -27,7 +27,7 @@ const CommentSection= (props) => {
           },
           body: JSON.stringify(comment)
       }
-      const response = await fetch(`https://cucina-mondo.onrender.com/posts/${props.post_id}/comments`, options)
+      const response = await fetch(`https://lap4-backend.onrender.com/posts/${props.post_id}/comments`, options)
     }
   return (
     <>
