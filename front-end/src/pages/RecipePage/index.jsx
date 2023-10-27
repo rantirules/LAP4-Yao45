@@ -10,7 +10,7 @@ const RecipePage = () => {
 
   useEffect(() => {
     async function loadRecipe() {
-      const res = await axios.get(`http://127.0.0.1:5000/recipes/${recipe_id}`)
+      const res = await axios.get(`https://lap4-backend.onrender.com/recipes/${recipe_id}`)
       const recipe = await res.data.recipe
       // console.log(recipe)
       setRecipe(recipe)

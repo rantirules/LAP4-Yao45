@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../Auth/AuthContext';
 import './index.css';
 import { alignProperty } from '@mui/material/styles/cssUtils';
@@ -9,7 +9,7 @@ import { useNavbar } from '../Navbar/NavbarContext';
 
 
 const Login = () => {
-    const { isLoggedIn, login, setUserName, userName } = useAuth(); // Access the authentication context
+    const { isLoggedIn, login, setUserName, userName } = useAuth(); 
     const navigate = useNavigate();
 
   const { navbarPosition } = useNavbar();
@@ -31,18 +31,14 @@ const Login = () => {
             [name]: value
         }))
     }
-    // console.log(formData)
-    //     function handleSubmit(event) {
-        //         event.preventDefault()
-        
-        //    }
+
 const handleSubmit = async (e) => {
 
     // const navigateTo = useNavigate();
     e.preventDefault();
-    console.log(formData);
+    // console.log(formData);
     try {
-        const response = await axios.post('http://127.0.0.1:5000/users/login', {
+        const response = await axios.post('https://lap4-backend.onrender.com/users/login', {
             username: formData.username,
             password: formData.password
         });
@@ -95,11 +91,14 @@ const handleSubmit = async (e) => {
                     value={formData.password}
                 /> </label> <br/>
                 <div id="submit-btn-cont">
-                    <button className="form-submit"> Log in </button><br/>
+                    <button className="form-submit" onClick={handleSubmit}> Log in </button><br/>
                 </div>
                 
                 { /* eslint-disable-next-line react/no-unescaped-entities */}
-                <p style={{textAlign: "right"}}><em> Don't have an account? </em> <a style={{color: "#FF8080"}}href="http://localhost:5173/register">Register Here</a></p>
+                <p style={{textAlign: "center", fontSize: '15px'}}>
+                    <em> Don't have an account? </em> 
+                    <Link id='signup-link' to='/register'>Register Here</Link>
+                </p>
             </form>
         </div>
         </div>

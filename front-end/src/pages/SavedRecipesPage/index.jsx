@@ -27,7 +27,7 @@ const user_id = localStorage.getItem('user')
   useEffect(() => {
     async function getSavedRecipes() {
       try {
-        const res = await axios.get(`http://127.0.0.1:5000/saved/${user_id}`);
+        const res = await axios.get(`https://lap4-backend.onrender.com/saved/${user_id}`);
         const recipes = res.data.saved_recipes;
         setRecipeList(recipes);
       } catch (error) {
@@ -41,7 +41,7 @@ const user_id = localStorage.getItem('user')
 
   return (
     <div id='saved-recipe-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
-      <div id='saved-title'>
+      <div id='title'>
         <h1>Saved Recipes</h1>
       </div>
 

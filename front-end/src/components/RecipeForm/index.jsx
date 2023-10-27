@@ -32,7 +32,7 @@ const RecipeForm = (props) => {
 
   function postRecipe(validIngredients, validSteps) {
     const user_id = localStorage.getItem('user')
-    fetch('http://127.0.0.1:5000/recipes', {
+    fetch('https://lap4-backend.onrender.com/recipes', {
       method: 'POST',
       body: JSON.stringify({
         user_id: user_id,

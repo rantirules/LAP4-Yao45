@@ -30,18 +30,18 @@ const Post = (props) => {
 
     useEffect(() => {
         const getComments = async () => {
-            const response = await fetch(`http://127.0.0.1:5000/posts/${props.id}/comments`)
+            const response = await fetch(`https://lap4-backend.onrender.com/posts/${props.id}/comments`)
             const data = await response.json()
             setComments(data.comments)
         }
         async function getUsername() {
-            const res = await axios.get(`http://127.0.0.1:5000/users/${props.userId}`)
+            const res = await axios.get(`https://lap4-backend.onrender.com/users/${props.userId}`)
             const username = await res.data.user.username
             setUsername(username)
         }
     
         async function getRecipe() {
-            const res = await axios.get(`http://127.0.0.1:5000/recipes/${props.recipeId}`)
+            const res = await axios.get(`https://lap4-backend.onrender.com/recipes/${props.recipeId}`)
             const recipeName = await res.data.recipe.name
             const culture = await res.data.recipe.culture
             setRecipeName(recipeName)

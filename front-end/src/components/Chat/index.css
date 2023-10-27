@@ -51,7 +51,7 @@
     display: flex;
     align-items: start;
     justify-content: start;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 .chat-title {
@@ -70,10 +70,12 @@
     margin-bottom: 1rem;
     font-size: 15px;
     height: 3rem;
+    cursor: pointer;
 }
 
 #chat-btn:hover {
-    background-color: #FF8080;
+    scale: 1.02;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* .sidebar {
@@ -213,7 +215,7 @@
 }
 
 .message-form > input{
-    font-size: 20px;
+    font-size: 15px;
     background-color: #FFD3D3;
     /* font-family: Arial, Helvetica, sans-serif; */
     border: none;
@@ -242,6 +244,8 @@
 
     &:hover {
         color: #FF8080;
+        scale: 1.02;
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
     }
 }
 
@@ -295,22 +299,15 @@
     
 }
 
-/* #somethin {
-    background-color: yellow;
-    font-size: 18px;
-} */
-
-/* #somethin:active {
-    text-decoration: underline;
-} */
 
 
-#somethin {
+
+#props-receiverin {
     /* background-color: yellow; */
-    font-size: 18px;
+    font-size: 15px;
 }
 
-#somethin::selection {
+#props-receiverin::selection {
     text-decoration: underline;
 }
 

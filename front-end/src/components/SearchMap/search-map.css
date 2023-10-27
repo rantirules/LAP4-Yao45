@@ -13,7 +13,7 @@
 #search-bar-map {
   height: 20px;
   background-color: #ffd3d3;
-  width: 15rem;
+  width: 13rem;
   display: flex;
   justify-content: center;
   border-radius: 10px;
@@ -32,7 +32,7 @@
   font-family: 'Nunito', sans-serif;
   font-style: italic;
   text-align: left;
-  font-size: 18px;
+  font-size: 15px;
 }
 
 #search-btn {
@@ -71,6 +71,7 @@
   /* margin-top: 1rem; */
   margin-bottom: 1rem;
   text-align: left;
+  font-size: 15px;
   /* background-color: antiquewhite; */
 }
 

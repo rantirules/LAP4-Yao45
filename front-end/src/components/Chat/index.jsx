@@ -32,17 +32,17 @@ const Chat = () => {
     useEffect(() => {
       console.log(currentUserId);
       const getCurrentUser = async () => {
-        const response = await fetch(`http://127.0.0.1:5000/users/${currentUserId}`)
+        const response = await fetch(`https://lap4-backend.onrender.com/users/${currentUserId}`)
         const data = await response.json()
         setUser(data.user.username)
       }
       const getUsers = async () => {
-        const response = await fetch('http://127.0.0.1:5000/users')
+        const response = await fetch('https://lap4-backend.onrender.com/users')
         const data = await response.json()
         setUsers(data.users)
       }
       const getDialogues = async () => {
-        const response = await fetch(`http://127.0.0.1:5000/dialogues`)
+        const response = await fetch(`https://lap4-backend.onrender.com/dialogues`)
         const data = await response.json()
         setDialogues(data.dialogues)
         console.log(dialogues);
@@ -81,7 +81,7 @@ const Chat = () => {
                 id='chat-btn'
                 // style={loginButtonStyles}
                 onClick={createNewChat}>
-            Start a New Chat!
+            Start a Chat!
           </button>
         </div>
         </div>

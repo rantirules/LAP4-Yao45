@@ -84,6 +84,7 @@ position: fixed;
   height: 3rem;
   padding: 1rem;
   font-size: 15px;
+  cursor: pointer;
 }
 
 .mui-btn p {
@@ -92,18 +93,18 @@ position: fixed;
 }
 
 .mui-btn:hover{
-  cursor: pointer;
-  color: #FFD3D3;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    scale: 1.02;
 }
 
 
 .login-buttons {
   display: flex;
-  flex-direction: column; /* Display buttons vertically */
+  flex-direction: column; 
 }
 
 .login-button {
-  margin-bottom: 8px; /* Add spacing between buttons */
+  margin-bottom: 8px; 
 }
 
 :root {
@@ -130,7 +131,7 @@ a {
 .secondary-nav {
   align-items: center;
   transform: translateX(10%);
-  width: 25rem;
+  width: 20rem;
   background-color: #FF8080;
   height: 40rem;
   border-bottom-left-radius:80px;
@@ -222,7 +223,8 @@ height: 3.1rem;
 }
 
 .display ul {
-  font-size: 20px;
+  font-size: 15px;
+  /* color: #ab1d1d; */
 }
 
 .display li:hover {
@@ -246,8 +248,6 @@ height: 3.1rem;
   border-radius: var(--border-radius);
   transition: background var(--speed);
   padding: 0.5rem;
-
-
 }
 
 .menu-item:hover {
@@ -313,22 +313,24 @@ height: 3.1rem;
 }
 
 
-/* Add this media query to your existing CSS */
+
+
+
 @media screen and (max-width: 768px) {
   .navbar-links {
-    display: none; /* Hide the links when screen width is less than or equal to 768px */
+    display: none; 
   }
   .search-bar input {
     width: 10px;
     display: block;
 
   }
-  /* Style the search icon when the links are hidden */
+
   .search-icon {
     align-items: flex-start;
-    font-size: 20px; /* Adjust the size of the search icon */
-    color: #fff; /* Adjust the color of the search icon */
-    cursor: pointer; /* Add a pointer cursor for interaction */
+    font-size: 20px; 
+    color: #fff; 
+    cursor: pointer; 
   }
   input[type="text"]::placeholder {
     visibility: hidden;
@@ -357,11 +359,6 @@ height: 3.1rem;
   /* background-color: #ab1d1d; */
 }
 
-/* .commentSection {
-
-} */
-
-/* */
 .cmnt-sbmt-form {
   /* background-color: yellow; */
   display: flex;
@@ -377,21 +374,10 @@ border: none;
 border-radius: 10px;
 height: 2rem;
 width: 50%;
-/* .cmnt-sbmt-form {
-  display: inline-flex;
-} */
-/* .cmnt-sbmt-form input {
-margin: 1rem;
-background-color: #b96060;
-border: solid 1px #b96060;;
-border-radius: 5px; */
-
 }
 
 .cmnt-btn {
   border-radius: 15px;
-  /* border: solid 1px #1C1C1C; */
-  /* background-color: #1C1C1C; */
   color:#1C1C1C;
 }
 .cmnt-sbmt-form button {
@@ -399,7 +385,6 @@ border-radius: 5px; */
   margin-top: 20px;
   font-family: Nunito, sans-serif;
   border-radius: 15px;
-  /* border: solid 1px #1C1C1C; */
   background-color: #F9F9F9;
   color: #1C1C1C;
   height: 2rem;
@@ -416,32 +401,3 @@ border-radius: 5px; */
 
 
 
-  /* border-radius: 5px;
-  border: none 1px #1C1C1C;
-  background-color: #F9F9F9;
-  color: #1C1C1C;
-border: solid 1px transparent;
-}
-
-.cmnt-sbmt-form button:hover {
-  cursor: pointer;
-  border: solid 1px;
-}
-
-
-.add-recipe {
-  margin-left: 5px;
-  align-self: center;
-}
-
-.display-section {
-  padding-right: 10px;
-}
-.rotd {
-  margin-right: 15px;
-} */
-
-/* .cmnt-sbmt-btn { */
- /* display:; */
- /* align-items: center; */
-/* } */

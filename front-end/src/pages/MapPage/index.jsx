@@ -1,4 +1,3 @@
-// MapPage.js
 import React, { useState } from 'react';
 import { Map, SearchMap } from '../../components';
 import axios from 'axios';
@@ -50,6 +49,11 @@ const MapPage = () => {
 
   return (
     <div id='map-page-cont'>
+
+      <div id='initial-message'>
+
+      </div>
+
       <div id='map-cont'>
         <Map selectedPosition={selectedPosition} />
       </div>
