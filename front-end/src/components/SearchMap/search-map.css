@@ -38,6 +38,7 @@
 #search-btn {
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 .search-icon {

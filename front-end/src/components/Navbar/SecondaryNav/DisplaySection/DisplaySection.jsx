@@ -36,9 +36,9 @@ const DisplaySection = ({ navbarPosition, closeNavbar }) => {
   const recipe = {
     title: 'Try our Recipe of the Day',
     image: 'pasta.jpeg',
-    dishName: 'Delicious Pasta',
+    dishName: 'Delicious Tomato Pasta',
     location: 'Italy',
-    history: "Pasta dishes originate from the Greeks but were perfected by the Romans. The use of tomato sauces were only introduced in the 18th century and became highly popular due to the high level of Italian immigration in this period."
+    history: "Tomato sauce pasta, originating in Southern Italy, emerged in the late 18th century when tomatoes were recognized as a safe and delicious ingredient. This iconic, simple sauce has since become a staple of Italian cuisine."
   };
 
   const cardStyles = {

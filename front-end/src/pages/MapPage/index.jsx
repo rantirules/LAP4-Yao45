@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Map, SearchMap } from '../../components';
+import { Map, SearchMap, Modal } from '../../components';
 import axios from 'axios';
 import './map-page.css';
 
@@ -47,12 +47,28 @@ const MapPage = () => {
     }
   };
 
+
+  const [isModalVisible, setIsModalVisible] = useState(true);
+
+  // Function to open the modal
+  const openModal = () => {
+    setIsModalVisible(true);
+  };
+
+  // Function to close the modal
+  const closeModal = () => {
+    setIsModalVisible(false);
+  };
+
   return (
     <div id='map-page-cont'>
 
-      <div id='initial-message'>
-
-      </div>
+<Modal show={isModalVisible} onClose={closeModal}>
+        <div>
+          <h3>Discover Local Ingredient Stores</h3> <br/>
+          <p>Input your address or postcode, and watch as we unveil the nearest grocery stores, so you can work your culinary wonders.</p>
+        </div>
+      </Modal>
 
       <div id='map-cont'>
         <Map selectedPosition={selectedPosition} />
