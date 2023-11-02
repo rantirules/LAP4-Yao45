@@ -21,7 +21,7 @@ export function AuthProvider({ children }) {
 
   useEffect(() => {
     const getUser = async () => {
-      const response = await fetch(`http://127.0.0.1:5000/users/${userName}`)
+      const response = await fetch(`https://lap4-backend.onrender.com/users/${userName}`)
       const data = response.json()
       setDisplayName(data.user.username)
       setUserId(data.user.id)
@@ -37,14 +37,14 @@ export function AuthProvider({ children }) {
     setIsLoggedIn(true);
     setUserName(userName)
     console.log(userName)
-    const res = await axios.get(`http://127.0.0.1:5000/users/${userName}`)
+    const res = await axios.get(`https://lap4-backend.onrender.com/users/${userName}`)
 
     localStorage.setItem('user', res.data.user.id)
   };
 
   // async function getId(userName) {
   //   console.log(userName)
-  //   const res = await axios.get(`http://127.0.0.1:5000/users/${userName}`)
+  //   const res = await axios.get(`https://lap4-backend.onrender.com/users/${userName}`)
   //   return res.data.user.id
   // }
 

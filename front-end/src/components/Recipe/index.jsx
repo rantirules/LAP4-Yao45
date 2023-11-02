@@ -32,7 +32,7 @@ const Recipe = (props) => {
       // get username
       if (props.user_id) {
         const id = await props.user_id
-        const resp = await axios.get(`http://127.0.0.1:5000/users/${id}`)
+        const resp = await axios.get(`https://lap4-backend.onrender.com/users/${id}`)
         setCreator(resp.data.user.username)
         setLoading(false)
       }

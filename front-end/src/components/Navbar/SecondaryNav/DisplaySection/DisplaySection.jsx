@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import Account from './Account/Account'
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { FaMapMarkerAlt } from 'react-icons/fa';
@@ -6,69 +6,70 @@ import { useNavigate } from 'react-router-dom';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
 import { useAuth } from '../../../Auth/AuthContext';
+import './style.css'
 
-const DisplaySection = ({navbarPosition, closeNavbar}) => {
-    const { isLoggedIn, login, logout,userName } = useAuth();
+const DisplaySection = ({ navbarPosition, closeNavbar }) => {
+  const { isLoggedIn, login, logout, userName } = useAuth();
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    const handleLoginClick = () => {
-        navigate('/login'); // Replace '/login' with the actual login page path
-        closeNavbar();
-      };
+  const handleLoginClick = () => {
+    navigate('/login');
+    closeNavbar();
+  };
 
-    const handleRegisterClick = () => {
-      navigate('/register')
-      closeNavbar();
-    }
+  const handleRegisterClick = () => {
+    navigate('/register')
+    closeNavbar();
+  }
 
-    const handleLogoutClick = () => {
-      logout()
-      navigate('/logout')
-      closeNavbar()
-    }
-    const handleAddRecipeClick = () => {
-      navigate('/new-recipe')
-      closeNavbar()
-    }
+  const handleLogoutClick = () => {
+    logout()
+    navigate('/logout')
+    closeNavbar()
+  }
+  const handleAddRecipeClick = () => {
+    navigate('/new-recipe')
+    closeNavbar()
+  }
 
-    const recipe = {
-        title: 'Try our Recipe of the Day',
-        image: '/src/assets/pasta.jpeg', // Replace with the actual recipe image URL
-        dishName: 'Delicious Pasta',
-        location: 'Italy',
-        history: "Pasta dishes originate from the Greeks but were perfected by the Romans. The use of tomato sauces were only introduced in the 18th century and became highly popular due to the high level of Italian immigration in this period."
-      };
+  const recipe = {
+    title: 'Try our Recipe of the Day',
+    image: 'pasta.jpeg',
+    dishName: 'Delicious Tomato Pasta',
+    location: 'Italy',
+    history: "Tomato sauce pasta, originating in Southern Italy, emerged in the late 18th century when tomatoes were recognized as a safe and delicious ingredient. This iconic, simple sauce has since become a staple of Italian cuisine."
+  };
 
-      const cardStyles = {
-        backgroundColor: 'transparent', // Background color set to #FF8080
-        border: 'none',
-      };
-       // Define inline styles for the buttons
+  const cardStyles = {
+    backgroundColor: 'transparent',
+    border: 'none',
+  };
+
   const loginButtonStyles = {
-    backgroundColor: '#1c1c1c', // Background color for the login button
-    color: 'white', // Text color for the login button
+    backgroundColor: '#1c1c1c',
+    color: 'white',
     textTransform: 'none',
-    width: '10rem',
-    height:'3rem',
+    width: '7rem',
+    height: '3rem',
     fontFamily: 'Nunito, sans-serif',
     borderRadius: '15px',
     fontSize: '15px'
-   
+
   };
 
-  
- 
+
+
   const typographyStyles = {
-    margin: '16px', // Adjust the value to control the gap
+    margin: '16px',
     fontFamily: 'Nunito, sans-serif',
 
   };
   const signUpButtonStyles = {
-    backgroundColor: 'transparent', // Transparent background for the sign-up button
-    border: 'none', // Remove the border
-    color: '#1c1c1c', // Text color for the sign-up button
-    fontWeight:'bold',
+    backgroundColor: 'transparent',
+    border: 'none',
+    color: '#1c1c1c',
+    fontWeight: 'bold',
     textTransform: 'none',
     fontFamily: 'Nunito, sans-serif',
 
@@ -78,68 +79,73 @@ const DisplaySection = ({navbarPosition, closeNavbar}) => {
       {localStorage.getItem('token') ? (
         // Display user's name when logged in
         <>
-          <Typography role="text"style={typographyStyles} variant="body2">
+          <Typography role="text" style={typographyStyles} variant="body2">
             Need some inspiration?
-          </Typography> </> ) : (<></>)}
-         <Typography style={typographyStyles} variant="h6" gutterBottom>
+          </Typography> </>) : (<></>)}
+      <Typography style={typographyStyles} variant="h6" gutterBottom>
         {recipe.title}
       </Typography>
-     
-    <CardMedia style={cardStyles}
-      component="img"
-      height="140"
-      image={recipe.image}
-      alt={recipe.dishName}
-    />
-     
+
+      <div id='pasta-img-cont'>
+          <CardMedia style={cardStyles}
+          component="img"
+          height="140"
+          image={recipe.image}
+          alt={recipe.dishName}
+          id='pasta-image'
+          />
+      </div>
+      
+
       <Typography style={typographyStyles} variant="body2">
         {recipe.dishName}
-        </Typography >
-        <Typography style={typographyStyles} variant="body2">
-        <FaMapMarkerAlt/> {recipe.location}
-        <br/>
-        <br/>
+      </Typography >
+      <Typography style={typographyStyles} variant="body2">
+        <FaMapMarkerAlt /> {recipe.location}
+        <br />
+        <br />
         <p className='history-recipe'>{recipe.history}</p>
       </Typography >
       {localStorage.getItem('token') ? (
         // Display user's name when logged in
-       
-          <button 
-            className='mui-btn'
-            onClick={handleAddRecipeClick}> 
-              <AddCircleOutlineIcon/> 
-              <p className='add-recipe'>Add your own recipe</p>
-          </button>
-    
+
+        <button
+          className='mui-btn'
+          onClick={handleAddRecipeClick}>
+          <AddCircleOutlineIcon />
+          <p className='add-recipe'>Add your own recipe</p>
+        </button>
+
       ) : (
         // Display login and sign-up buttons when not logged in
         <div className="login-buttons-sec">
           <div className="login-button-sec">
-            <Button
+            <button
               id='button-for-login'
               // variant="outlined"
               // color="primary"
-              style={loginButtonStyles}
+              // style={loginButtonStyles}
               onClick={handleLoginClick}
             >
               Log In
-            </Button>
+            </button>
           </div>
           <div className="login-button-sec">
-            <Button
-              variant="outlined"
-              color="secondary"
-              style={signUpButtonStyles}
+            <button
+              id='button-for-signup'
+              // variant="outlined"
+              // color="secondary"
+              // style={signUpButtonStyles}
               onClick={handleRegisterClick}
             >
               Sign Up
-            </Button>
+            </button>
+          </div>
         </div>
-      </div>
       )}
-      </section>
+    </section>
 
-      
+
   )
 }
 

@@ -26,7 +26,7 @@ const Discover = () => {
   const [posts, setPosts] = useState([])
   useEffect(() => {
     const getPosts = async () => {
-      const response = await fetch('http://127.0.0.1:5000/posts')
+      const response = await fetch('https://lap4-backend.onrender.com/posts')
       const data = await response.json()
       setPosts(data.posts)
     }

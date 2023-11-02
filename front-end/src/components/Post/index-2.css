@@ -80,7 +80,7 @@
   }
   
   .user2 h3 {
-    font-size: 20px;
+    font-size: 18px;
     margin-left: 1rem;
   }
   
@@ -121,6 +121,11 @@
   .link2 p {
     margin-left: 1rem;
     color: #1c1c1c;
+    font-size: 15px;
+  }
+
+  #view-recipe {
+    font-weight: bold;
   }
 
   #view-recipe:hover {
@@ -154,7 +159,7 @@
     /* padding: 10px 20px; */
     /* border-radius: 5px; */
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
   }
   
@@ -206,7 +211,7 @@
     flex-wrap: wrap; */
     padding: 1rem;
     white-space: normal;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   #dish-description p {
@@ -227,7 +232,7 @@
     flex-wrap: wrap; */
     padding: 1rem;
     white-space: normal;
-    font-size: 18px;
+    font-size: 15px;
   }
 
   #personal-description p {
