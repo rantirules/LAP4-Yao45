@@ -81,7 +81,7 @@ const Chat = () => {
                 id='chat-btn'
                 // style={loginButtonStyles}
                 onClick={createNewChat}>
-            Start a New Chat!
+            Start a Chat!
           </button>
         </div>
         </div>

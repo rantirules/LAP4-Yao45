@@ -24,3 +24,5 @@ export { default as StoreLocator } from './StoreLocator'
 export { default as HomeCard } from './HomeCard'
 export { default as ShareRecipe } from './ShareRecipe'
 export { default as NewRecipeButton } from './NewRecipeButton'
+
+export { default as Modal } from './Modal'

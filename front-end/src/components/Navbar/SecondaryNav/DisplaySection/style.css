@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Pacifico&display=swap');
+
+#button-for-login {
+    background-color: #1c1c1c;
+    color: #F9F9F9;
+    width: 7rem;
+    height: 3rem;
+    font-family: Nunito, sans-serif;
+    border: none;
+    border-radius: 15px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#button-for-login:hover {
+    /* background-color: #F9F9F9;
+    color: #1c1c1c;
+    border: 2px solid #1c1c1c; */
+    scale: 1.02;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+#button-for-signup {
+    background-color: transparent;
+    border: none;
+    color: #1c1c1c;
+    font-weight: bold;
+    font-family: Nunito, sans-serif;
+    margin-top: 1rem;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#button-for-signup:hover {
+    color: #F9F9F9;
+    text-decoration: underline;
+    scale: 1.1;
+    /* box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); */
+}
+
+#pasta-img-cont {
+    /* background-color: #1c1c1c; */
+    width:20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pasta-image {
+    width: 80%;
+}

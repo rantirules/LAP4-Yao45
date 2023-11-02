@@ -1,0 +1,93 @@
+.signup-form-container {
+    /* border: 2px solid black; */
+    /* background-color: antiquewhite; */
+    height: 70%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    /* margin: 0 auto; */
+    /* margin-top: 3%; */
+    padding: 5%;
+    border: 1px solid #ccc;
+    background-color: #ffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+#signup-title {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+}
+
+#form {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+#name-sect {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    margin-left: 25px;
+    margin-right: 25px;
+    /* width: 100%; */
+    margin-top: 20px;
+}
+
+#name {
+    /* background-color: aquamarine; */
+    /* width: 100%; */
+    margin: 0;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+}
+
+/* #name input {
+    background-color: aqua;
+    width: 80%;
+} */
+
+.name-input {
+    width: 93%;
+    padding: 10px;
+    /* margin: 0 auto; */
+    /* margin-bottom: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 15px;
+    /* background-color: lightpink; */
+}
+
+#email-sect {
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+#email {
+    width: 100%;
+    margin: 0;
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+#email input {
+    width: 97%;
+}
+
+#submit-btn-cont-register {
+    margin-top: 1rem;
+}

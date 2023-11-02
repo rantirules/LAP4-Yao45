@@ -4,8 +4,10 @@ import countryData from "../../assets/countrylist";
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { useNavbar } from '../Navbar/NavbarContext';
+import { Link } from 'react-router-dom';
 
 import '../Login/index.css'
+import './style.css'
 
 const Register = () => {
 
@@ -103,75 +105,104 @@ const Register = () => {
 
     return (
         <div id='login-page-cont' className={navbarPosition === 'closed' ? 'closed' : ''}>
-        <div className="form-container">
-            <h1>Welcome to Culturify</h1>
-            <form className="form" onSubmit={handleSubmit}>
-            <label> Name <br/>
-                <input
-                    type="text"
-                    placeholder="Name"
-                    className="form-input"
-                    name="name"
-                    onChange={handleChange}
-                    value={formData.name}
-                /></label><br />
-                <label> Email <br/>
-                <input
-                    type="email"
-                    placeholder="Email address"
-                    className="form-input"
-                    name="email"
-                    onChange={handleChange}
-                    value={formData.email}
-                /></label><br />
-                <label> Username <br/>
-                <input
-                    type="text"
-                    placeholder="username"
-                    className="form-input"
-                    name="username"
-                    onChange={handleChange}
-                    value={formData.username}
-                    onBlur={checkUsernameAvailability} 
-                /></label><br />
-                {!usernameAvailable && <div className="availability-error">Username not available</div>}
-                <label> Password <br/>
-                <input
-                    type="password"
-                    placeholder="Password"
-                    className="form-input"
-                    name="password"
-                    onChange={handleChange}
-                    value={formData.password}
-                /></label><br />
-                <label> Confirm Password <br/>
-                <input
-                    type="password"
-                    placeholder="Confirm password"
-                    className="form-input"
-                    name="passwordConfirm"
-                    onChange={handleChange}
-                    value={formData.passwordConfirm}
-                /></label><br />
-                {!emailAvailable && <div className="availability-error">Email not available</div>}
-                <label>Choose your country / countries
-                <div className="dropdown-container">
-                    <Select
-                        options={optionList}
-                        placeholder="Select country"
-                        value={selectedOptions}
-                        onChange={handleSelect}
-                        isSearchable={true}
-                        isMulti
+        <div className="signup-form-container">
+            <h1 id='signup-title'>Welcome to Culturify</h1>
+            <form id="form" onSubmit={handleSubmit}>
+            <div id='name-sect'>
+                <label id='name'> Name <br/>
+                    <input
+                        type="text"
+                        placeholder="Name"
+                        // className="form-input"
+                        className='name-input'
+                        name="name"
+                        onChange={handleChange}
+                        value={formData.name}
                     />
-                </div>
                 </label>
-                <div id="submit-btn-cont">
+
+                <label id='name'> Username <br/>
+                    <input
+                        type="text"
+                        placeholder="Username"
+                        // className="form-input"
+                        className='name-input'
+                        name="username"
+                        onChange={handleChange}
+                        value={formData.username}
+                        onBlur={checkUsernameAvailability} 
+                    />
+                </label>
+            </div>
+
+            <div id='email-sect'>
+                <label id='email'> Email <br/>
+                    <input
+                        type="email"
+                        placeholder="Email address"
+                        className="form-input"
+                        name="email"
+                        onChange={handleChange}
+                        value={formData.email}
+                    />
+                </label>
+            </div>
+            
+                
+                {!usernameAvailable && <div className="availability-error">Username not available</div>}
+
+            <div id='name-sect'>
+                <label id='name'> Password <br/>
+                    <input
+                        type="password"
+                        placeholder="Password"
+                        // className="form-input"
+                        className='name-input'
+                        name="password"
+                        onChange={handleChange}
+                        value={formData.password}
+                    />
+                </label>
+
+                <label id='name'> Confirm Password <br/>
+                    <input
+                        type="password"
+                        placeholder="Confirm password"
+                        // className="form-input"
+                        className='name-input'
+                        name="passwordConfirm"
+                        onChange={handleChange}
+                        value={formData.passwordConfirm}
+                    />
+                </label>
+            </div>
+                
+                {!emailAvailable && <div className="availability-error">Email not available</div>}
+
+            <div id='email-sect'>
+                <label id='email'>Choose your country / countries
+                    <div className="dropdown-container">
+                        <Select
+                            options={optionList}
+                            placeholder="Select country"
+                            value={selectedOptions}
+                            onChange={handleSelect}
+                            isSearchable={true}
+                            isMulti
+                            id='dropdown'/>
+                    </div>
+                </label>
+            </div>
+                
+                <div id="submit-btn-cont-register">
                     <button className="form-submit"> Sign up </button>
                 </div>
                 
             </form><br/>
-            <p style={{textAlign: "right"}}><em>Already have an account? </em> <a style={{color: "#FF8080"}}href="https://cucina-mondo.onrender.com/login">Login Here</a></p>
+            <p style={{textAlign: "center"}}>
+                <em>Already have an account? </em> 
+                <Link id='signup-link' to='/login'>Login Here</Link>
+            </p>
 
         </div>
         </div>

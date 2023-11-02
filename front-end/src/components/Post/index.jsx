@@ -35,7 +35,6 @@ const Post = (props) => {
             setComments(data.comments)
         }
         async function getUsername() {
-            console.log(props.userId)
             const res = await axios.get(`https://lap4-backend.onrender.com/users/${props.userId}`)
             const username = await res.data.user.username
             setUsername(username)

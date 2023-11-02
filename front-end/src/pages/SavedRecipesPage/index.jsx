@@ -41,7 +41,7 @@ const user_id = localStorage.getItem('user')
 
   return (
     <div id='saved-recipe-page' className={navbarPosition === 'closed' ? 'closed' : ''}>
-      <div id='saved-title'>
+      <div id='title'>
         <h1>Saved Recipes</h1>
       </div>
 

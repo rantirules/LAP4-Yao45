@@ -29,7 +29,7 @@ const ProfileIcon = (props) => {
   return (
     <div id='user-container' onClick={handleClick} className={clicked ? 'clicked' : ''}>
         <AccountCircleOutlinedIcon style={{color:'#1c1c1c'}}/>
-        <div id='somethin'>
+        <div id='props-receiver'>
             {props.receiver}
             🇮🇹
         </div>
