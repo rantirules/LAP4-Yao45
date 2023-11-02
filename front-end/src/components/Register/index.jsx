@@ -114,7 +114,7 @@ const Register = () => {
                         type="text"
                         placeholder="Name"
                         // className="form-input"
-                        id='name-input'
+                        className='name-input'
                         name="name"
                         onChange={handleChange}
                         value={formData.name}
@@ -126,7 +126,7 @@ const Register = () => {
                         type="text"
                         placeholder="Username"
                         // className="form-input"
-                        id='name-input'
+                        className='name-input'
                         name="username"
                         onChange={handleChange}
                         value={formData.username}
@@ -157,7 +157,7 @@ const Register = () => {
                         type="password"
                         placeholder="Password"
                         // className="form-input"
-                        id='name-input'
+                        className='name-input'
                         name="password"
                         onChange={handleChange}
                         value={formData.password}
@@ -169,7 +169,7 @@ const Register = () => {
                         type="password"
                         placeholder="Confirm password"
                         // className="form-input"
-                        id='name-input'
+                        className='name-input'
                         name="passwordConfirm"
                         onChange={handleChange}
                         value={formData.passwordConfirm}
